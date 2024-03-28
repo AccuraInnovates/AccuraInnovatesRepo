@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s2HmbzMTbR52r2I5/Pemtg/yRgxBx+UW/4L3pZ9YWtk=",
+  "Hash": "F4HnqROClqBftkQapLDYH4CrDyJqzOiTmAlstV64mAM=",
   "Source": "Accura_Innovatives",
   "BasePath": "_content/Accura_Innovatives",
   "Mode": "Default",
@@ -2713,6 +2713,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\Accura_Innovatives\\Accura_Innovatives\\wwwroot\\SalaryDeatilsUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\Accura_Innovatives\\Accura_Innovatives\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "SalaryDeatilsUploads/NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx"
     },
     {
       "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\Accura_Innovatives\\Accura_Innovatives\\wwwroot\\SalaryDeatilsUploads\\Salary_Process_Master (1).xlsx",
