@@ -1,0 +1,233 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Accura_Innovatives.Models.EmployeeMasterData1>
+@* @model IEnumerable<Accura_Innovatives.Models.EmployeeMasterData1>
+ *@
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Controller"] = "EmployeeMasterData1";
+    ViewData["Action"] = "Index";
+}
+@using cloudscribe.Pagination.Models;
+@using System.ComponentModel.DataAnnotations
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-attachment: fixed;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body>
+
+    <br />
+    <h1 class="text-white text-center" style="padding-top:225px" enctype="multipart/form-data">Index</h1>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p style="color: red;">@ViewBag.ErrorMessage</p>
+    }
+    @if (!string.IsNullOrEmpty(ViewBag.Success))
+    {
+        <p style="color: green;">@ViewBag.Success</p>
+    }
+
+    <form asp-action="Index" method="get">
+        <div class="container">
+            <div>
+                <p>
+                    <label class="text-white">Employee Code:</label><input type="number" name="searchString" value="@ViewBag.CurrentFilter" required />
+                    <input type="submit" value="Search" class="btn btn-success" />
+                    <a style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary m1-1" asp-action="Index">Back to List</a>
+                </p>
+            </div>
+        </div>
+    </form>
+
+
+    <p>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <a asp-action="Create" class="btn btn-sm btn-primary m1-1">Create New</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="BulkUpload">Bulk Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="Attendance">Attendance Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="EmployeeMasterData1" asp-action="SalaryDetailsUpload">Add Gross To Salary</a>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="YearlyLeave">Yearly Leave Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="CompOffAdvances">CompOff/Advances Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="SalaryProcessMaster">Salary Master Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ExportPdfReport">Export Pdf Report</a>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ConsolidatedModel">Export Consolidated Excel</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ExportEPFReport">EPF File Export</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ExportEsiReport">Export ESI Report</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="CalculateSalary">Calculate Salary</a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="SalaryDetailsUpload">Salary Details Upload</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ExportHDFCToFile">Export HDFC Bank Salary</a>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="ExportOtherBanksToFile">Export Other Bank Salary</a>
+                </div>
+            </div>
+        </div>
+    </p>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table" style=" background-color: rgba(255, 255, 255, 0.8);">
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpCode)">Employee Code</label>
+                        </th>
+                        <th>
+                            <label for=" @Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpCtg)">Employee Category</label>
+                        </th>
+                        <th>
+                            <label for=" @Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpName)">Employee Name</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpPhoto)">Profile Photo</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().Gender)">Gender</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().AadharNo)">Aadhar No.</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmerContactNo)">Emergency Contact</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpCurrentStatus)">Current Status</label>
+                        </th>
+                        <th>
+                            <label for="@Html.DisplayNameFor(model => model.Data.FirstOrDefault().ReportingTo)">Reporting To</label>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Data)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmpCode)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmpCtg)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmpName)
+                            </td>
+
+                            <td>
+                                @* <img src="../Images/@Html.DisplayFor(modelItem => item.EmpPhoto)" style="width:75px; height:75px" /> *@
+                                @*  @Html.DisplayFor(modelItem => item.EmpPhoto) *@
+                                @if (item.EmpPhoto != null && item.EmpPhoto != "NULL")
+                                {
+                                    @if (item.EmpPhoto != null && item.EmpPhoto.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + item.EmpPhoto)" type="application/pdf" width="80px" height="100px" />
+                                    }
+                                    else if (item.EmpPhoto != null && item.EmpPhoto.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || item.EmpPhoto.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || item.EmpPhoto.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" +item.EmpPhoto)" width="75px" height="75px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span><img src="../Images/@Html.DisplayFor(modelItem => item.EmpPhoto)" style="width:75px; height:75px" /></span>
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Gender)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AadharNo)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmerContactNo)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmpCurrentStatus)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReportingTo)
+                            </td>
+
+                            <td>
+                                <a asp-action="Edit" class="btn btn-sm btn-info" asp-route-id="@item.EmpCode">Edit</a>
+                            </td>
+                            <td>
+                                <a asp-action="Details" class="btn btn-sm btn-primary m1-1" asp-route-id="@item.EmpCode">Details</a>
+                            </td>
+                            <td>
+                                <a asp-action="Delete" class="btn btn-sm btn-dark m1-1" asp-route-id="@item.EmpCode">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <br />
+    <partial name="_PaginationPartial" view-data="ViewData" model="Model" />
+
+</body>
+</html>

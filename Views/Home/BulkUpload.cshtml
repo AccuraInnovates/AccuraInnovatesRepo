@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('../Image/Welding.jpg') center/cover no-repeat fixed; 
+            height: 100%;
+            background-attachment: fixed;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            top: 65px;
+            left: 12.5%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+           
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 80%;
+            height: auto;
+        }
+              .bulk-container {
+            top: 65px;
+            left: 12.5%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            box-sizing: border-box;
+            text-size-adjust: 12px;
+            border: 1px solid #ccc;
+            width: 80%;
+            
+
+        }
+
+        .success-message {
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size:18px;
+        }
+
+
+        .btn {
+            cursor: pointer;
+        }
+
+        .btn-dark {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .text-dark {
+            color: #343a40;
+        }
+
+         
+       
+
+        h1,h3{
+            text-shadow:2px 2px 4px black;
+            text-align:center;
+            text-decoration:dashed;
+        }
+
+        /* .exelupload{
+            display:none;
+        } */
+
+</style>
+
+</head>
+
+<body>
+   
+<form class="bulk-Container" method="post" enctype="multipart/form-data">
+    <h1>Employee Master Data</h1>
+    <br />
+        <h3>Bulk Upload File</h3>
+<hr />
+  
+    
+        <div style="text-align:center">
+            <p style="color: green;">@ViewBag.Success</p>
+            <p style="color: red;">@ViewBag.ErrorMessage</p>
+        </div>
+   <div class="row" style="padding:5px">
+            <div class="col-md-2" style="text-align:center;">
+                <a asp-action="Index" asp-controller="EmployeeMasterData1" style="width:125px; color:black" id="Button-img" class="btn btn-sm btn-primary m1-1">Back to List</a>
+               
+            </div>
+
+
+            <div class="col-md-7" style="text-align:center">
+                <label style="text-decoration:underline;font-size:18px;margin-right:15px">Upload Employee Details Excel File:</label>
+
+                <div style="height:40px"></div>
+               
+                <div class="exelupload" style="align-items:center;" >
+                    
+                    <label style="text-align:left;font-size:15px;display:inline;padding-left:30px">Select Excel file:</label>
+                    <input type="file" name="file"  />
+
+                    <br />
+                    <br />
+                    <input type="submit" asp-controller="Home"  asp-action="BulkUpload" class="btn btn-dark " value="Upload Excel File" />
+
+                    <br />
+                    <br />
+                    <input type="submit" asp-controller="Home" asp-action="DownloadBulkUploadSampleExcel" class="btn btn-dark"  value="Excel Sample" />
+                    <div style="height:50px"></div>
+
+                
+                </div>
+            </div>
+
+            <div class="col-md-2" style="text-align:right">
+                
+                <div>
+                    @if (!string.IsNullOrEmpty(ViewBag.Success)) 
+                    {
+                    <a asp-action="ImageUpload" asp-controller="Home" style="width:150px; color:black" id="Button-img" class="text-dark btn btn-sm btn-primary">Bulk Upload Images</a>
+                    }
+                </div>
+            </div>
+
+      
+  
+  
+ 
+    </div>
+    
+</form>
+  
+</body>
+</html> 
+@* <!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .Payslip{
+            border:1px black solid;
+            background-color: rgba(255, 255, 255, 0.8);
+            width:90%
+       }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background: url('../Image/Welding.jpg') center/cover no-repeat fixed;  */
+            height: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+    </head>
+    <body>
+    <table class="Payslip">
+        <tr style="text-align:center;border:solid 1px black;>
+            <td colspan="3"><img src="~/Image/logo.png" /></td>
+            <td colspan="9">ACCURA WELDRODS KOVAI PVT. LTD.<br />NO.1/155-2,PONNANDANPALAYAM,S.F NO-454,PART 475/2,KANIYR VILLAGE</td>
+        </tr>
+        <tr style="text-align:center;border:solid 1px black; margin:2px;"><td colspan="12">Payslip for the Month of Jan-2024</td></tr>
+            <tr>
+                <td>
+            <table style="border-collapse: collapse;">
+                <tr>
+                <td class="col-md-5" style="border: 1px solid #000; padding: 10px;width:50%">
+                    <table>
+                        <tr><td>Emp.Code</td><td>122334</td></tr>
+                        <tr><td>Father's Name</td><td>asdf</td></tr>
+                        <tr><td>Dob</td><td>123456</td></tr>
+                        <tr><td>Department</td><td>it</td></tr>
+                        <tr><td>Designation</td><td>dev</td></tr>
+                    </table>
+                </td>
+                <td  style="border: 1px solid #000; padding: 10px;width:25%">
+                    <table style="border-collapse: collapse;">
+                        <tr><td>A/C No</td><td>122334</td></tr>
+                        <tr><td>Esi No</td><td>234567</td></tr>
+                        <tr><td>Pf No</td><td>123456</td></tr>
+                        <tr><td>Doj</td><td>i3456</td></tr>
+                    </table>
+                </td>
+                <td  style="border: 1px solid #000; padding: 10px;width:25%">
+                    <table>
+                        <tr><td>Total Working Days</td><td>12</td></tr>
+                        <tr><td>Total Weekoff Days</td><td>2</td></tr>
+                    </table>
+                </td>
+                </tr>
+                </table>
+            </td>
+            </tr>
+        <tr>
+            <td>
+                <table style="border-collapse: collapse;">
+                    <tr>
+                        <td class="col-md-4" style="border: 1px solid #000; padding: 10px;width:50%">
+                            <table>
+                                <tr><th>Leave</th><th>CL</th><th>SL</th></tr>
+                                <tr><td>Total Allowed</td><td>18</td><td>6</td></tr>
+                                <tr><td>Consumed in Pre.Months</td><td>2</td><td>4</td></tr>
+                                <tr><td>Consumed for the Month</td><td>1</td><td>1</td></tr>
+                                <tr><td>Balance Available</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table style="border-collapse: collapse;">
+                                <tr><th colspan="2">Compensation Leave Details</th></tr>
+                                <tr><td>Opening Balance</td><td>2</td></tr>
+                                <tr><td>Corrent month Addition</td><td>123456</td></tr>
+                                <tr><td>Consumed for the Month</td><td>i3456</td></tr>
+                                <tr><td>Balance Available</td><td>i3456</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table>
+                                <tr><th>Total Present Days</th><th>12</th></tr>
+                                <tr><td>NH Days</td><td>2</td></tr>
+                                <tr><td>LOP Days</td><td>2</td></tr>
+                                <tr><td>Total Salary Days</td><td>2</td></tr>
+                                <tr><td>Gross Salary=Basic+HRA</td><td>2</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table style="border-collapse: collapse;">
+                                
+                                <tr><td>Advance 1 Amount</td><td>2</td></tr>
+                                <tr><td>Deducted Amount</td><td>123456</td></tr>
+                                <tr><td>Deduction for the Month</td><td>i3456</td></tr>
+                                <tr><td>Closing Balance</td><td>i3456</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table>
+                                
+                                <tr><td>Advance 2 Amount</td><td>2</td></tr>
+                                <tr><td>Deducted Amount</td><td>2</td></tr>
+                                <tr><td>Deduction for the Month</td><td>2</td></tr>
+                                <tr><td>Closing Balance</td><td>2</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+    </table>
+    </body>
+    </html> *@

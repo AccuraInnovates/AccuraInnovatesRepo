@@ -1,0 +1,51 @@
+﻿@model Accura_Innovatives.Models.SalaryCalculation
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Payroll</h4>
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p style="color: red;">@ViewBag.ErrorMessage</p>
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditSalaryDetails" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row" style="border:solid 1px black">
+                <div class="col-5 form-group">
+                    <label asp-for="SalCalId" class="control-label"></label>
+                    <input asp-for="SalCalId" readonly class="form-control" />
+                    <span asp-validation-for="SalCalId" class="text-danger"></span>
+                </div>
+                <div class="col-5 form-group">
+                    <label asp-for="EmpCode" class="control-label"></label>
+                    <input asp-for="EmpCode" readonly class="form-control" />
+                    <span asp-validation-for="EmpCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row" style="border:solid 1px black">
+                <label>Editable fields:</label>
+                <div class="col-5 form-group">
+                    <label asp-for="BasicPay" class="control-label"></label>
+                    <input asp-for="BasicPay" type="number" class="form-control" />
+                    <span asp-validation-for="BasicPay" class="text-danger"></span>
+                </div>
+                <div class="col-5 form-group">
+                    <label asp-for="OtherAllowances" class="control-label"></label>
+                    <input asp-for="OtherAllowances" type="number" class="form-control" />
+                    <span asp-validation-for="OtherAllowances" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

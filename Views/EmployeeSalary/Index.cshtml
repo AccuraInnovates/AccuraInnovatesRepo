@@ -1,0 +1,125 @@
+﻿@model cloudscribe.Pagination.Models.PagedResult<Accura_Innovatives.Models.SalaryCalculation>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Controller"] = "EmployeeSalary";
+    ViewData["Action"] = "Index";
+}
+
+@using cloudscribe.Pagination.Models;
+@using System.ComponentModel.DataAnnotations
+<br />
+<br />
+<br />
+
+
+<h1 class="text-white text-center">Index</h1>
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p style="color: red;">@ViewBag.ErrorMessage</p>
+}
+@if (!string.IsNullOrEmpty(ViewBag.Success))
+{
+    <p style="color: green;">@ViewBag.Success</p>
+}
+<form asp-action="Index" method="get">
+    <div>
+        <p>
+            <label class="text-white">Employee Code:</label><input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-success" />
+            <a asp-action="Index" asp-controller="EmployeeMasterData1"> Back To Employee Details</a>
+        </p>
+    </div>
+</form>
+<p>
+    <div class="row">
+       @*  <div class="col-md-3">
+            <a asp-action="Create" class="btn btn-sm btn-primary m1-1">Create New</a>
+        </div>
+         *@
+        <div class="col-md-3">
+            <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="Home" asp-action="Attendance">Attendance Upload</a>
+        </div>
+        <div class="col-md-3">
+            <a class="btn btn-sm btn-primary m1-1" asp-area="" asp-controller="EmployeeMasterData1" asp-action="SalaryDetailsUpload">Salary Details Upload</a>
+        </div>
+    </div>
+
+</p>
+<table class="table" style=" background-color: rgba(255, 255, 255, 0.8);">
+    <thead>
+        <tr>
+            <th class="visually-hidden">@Html.DisplayNameFor(model => model.Data.FirstOrDefault().SalCalId)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().EmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().BasicPay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().OtherAllowances)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().GrossPay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().NetPay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().CTC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.FirstOrDefault().LastEditedDate)
+            </th>
+           @*  <th></th>
+            <th></th>
+            <th></th> *@
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Data) {
+        <tr>
+                <td class="visually-hidden">@Html.DisplayFor(model => model.Data.FirstOrDefault().SalCalId)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpCode)
+                </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpName)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BasicPay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtherAllowances)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GrossPay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NetPay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CTC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastEditedDate)
+                </td>
+                @* <td>
+                    <a asp-action="Edit" class="btn btn-sm btn-info" asp-route-id="@item.SalCalId">Edit</a>
+                </td>
+                <td>
+                    <a asp-action="Details" class="btn btn-sm btn-primary m1-1" asp-route-id="@item.SalCalId">Details</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" class="btn btn-sm btn-dark m1-1" asp-route-id="@item.SalCalId">Delete</a>
+                </td> *@
+            </tr>
+        }
+    </tbody>
+</table>
+
+<partial name="_PaginationPartial" view-data="ViewData" model="Model" />

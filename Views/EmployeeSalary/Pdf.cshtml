@@ -1,0 +1,176 @@
+﻿@* @model Accura_Innovatives.Models.SalaryCalculation
+
+@* 
+<!Doctype html>
+ <html>    
+     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+ </style>
+     </head>
+
+ <body>
+    <div>
+
+    </div>
+</body>
+ </html> *@
+
+@*<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .Payslip{
+            border:1px black solid;
+            background-color: rgba(255, 255, 255, 0.8);
+            width:90%
+       }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background: url('../Image/Welding.jpg') center/cover no-repeat fixed;  */
+            height: 100%;
+            background-attachment: fixed;
+        }
+    </style>
+    </head>
+    <body>
+    <table class="Payslip">
+        <tr style="text-align:center;border:solid 1px black;">
+            <td colspan="3"><img src="~/Image/logo.png" /></td>
+            <td colspan="9">ACCURA WELDRODS KOVAI PVT. LTD.<br />NO.1/155-2,PONNANDANPALAYAM,S.F NO-454,PART 475/2,KANIYR VILLAGE</td>
+        </tr>
+        <tr style="text-align:center;border:solid 1px black; margin:2px;"><td colspan="12">Payslip for the Month of Jan-2024</td></tr>
+            <tr>
+                <td>
+            <table style="border-collapse: collapse;">
+                <tr>
+                <td class="col-md-5" style="border: 1px solid #000; padding: 10px;width:50%">
+                    <table>
+                        <tr><td>Emp.Code</td><td>1</td></tr>
+                        <tr><td>Father's Name</td><td>wert</td></tr>
+                        <tr><td>Dob</td><td>123456</td></tr>
+                        <tr><td>Department</td><td>it</td></tr>
+                        <tr><td>Designation</td><td>dev</td></tr>
+                    </table>
+                </td>
+                <td  style="border: 1px solid #000; padding: 10px;width:25%">
+                    <table style="border-collapse: collapse;">
+                        <tr><td>A/C No</td><td>122334</td></tr>
+                        <tr><td>Esi No</td><td>234567</td></tr>
+                        <tr><td>Pf No</td><td>123456</td></tr>
+                        <tr><td>Doj</td><td>i3456</td></tr>
+                    </table>
+                </td>
+                <td  style="border: 1px solid #000; padding: 10px;width:25%">
+                    <table>
+                        <tr><td>Total Working Days</td><td>12</td></tr>
+                        <tr><td>Total Weekoff Days</td><td>2</td></tr>
+                    </table>
+                </td>
+                </tr>
+                </table>
+            </td>
+            </tr>
+        <tr>
+            <td>
+                <table style="border-collapse: collapse;">
+                    <tr>
+                        <td class="col-md-4" style="border: 1px solid #000; padding: 10px;width:50%">
+                            <table>
+                                <tr><th>Leave</th><th>CL</th><th>SL</th></tr>
+                                <tr><td>Total Allowed</td><td>18</td><td>6</td></tr>
+                                <tr><td>Consumed in Pre.Months</td><td>2</td><td>4</td></tr>
+                                <tr><td>Consumed for the Month</td><td>1</td><td>1</td></tr>
+                                <tr><td>Balance Available</td><td>1</td><td>1</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table style="border-collapse: collapse;">
+                                <tr><th colspan="2">Compensation Leave Details</th></tr>
+                                <tr><td>Opening Balance</td><td>2</td></tr>
+                                <tr><td>Corrent month Addition</td><td>123456</td></tr>
+                                <tr><td>Consumed for the Month</td><td>i3456</td></tr>
+                                <tr><td>Balance Available</td><td>i3456</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table>
+                                <tr><th>Total Present Days</th><th>12</th></tr>
+                                <tr><td>NH Days</td><td>2</td></tr>
+                                <tr><td>LOP Days</td><td>2</td></tr>
+                                <tr><td>Total Salary Days</td><td>2</td></tr>
+                                <tr><td>Gross Salary=Basic+HRA</td><td>2</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table style="border-collapse: collapse;">
+                                
+                                <tr><td>Advance 1 Amount</td><td>2</td></tr>
+                                <tr><td>Deducted Amount</td><td>123456</td></tr>
+                                <tr><td>Deduction for the Month</td><td>i3456</td></tr>
+                                <tr><td>Closing Balance</td><td>i3456</td></tr>
+                            </table>
+                        </td>
+                        <td style="border: 1px solid #000; padding: 10px;width:25%">
+                            <table>
+                                
+                                <tr><td>Advance 2 Amount</td><td>2</td></tr>
+                                <tr><td>Deducted Amount</td><td>2</td></tr>
+                                <tr><td>Deduction for the Month</td><td>2</td></tr>
+                                <tr><td>Closing Balance</td><td>2</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                                <tr>
+                                    <td style="border: 1px solid #000; padding: 10px;width:50%">
+                                        <table>
+                                            <tr><th>Salary Particulars</th></tr>
+                                            <tr><td>Basic</td><td>6</td></tr>
+                                            <tr><td>HRA</td><td>4</td></tr>
+                                            <tr><td>Incentive_1</td><td>0.00</td></tr>
+                                            <tr><td>Incentive_2</td><td>0.00</td></tr>
+                                            <tr><td>Incentive_2</td><td>0.00</td></tr>
+                                            <tr><td></td><td>0.00</td></tr>
+                                            <tr><td>Other Earnings</td><td>0.00</td></tr>
+                                        </table>
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 10px;width:25%">
+                                        <table style="border-collapse: collapse;">
+                                            <tr><th colspan="2">Compensation Leave Details</th></tr>
+                                            <tr><td>Opening Balance</td><td>2</td></tr>
+                                            <tr><td>Corrent month Addition</td><td>123456</td></tr>
+                                            <tr><td>Consumed for the Month</td><td>i3456</td></tr>
+                                            <tr><td>Balance Available</td><td>i3456</td></tr>
+                                        </table>
+                                    </td>
+                                    <td style="border: 1px solid #000; padding: 10px;width:25%">
+                                        <table>
+                                            <tr><th>Total Present Days</th><th>12</th></tr>
+                                            <tr><td>NH Days</td><td>2</td></tr>
+                                            <tr><td>LOP Days</td><td>2</td></tr>
+                                            <tr><td>Total Salary Days</td><td>2</td></tr>
+                                            <tr><td>Gross Salary=Basic+HRA</td><td>2</td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                </table>
+            </td>
+        </tr>
+
+    </table>
+    </body>
+    </html>
+ *@

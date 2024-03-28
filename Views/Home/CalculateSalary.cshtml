@@ -1,0 +1,19 @@
+﻿<form method="post" style="padding:10px;width:50%;left:25%; top:25%;position:absolute; background-color: rgba(255, 255, 255, 0.8);" enctype="multipart/form-data">
+    <h3 style="text-align:center"> Salary Calculation:</h3>
+    <p style="color: green;">@ViewBag.Success</p>
+    <p style="color: red;">@ViewBag.Error</p>
+
+    <div class="row" style="padding:10px;">
+        <label>Enter the Month and Year:</label>
+        <input type="text"  style="width:200px;" name="MonthYear" required/>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-5">
+            <input type="submit" style="width:auto;height:auto; padding-top:2px; padding-bottom:2px; margin:10px;" asp-action="CalculateSalary" asp-controller="EmployeeSalary" class="btn btn-sm btn-primary" value="Calculate" />
+        </div>
+           <div class="col-md-5">
+            <a style="width:100px;height:auto;padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-controller="EmployeeMasterData1" asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</form>

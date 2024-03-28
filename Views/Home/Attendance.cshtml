@@ -1,0 +1,25 @@
+﻿<form method="post" style="padding:10px;width:50%;left:25%; top:25%;position:absolute; background-color: rgba(255, 255, 255, 0.8);" enctype="multipart/form-data">
+    <h3> Attendance Upload:</h3>
+    <p style="color: green;">@ViewBag.Success</p>
+    <p style="color: red;">@ViewBag.Error</p>
+    
+    <div class="row">
+        <label>Select Excel file:</label>
+        <input type="file" name="file" />
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-3">
+            <input type="submit" asp-controller="Home" asp-action="Attendance" class="btn btn-dark" value="Upload Excel File" />
+        </div>
+        <div class="col-3">
+            <input type="submit" asp-controller="Home" asp-action="DownloadAttendanceSampleExcel" class="btn btn-dark" style="margin-left:40px;" value="Excel Sample" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <a asp-action="Index" asp-controller="EmployeeMasterData1" class="text-dark">Back to List</a>
+        </div>
+        
+    </div>
+</form>

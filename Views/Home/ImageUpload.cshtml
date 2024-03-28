@@ -1,0 +1,2127 @@
+﻿@model Accura_Innovatives.EmployeeViewModel
+
+
+@{
+    ViewData["Title"] = "ImageUpload";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            
+            height: 100%;
+            background-attachment: fixed;
+        }
+
+        body {
+            display: flex;
+            background: url('../Image/Welding.jpg') center/cover no-repeat fixed;
+            align-items: center;
+            min-height: 100vh;
+            text-align: left;
+            background-attachment:fixed;
+        }
+
+        .img-container {
+           
+            background-color: rgba(255, 255, 255, 0.8);
+           /*  position: absolute; */
+            box-sizing: border-box;
+            text-size-adjust: 12px;
+            border: 1px solid none;
+            width: 100%;
+            /* left: 16.5%; */
+            padding-left:12.5px;
+            margin-left:0px;
+           
+        }
+        .container{
+            top: 165px;
+            
+            padding-top:40px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size:13px:
+        }
+        form{
+            padding:10px;
+            width:100%;
+            align-items:center;
+
+        }
+
+       /*  input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        } */
+        
+        h1, h3 {
+            text-shadow: 2px 2px 4px black;
+            text-align: center;
+            text-decoration: dashed;
+            
+        }
+
+        .heads {
+            text-decoration: underline;
+            font-size: 15px;
+            
+        }
+</style>
+    </head>
+<body>
+
+    <div class="container" >
+    
+       
+    <div class="row img-container">
+
+            <h1>Employee Mater Data</h1>
+            <h3>Bulk Upload Images</h3>
+            <hr />
+        
+            <p>
+                @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                {
+
+                    <label style="display:inline-block" >Employee Code:</label>
+                    <input  type="number" id="code" name="code" value="" required/>
+
+                        @* @Html.TextBox("code", "", htmlAttributes: new { @class = " w-50 form-control" }) *@
+
+
+                    <input type="submit"  value="Search" class="btn btn-success" />
+                  
+                        <a asp-action="Index" asp-controller="EmployeeMasterData1" style="width:100px" class="text-white btn btn-sm btn-primary">Back to List</a>
+                
+                    }
+            </p>
+            @*  <form class="d-flex" asp-action="ImageUpload" asp-controller="Home" method="get">
+            <input name="searchString" class="form-control me-1" type="search" aria-label="Search" />
+            <button class="btn btn-dark" type="submit">Fetch</button>
+            </form> *@
+        
+
+    </div>
+        <form asp-action="SaveImage" asp-controller="Home" enctype="multipart/form-data" style=" background-color: rgba(255, 255, 255, 0.8);">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       
+        <div>
+            <div>
+                    <p style="color: green;text-align:center; font-size:20px;">@ViewBag.Success</p>
+                    <p style="color: red;text-align:center;font-size:20px;">@ViewBag.ErrorMessage</p>
+            </div>
+            
+                <div style="border:black 1px solid; padding: 10px;">
+                    <label class="heads" for="EmpDet">Employee Details:</label>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EmpCode)
+                </dt>
+                <dt class="col-sm-10">
+                    @Html.DisplayFor(model => model.EmpCode)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EmpCtg)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EmpCtg)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EmpName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EmpName)
+                </dd>
+            </dl>
+        </div>
+        </div>
+            <br />
+        <input type="hidden" asp-for="EmpCtg" />
+        <input type="hidden" asp-for="EmpCode" />
+        <input type="hidden" asp-for="EmpName" />
+        <input type="hidden" asp-for="EmpAadharName" />
+        <input type="hidden" asp-for="EmpPanName" />
+        <input type="hidden" asp-for="EmpCertifName" />
+        <input type="hidden" asp-for="EmpNameInBank" />
+        <input type="hidden" asp-for="EmpBcardName" />
+            <div style="border:black 1px solid; padding: 10px;">
+                <label class="heads" for="EmpPer">Employee Personal Images:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="ProfilePhoto" class="control-label">Upload Profile Photo:</label>
+                        <input asp-for="ProfilePhoto" type="file" id="imageInput" accept="image/*" class="form-control" />
+                        <span asp-validation-for="ProfilePhoto" class="text-danger"></span>
+                        <div id="uploaded-image-container">
+                            <div id="imagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" asp-for="Gender" />
+                <input type="hidden" asp-for="BloodGrp" />
+                <input type="hidden" asp-for="AadharNo" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="AadharCard" class="control-label">Upload Adhar Photo:</label>
+                        <input asp-for="AadharCard" type="file" id="aadharImageInput"  class="form-control" />
+                        <span asp-validation-for="AadharCard" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="aadharImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PanNo" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="PanCard" class="control-label">Upload Pancard Photo:</label>
+                        <input asp-for="PanCard" id="panImageInput"  class="form-control" />
+                        <span asp-validation-for="PanCard" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="panImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="DrvLinNo" />
+                <input type="hidden" asp-for="DrvLinVal" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="DrvLinCard" class="control-label">Upload Driving Licence Photo:</label>
+                        <input asp-for="DrvLinCard" class="form-control" id="drivingLicenceImageInput"  />
+                        <span asp-validation-for="DrvLinCard" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="drivingLicenceImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PassportNo" />
+                <input type="hidden" asp-for="PassportVal" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="PassportCard" class="control-label">Upload Passport Photo:</label>
+                        <input asp-for="PassportCard" class="form-control" id="passportImageInput"  />
+                        <span asp-validation-for="PassportCard" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="passportImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br />
+            <input type="hidden" asp-for="AadharDob" />
+            <input type="hidden" asp-for="Dob" />
+            <input type="hidden" asp-for="PresentAddressLine1" />
+            <input type="hidden" asp-for="PresentAddressLine2" />
+            <input type="hidden" asp-for="PresentAddressCity" />
+            <input type="hidden" asp-for="PresentAddressState" />
+            <input type="hidden" asp-for="PresentAddressZipcode" />
+            <input type="hidden" asp-for="PermAddressLine1" />
+            <input type="hidden" asp-for="PermAddressLine2" />
+            <input type="hidden" asp-for="PermAddressCity" />
+            <input type="hidden" asp-for="PermAddressState" />
+            <input type="hidden" asp-for="PermAddressZipcode" />
+            <input type="hidden" asp-for="CommAddressLine1" />
+            <input type="hidden" asp-for="CommAddressLine2" />
+            <input type="hidden" asp-for="CommAddressCity" />
+            <input type="hidden" asp-for="CommAddressState" />
+            <input type="hidden" asp-for="CommAddressZipcode" />
+            <input type="hidden" asp-for="Nationality" />
+            <input type="hidden" asp-for="MaritalStatus" />
+            <input type="hidden" asp-for="PerEmail" />
+            <input type="hidden" asp-for="PerMobile" />
+            <input type="hidden" asp-for="PerAccNo" />
+            <input type="hidden" asp-for="PerBnkName" />
+            <input type="hidden" asp-for="PerBnkIfsc" />
+            <input type="hidden" asp-for="PerBnkBranch" />
+            <input type="hidden" asp-for="FamMemName1" />
+            <input type="hidden" asp-for="FamMemRel1" />
+            <input type="hidden" asp-for="FamMemContact1" />
+            <input type="hidden" asp-for="FamMemName2" />
+            <input type="hidden" asp-for="FamMemRel2" />
+            <input type="hidden" asp-for="FamMemContact2" />
+            <input type="hidden" asp-for="FamMemName3" />
+            <input type="hidden" asp-for="FamMemRel3" />
+            <input type="hidden" asp-for="FamMemContact3" />
+            <input type="hidden" asp-for="FamMemName4" />
+            <input type="hidden" asp-for="FamMemRel4" />
+            <input type="hidden" asp-for="FamMemContact4" />
+            <input type="hidden" asp-for="FamMemName5" />
+            <input type="hidden" asp-for="FamMemRel5" />
+            <input type="hidden" asp-for="FamMemContact5" />
+            <input type="hidden" asp-for="EmerContactName" />
+            <input type="hidden" asp-for="EmerContactRel" />
+            <input type="hidden" asp-for="EmerContactNo" />
+            <div style="border:black 1px solid; padding: 10px;">
+                <label class="heads" for="EmpEdu">Employee Educational Images:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="TcCard" class="control-label">Upload Transfer Certificate:</label>
+                        <input asp-for="TcCard" class="form-control" id="TCImageInput"  />
+                        <span asp-validation-for="TcCard" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="TCImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="HighQuali" />
+                <input type="hidden" asp-for="HighQualiInstituteName" />
+                <input type="hidden" asp-for="HighQualiMark" />
+                <input type="hidden" asp-for="HighQualiPassYear" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="HighQualiCerf1" class="control-label">Upload HighQualification(PG) Proof:</label>
+                        <input asp-for="HighQualiCerf1" class="form-control" id="PGImageInput" />
+                        <span asp-validation-for="HighQualiCerf1" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="PGImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="HighQuali2" />
+                <input type="hidden" asp-for="HighQualiInstituteName2" />
+                <input type="hidden" asp-for="HighQualiMark2" />
+                <input type="hidden" asp-for="HighQualiPassYear2" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="HighQualiCerf2" class="control-label">Upload HighQualification(UG) Proof:</label>
+                        <input asp-for="HighQualiCerf2" class="form-control" id="UGImageInput" />
+                        <span asp-validation-for="HighQualiCerf2" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="UGImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="HscSchoolName" />
+                <input type="hidden" asp-for="HscMark" />
+                <input type="hidden" asp-for="HscPassYear" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="HscCerf" class="control-label">Upload HSC Proof</label>
+                        <input asp-for="HscCerf" class="form-control" id="12ImageInput" />
+                        <span asp-validation-for="HscCerf" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="12ImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="SslcSchoolName" />
+                <input type="hidden" asp-for="SslcMark" />
+                <input type="hidden" asp-for="SslcPassYear" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="SslcCerf" class="control-label">Upload SSLC Proof:</label>
+                        <input asp-for="SslcCerf" class="form-control" id="10ImageInput" />
+                        <span asp-validation-for="SslcCerf" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="10ImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="OtherCerfName1" />
+                <input type="hidden" asp-for="OtherCerfInstitute1" />
+                <input type="hidden" asp-for="OtherCerfMark1" />
+                <input type="hidden" asp-for="OtherCerfDuration1" />
+                <input type="hidden" asp-for="OtherCerfPassYear1" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="OtherCerf1" class="control-label">Other Cetificate(1) Proof:</label>
+                        <input asp-for="OtherCerf1" class="form-control" id="otherCerti1ImageInput"  />
+                        <span asp-validation-for="OtherCerf1" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="otherCerti1ImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="OtherCerfName2" />
+                <input type="hidden" asp-for="OtherCerfInstitute2" />
+                <input type="hidden" asp-for="OtherCerfMark2" />
+                <input type="hidden" asp-for="OtherCerfDuration2" />
+                <input type="hidden" asp-for="OtherCerfPassYear2" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="OtherCerf2" class="control-label">Other Certificate(2) Proof:</label>
+                        <input asp-for="OtherCerf2" class="form-control" id="otherCerti2ImageInput"  />
+                        <span asp-validation-for="OtherCerf2" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="otherCerti2ImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="OtherCerfName3" />
+                <input type="hidden" asp-for="OtherCerfInstitute3" />
+                <input type="hidden" asp-for="OtherCerfMark3" />
+                <input type="hidden" asp-for="OtherCerfDuration3" />
+                <input type="hidden" asp-for="OtherCerfPassYear3" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="OtherCerf3" class="control-label">Other Certificate(3) Proof:</label>
+                        <input asp-for="OtherCerf3" class="form-control" id="otherCerti3ImageInput" />
+                        <span asp-validation-for="OtherCerf3" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="otherCerti3ImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br />
+            <input type="hidden" asp-for="ExpYears" />
+            <input type="hidden" asp-for="PreWorkCmp1" />
+            <input type="hidden" asp-for="PreWorkCmpSdt1" />
+            <input type="hidden" asp-for="PreWorkCmpEdt1" />
+            <div style="border:black 1px solid; padding: 10px;">
+                <label class="heads" for="EmpProf">Employee Pre Professional Images:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="PreWorkCmpDoc1" class="control-label">Previous Work(1) Proof:</label>
+                        <input asp-for="PreWorkCmpDoc1" class="form-control" id="workProofImageInput1"  />
+                        <span asp-validation-for="PreWorkCmpDoc1" class="text-danger"></span>
+                        <div class="col-md-5  uploaded-image-container" id="uploaded-image-container">
+                            <div id="workProofImagePreview1"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PreWorkCmp2" />
+                <input type="hidden" asp-for="PreWorkCmpSdt2" />
+                <input type="hidden" asp-for="PreWorkCmpEdt2" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="PreWorkCmpDoc2" class="control-label">Previous Work(2) Proof:</label>
+                        <input asp-for="PreWorkCmpDoc2" class="form-control" id="workProofImageInput2" />
+                        <span asp-validation-for="PreWorkCmpDoc2" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="workProofImagePreview2"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PreWorkCmp3" />
+                <input type="hidden" asp-for="PreWorkCmpSdt3" />
+                <input type="hidden" asp-for="PreWorkCmpEdt3" />
+                <div class=" col-md-4">
+                    <div class="form-group">
+                            <label asp-for="PreWorkCmpDoc3" class="control-label">Previous Work(3) Proof:</label>
+                        <input asp-for="PreWorkCmpDoc3" class="form-control" id="workProofImageInput3" />
+                        <span asp-validation-for="PreWorkCmpDoc3" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="workProofImagePreview3"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PreWorkCmp4" />
+                <input type="hidden" asp-for="PreWorkCmpSdt4" />
+                <input type="hidden" asp-for="PreWorkCmpEdt4" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="PreWorkCmpDoc4" class="control-label">Previous Work(4) Proof:</label>
+                        <input asp-for="PreWorkCmpDoc4" class="form-control" id="workProofImageInput4"  />
+                        <span asp-validation-for="PreWorkCmpDoc4" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="workProofImagePreview4"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="PreWorkCmp5" />
+                <input type="hidden" asp-for="PreWorkCmpSdt5" />
+                <input type="hidden" asp-for="PreWorkCmpEdt5" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="PreWorkCmpDoc5" class="control-label">Previous Work(5) Proof:</label>
+                        <input asp-for="PreWorkCmpDoc5" class="form-control" id="workProofImageInput5"  />
+                        <span asp-validation-for="PreWorkCmpDoc5" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="workProofImagePreview5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br />
+            <input type="hidden" asp-for="WorkExBreak1" />
+            <input type="hidden" asp-for="WorkExBreakSdt1" />
+            <input type="hidden" asp-for="WorkExBreakEdt1" />
+            <input type="hidden" asp-for="WorkExBreak2" />
+            <input type="hidden" asp-for="WorkExBreakSdt2" />
+            <input type="hidden" asp-for="WorkExBreakEdt2" />
+            <input type="hidden" asp-for="WorkExBreak3" />
+            <input type="hidden" asp-for="WorkExBreakSdt3" />
+            <input type="hidden" asp-for="WorkExBreakEdt3" />
+            <input type="hidden" asp-for="WorkExBreak4" />
+            <input type="hidden" asp-for="WorkExBreakSdt4" />
+            <input type="hidden" asp-for="WorkExBreakEdt4" />
+            <input type="hidden" asp-for="PreWorkCmpCtc" />
+            <input type="hidden" asp-for="PreWorkCmpEpfStatus" />
+            <input type="hidden" asp-for="PreWorkCmpEsiStatus" />
+            <input type="hidden" asp-for="EmpDept" />
+            <input type="hidden" asp-for="EmpDesignation" />
+            <input type="hidden" asp-for="PaymentMode" />
+            <input type="hidden" asp-for="EmpDoj" />
+            <input type="hidden" asp-for="EmpOnboardCtg" />
+            <input type="hidden" asp-for="ContractorId" />
+            <input type="hidden" asp-for="SalaryPaidBy" />
+            <input type="hidden" asp-for="EmpRole" />
+            <input type="hidden" asp-for="SalAccEligibility" />
+            <input type="hidden" asp-for="SalAccNo" />
+            <input type="hidden" asp-for="SalBankName" />
+            <input type="hidden" asp-for="SalBankIfsc" />
+            <input type="hidden" asp-for="SalBankBranch" />
+            <input type="hidden" asp-for="SalBenfCode" />
+            <input type="hidden" asp-for="EsiEpfEligibility" />
+            <input type="hidden" asp-for="Form11Willingness" />
+            <input type="hidden" asp-for="Form11Eligibility" />
+            <input type="hidden" asp-for="Form11No" />
+            <div style="border:black 1px solid; padding: 10px;">
+                <label class="heads" for="EmpVerf">Employee Verification Images:</label>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Form11Doc1" class="control-label">Form XI Proof(1):</label>
+                        <input asp-for="Form11Doc1" class="form-control" id="formXIAttachmentImageInput" />
+                        <span asp-validation-for="Form11Doc1" class="text-danger"></span>
+                        <div class="col-md-4" id="uploaded-image-container">
+                            <div id="formXIAttachmentImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="Form11Doc2" class="control-label">Form XI Proof(2):</label>
+                        <input asp-for="Form11Doc2" class="form-control" id="formXIScreenShotImageInput" />
+                        <span asp-validation-for="Form11Doc2" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="formXIScreenShotImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="EsiJdt" />
+                <input type="hidden" asp-for="EpfJdt" />
+                <input type="hidden" asp-for="EsiNo" />
+                <input type="hidden" asp-for="EsiNomineeName" />
+                <input type="hidden" asp-for="EpfNo" />
+                <input type="hidden" asp-for="EpfNomineeName" />
+                <input type="hidden" asp-for="SalCriteria" />
+                <input type="hidden" asp-for="EmpSal" />
+                <input type="hidden" asp-for="EmpWageShift" />
+                <input type="hidden" asp-for="EmpWageHr" />
+                <input type="hidden" asp-for="EmpWageDay" />
+                <input type="hidden" asp-for="RoomRent" />
+                <input type="hidden" asp-for="MessDeduction" />
+                <input type="hidden" asp-for="OffEmail" />
+                <input type="hidden" asp-for="OffMobile" />
+                <input type="hidden" asp-for="AssetEligibility" />
+                <input type="hidden" asp-for="Assets" />
+                <input type="hidden" asp-for="OnboardVia" />
+                <input type="hidden" asp-for="OnboardRefNo" />
+                <input type="hidden" asp-for="OnboardRefName1" />
+                <input type="hidden" asp-for="OnboardRefName2" />
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="Attachment1" class="control-label">Other Attachment 1:</label>
+                        <input asp-for="Attachment1" class="form-control" id="otherAttachmentImageInput1" />
+                        <span asp-validation-for="Attachment1" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="otherAttachmentImagePreview1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="Attachment2" class="control-label">Other Attachment 2:</label>
+                        <input asp-for="Attachment2" class="form-control" id="otherAttachmentImageInput2" />
+                        <span asp-validation-for="Attachment2" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="otherAttachmentImagePreview2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="Attachment3" class="control-label">Other Attachment 3:</label>
+                        <input asp-for="Attachment3" class="form-control" id="otherAttachmentImageInput3"/>
+                        <span asp-validation-for="Attachment3" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="otherAttachmentImagePreview3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="Attachment4" class="control-label">Other Attachment 4:</label>
+                        <input asp-for="Attachment4" class="form-control" id="otherAttachmentImageInput4" />
+                        <span asp-validation-for="Attachment4" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="otherAttachmentImagePreview4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                            <label asp-for="Attachment5" class="control-label">Other Attachment 5:</label>
+                        <input asp-for="Attachment5" class="form-control" id="otherAttachmentImageInput5" />
+                        <span asp-validation-for="Attachment5" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="otherAttachmentImagePreview5"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="AadharVerf" />
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="AadharVerfProof" class="control-label">Aadhar Verification Proof:</label>
+                        <input asp-for="AadharVerfProof" class="form-control" id="aadharCardVerifiedProof"/>
+                        <span asp-validation-for="AadharVerfProof" class="text-danger"></span>
+                        <div class="col-md-5" id="uploaded-image-container">
+                            <div id="aadharCardVerifiedImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="CerfVerf" />
+                <input type="hidden" asp-for="OriginalDocSubmission" />
+                <input type="hidden" asp-for="OriginalDocList" />
+                <input type="hidden" asp-for="OriginalDocAck" />
+                <input type="hidden" asp-for="OriginalDocAckNo" />
+                <div class="    col-md-4">
+                    <div class="form-group">
+                        <label asp-for="OriginalDocAckProof" class="control-label">Acknowledgement Proof:</label>
+                        <input asp-for="OriginalDocAckProof" class="form-control" id="acknowledgementAttachment" />
+                        <span asp-validation-for="OriginalDocAckProof" class="text-danger"></span>
+                        <div class="col-md-3" id="uploaded-image-container">
+                            <div id="acknowledgementAttchmentImagePreview"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" asp-for="EmpCurrentStatus" />
+                <input type="hidden" asp-for="EmpDoe" />
+                <input type="hidden" asp-for="OriginalDocHandover" />
+                <input type="hidden" asp-for="OriginalDocAckBack" />
+                <input type="hidden" asp-for="ReleavedReason" />
+                <input type="hidden" asp-for="EmpRejoinDate" />
+                <input type="hidden" asp-for="ReportingTo" />
+                <input type="hidden" asp-for="EmpOldCode" />
+                <input type="hidden" asp-for="RetainOldEmpCode" />
+            </div>
+            </div>
+            <br />
+
+            <div class="form-group" style="text-align:center">
+                <input type="submit" class="btn btn-sm btn-primary" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" value="Upload" class="btn btn-primary" />
+            </div>
+    
+    </form>
+
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<script>
+    // document.getElementById('imageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('imagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('imageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('imagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('aadharImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('aadharImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('aadharImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('aadharImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('panImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('panImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('panImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('panImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('drivingLicenceImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('drivingLicenceImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('drivingLicenceImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('drivingLicenceImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('passportImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('passportImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('passportImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('passportImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('TCImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('TCImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('TCImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('TCImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('PGImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('PGImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('PGImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('PGImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('UGImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('UGImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('UGImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('UGImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('12ImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('12ImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('12ImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('12ImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('10ImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('10ImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('10ImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('10ImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherCerti1ImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherCerti1ImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherCerti1ImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherCerti1ImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherCerti2ImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherCerti2ImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherCerti2ImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherCerti2ImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherCerti3ImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherCerti3ImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherCerti3ImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherCerti3ImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('workProofImageInput1').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('workProofImagePreview1');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('workProofImageInput1').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('workProofImagePreview1');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+
+    // document.getElementById('workProofImageInput2').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('workProofImagePreview2');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('workProofImageInput2').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('workProofImagePreview2');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('workProofImageInput3').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('workProofImagePreview3');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('workProofImageInput3').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('workProofImagePreview3');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('workProofImageInput4').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('workProofImagePreview4');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('workProofImageInput4').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('workProofImagePreview4');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('workProofImageInput5').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('workProofImagePreview5');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('workProofImageInput5').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('workProofImagePreview5');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('formXIAttachmentImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('formXIAttachmentImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('formXIAttachmentImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('formXIAttachmentImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('formXIScreenShotImageInput').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('formXIScreenShotImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('formXIScreenShotImageInput').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('formXIScreenShotImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherAttachmentImageInput1').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherAttachmentImagePreview1');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherAttachmentImageInput1').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherAttachmentImagePreview1');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherAttachmentImageInput2').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherAttachmentImagePreview2');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherAttachmentImageInput2').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherAttachmentImagePreview2');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherAttachmentImageInput3').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherAttachmentImagePreview3');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherAttachmentImageInput3').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherAttachmentImagePreview3');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherAttachmentImageInput4').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherAttachmentImagePreview4');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherAttachmentImageInput4').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherAttachmentImagePreview4');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('otherAttachmentImageInput5').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('otherAttachmentImagePreview5');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('otherAttachmentImageInput5').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('otherAttachmentImagePreview5');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+        // document.getElementById('aadharCardVerifiedProof').addEventListener('change', function () {
+        //     var input = this;
+        //     var preview = document.getElementById('aadharCardVerifiedImagePreview');
+
+        //     while (preview.firstChild) {
+        //         preview.removeChild(preview.firstChild);
+        //     }
+
+        //     var reader = new FileReader();
+        //     reader.onload = function (e) {
+        //         var img = document.createElement('img');
+        //         img.src = e.target.result;
+        //         img.style.width = '200px';
+        //         preview.appendChild(img);
+        //     };
+
+        //     reader.readAsDataURL(input.files[0]);
+        // });
+
+        document.getElementById('aadharCardVerifiedProof').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('aadharCardVerifiedImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+    // document.getElementById('acknowledgementAttachment').addEventListener('change', function () {
+    //     var input = this;
+    //     var preview = document.getElementById('acknowledgementAttchmentImagePreview');
+
+    //     while (preview.firstChild) {
+    //         preview.removeChild(preview.firstChild);
+    //     }
+
+    //     var reader = new FileReader();
+    //     reader.onload = function (e) {
+    //         var img = document.createElement('img');
+    //         img.src = e.target.result;
+    //         img.style.width = '200px';
+    //         preview.appendChild(img);
+    //     };
+
+    //     reader.readAsDataURL(input.files[0]);
+    // });
+
+        document.getElementById('acknowledgementAttachment').addEventListener('change', function () {
+            var input = this;
+            var preview = document.getElementById('acknowledgementAttchmentImagePreview');
+
+            while (preview.firstChild) {
+                preview.removeChild(preview.firstChild);
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                if (input.files && input.files[0]) {
+                    var file = input.files[0];
+                    if (file.type === 'application/pdf') {
+                        // If PDF file
+                        var embed = document.createElement('embed');
+                        embed.src = e.target.result;
+                        embed.type = 'application/pdf';
+                        embed.width = '200';
+                        embed.height = '200';
+                        preview.appendChild(embed);
+                    } else if (file.type.match('image.*')) {
+                        // If image file
+                        var img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.width = '200px';
+                        preview.appendChild(img);
+                    } else {
+                        // Unsupported file type
+                        preview.textContent = 'Unsupported file type';
+                    }
+                }
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        });
+
+</script>
+</body>
+</html>
+
+
+

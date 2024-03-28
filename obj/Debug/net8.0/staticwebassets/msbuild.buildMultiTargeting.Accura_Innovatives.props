@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Accura_Innovatives.props" />
+</Project>

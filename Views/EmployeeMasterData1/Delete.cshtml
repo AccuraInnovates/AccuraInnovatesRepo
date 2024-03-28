@@ -1,0 +1,2719 @@
+﻿@model Accura_Innovatives.Models.EmployeeMasterData1
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* background: url('../Image/Welding.jpg') center/cover no-repeat fixed;  */
+            height: 100%;
+            background-attachment: fixed;
+        }
+
+
+        body {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            text-align: left;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 65px;
+            left: 12.5%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 80%;
+        }
+
+        .tabs {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            display: flex;
+            justify-content: center;
+            /* margin-bottom: 14px; */
+            text-align: center;
+            height: 30px;
+        }
+
+        .tab {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            cursor: pointer;
+            border: 1px solid lightgrey;
+            border-radius: 4px;
+            margin: 0 4px;
+            background-color: lightblue;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* Hide all tab content by default */
+        .tab-content {
+            display: none;
+            font-size: 14px;
+            padding: 5px;
+            /* text-align: center; */
+        }
+
+
+
+        .centered-text {
+            text-align: center; /* Center-align text */
+            font-size: 14px;
+        }
+        /* Show the selected tab content */
+        .tab-content.active {
+            display: block;
+            
+        }
+
+
+        .det-Container {
+            top: 65px;
+            left: 12.5%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            box-sizing: border-box;
+            text-size-adjust: 12px;
+            border: 1px solid #ccc;
+            width: 80%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+       .tab:active{
+           background-color:deepskyblue;
+       }
+
+        .heads {
+            text-decoration: underline;
+            font-size: 15px;
+        }
+
+        h1, h4 {
+            text-shadow: 2px 2px 3px black;
+        }
+
+    </style>
+</head>
+<body>
+    <form class="del-Container" asp-action="Details" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div style="border-block 1px solid">
+           
+            <h1 class="text-black text-center">Delete</h1> 
+
+            <h4 class="text-black" >Are you sure you want to delete this?</h4>
+           
+        </div>
+        <br />
+        <br />
+            
+            <div class="tabs centered-text">
+                <div  class="tab" onclick="showTab('tab1')">Personal Details</div>
+                <div class="tab" onclick="showTab('tab2')">Family Details</div>
+                <div class="tab" onclick="showTab('tab3')">Education Details</div>
+                <div class="tab" onclick="showTab('tab4')">Pre.Professional Details</div>
+                <div class="tab" onclick="showTab('tab5')">New Joinee Details</div>
+                <div class="tab" onclick="showTab('tab6')">Verification</div>
+
+                <!-- Add more tabs as needed -->
+            </div>
+       
+        <hr />
+
+        <ng-form enctype="multipart/form-data">
+            <!-- Personal Details Tab -->
+            <div id="tab1" class="tab-content active">
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpDetails">Employee Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.EmpCode)">Employee Code</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpCode)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpCtg)">Employee Category</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.EmpCtg)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpName)">Employee Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpName)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PerEmail)">Personal Mail Id</label>
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PerEmail)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PerMobile)">Personal Phone No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PerMobile)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.Gender)">Gender</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Gender)" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+
+                                <label for="@Html.DisplayNameFor(model => model.BloodGrpNavigation)">Blood Group</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.BloodGrpNavigation.BloodGrp)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.MaritalStatus)">Marital Status</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.MaritalStatus)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpPhoto)">Employee Profile Photo</label>
+
+                                @* @Html.DisplayFor(model => model.EmpPhoto) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.EmpPhoto)" width="108px" height="148px" alt="Add Profile Photo"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.EmpPhoto))
+                                {
+                                    @if (Model.EmpPhoto.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.EmpPhoto)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.EmpPhoto.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.EmpPhoto.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.EmpPhoto.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.EmpPhoto)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Profile Photo provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpAadharDetails">Employee Aadhar Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.AadharNo)">Aadhar No</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.AadharNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.EmpAadharName)">Employee Aadhar Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpAadharName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.AadharDob)">Aadhar DOB</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.AadharDob)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.Dob)">DOB</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Dob)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.AadharCard)">Aadhar Card Proof</label>
+
+
+                                @* @Html.DisplayFor(model => model.AadharCard) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.AadharCard)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.AadharCard))
+                                {
+                                    @if (Model.AadharCard.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.AadharCard)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.AadharCard.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.AadharCard)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Aadhar Card provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpPanDetails">Employee Pancard Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PanNo)">Pan No</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PanNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpPanName)">Employee Pancard Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpPanName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PanCard)">PanCard Proof</label>
+
+                                @*  @Html.DisplayFor(model => model.PanCard) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PanCard)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PanCard))
+                                {
+                                    @if (Model.PanCard.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PanCard)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PanCard.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PanCard.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PanCard.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PanCard)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No PAN Card provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpNameDetails">Employee Name Details & Nationality:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpBcardName)">Preferred Name in Business card &<br /> AWRKPL records</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpBcardName)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpCertifName)">Employee Name in Education Certificate</label>
+                                <br />
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpCertifName)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.NationalityNavigation)">Nationality</label>
+                                <br />
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.NationalityNavigation.Nationality)" />
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpDrvLinDetails">Employee Driving Licence Details:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.DrvLinNo)">Driving Licence No</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.DrvLinNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.DrvLinVal)">Driving Licence Validity</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.DrvLinVal)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.DrvLinCard)">Driving Licence Proof</label>
+
+                                @* @Html.DisplayFor(model => model.DrvLinCard) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.DrvLinCard)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.DrvLinCard))
+                                {
+                                    @if (Model.DrvLinCard.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.DrvLinCard)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.DrvLinCard.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.DrvLinCard.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.DrvLinCard.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.DrvLinCard)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No DRVLIN Card provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpPassportDetails">Employee Passport Details:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PassportNo)">Passport No</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PassportNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PassportVal)">Passport Validity</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PassportVal)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PassportCard)">Passport Proof</label>
+
+                                @* @Html.DisplayFor(model => model.PassportCard) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PassportCard)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PassportCard))
+                                {
+                                    @if (Model.PassportCard.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PassportCard)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PassportCard.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PassportCard.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PassportCard.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PassportCard)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Passport Card provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="presentAddress">Present Address:</label>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.PresentAddressLine1)">Address Line 1</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PresentAddressLine1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.PresentAddressLine2)">Address Line 2</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.PresentAddressLine2)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.PresentAddressCity)">City</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PresentAddressCity)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PresentAddressState)">State</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PresentAddressState)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PresentAddressZipcode)">Zip/Postal Code</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PresentAddressZipcode)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="permanentAddress">Permanent Address:</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.PermAddressLine1)">Address Line 1</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PermAddressLine1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.PermAddressLine2)">Address Line 2</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PermAddressLine2)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PermAddressCity)">City</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PermAddressCity)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PermAddressState)">State</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.PermAddressState)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PermAddressZipcode)">Zip/Postal Code</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PermAddressZipcode)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="communicationAddress">Communication Address:</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.CommAddressLine1)">Address Line 1</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.CommAddressLine1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.CommAddressLine2)">Address Line 2</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.CommAddressLine2)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.CommAddressCity)">City</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.CommAddressCity)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.CommAddressState)">State</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.CommAddressState)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.CommAddressZipcode)">Zip/Postal Code</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.CommAddressZipcode)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpPerBankDetails">Employee Personal Bank Details:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpNameInBank)">Employee Name in Bank Records</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpNameInBank)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PerAccNo)">Personal Bank Account No.</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PerAccNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.PerBnkNameNavigation)">Personal Bank Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PerBnkNameNavigation.BankName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6
+">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PerBnkIfsc)">Personal Bank Ifsc</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PerBnkIfsc)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PerBnkBranch)">Personal Bank Branch</label>
+
+                                <input type="text" readonly value="  @Html.DisplayFor(model => model.PerBnkBranch)" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="text-center">
+                    <a style="width:100px;text-align:center; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab2')">Next</button>
+                </div>
+            </div>
+
+            <!-- Family Details Tab -->
+            <div id="tab2" class="tab-content">
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="FamMemName1">Family Member 1:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemName1)">Name</label>
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemName1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemRel1)">Relationship</label>
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.FamMemRel1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemContact1)">Contact Number</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemContact1)" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="FamMemName2">Family Member 2:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemName2)">Name</label>
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemName2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" Html.DisplayNameFor(model => model.FamMemRel2)">Relationship</label>
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemRel2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemContact2)">Contact Number</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemContact2)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="FamMemName3">Family Member 3:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemName3)">Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemName3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemRel3)">Relationship</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemRel3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemContact3)">Contact Number</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemContact3)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="FamMamName4">Family Member 4:</label>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemName4)">Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemName4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemRel4)">Relationship</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemRel4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemContact4)">Contact Number</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemContact4)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="FamMemName5">Family Member 5:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemName5)">Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.FamMemName5)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.FamMemRel5)">Relationship</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemRel5)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.FamMemContact5)">Contact Number</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.FamMemContact5)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="emerContact">Emergency Contact:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.EmerContactName)">Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmerContactName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmerContactRel)">Relationship</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmerContactRel)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.EmerContactNo)">Contact Number</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmerContactNo)" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="text-center">
+
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab1')">Back</button>
+                    <a style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab3')">Next</button>
+                </div>
+
+            </div>
+
+            <!-- Educational Details Tab -->
+            <div id="tab3" class="tab-content">
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="TCCard">Transfer Certificate:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.TcCard)">Tc Card </label>
+
+                                @*  @Html.DisplayFor(model => model.TcCard) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.TcCard)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.TcCard))
+                                {
+                                    @if (Model.TcCard.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.TcCard)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.TcCard.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.TcCard.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.TcCard.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.TcCard)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No TC Card provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="highQualification(PG)">High Qualification(PG):</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                @* <div class="form-group"> *@
+
+                                <label for="  @Html.DisplayNameFor(model => model.HighQualiNavigation)">High Qualification(PG)</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.HighQualiNavigation.QualiName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4  form-group">
+                            <label for=" @Html.DisplayNameFor(model => model.HighQualiInstituteName)">College/University Name</label>
+
+                            <input type="text" readonly value="@Html.DisplayFor(model => model.HighQualiInstituteName)" />
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HighQualiMark)">Marks Obtained</label>
+
+                                <input type="text" id="marksInput" readonly value="@Html.DisplayFor(model => model.HighQualiMark)" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class=" form-group">
+                                    <label for=" @Html.DisplayNameFor(model => model.HighQualiPassYear)">Passed Out Year</label>
+
+                                    <input type="text" readonly value="@Html.DisplayFor(model => model.HighQualiPassYear)" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="  form-group">
+                                    <label for=" @Html.DisplayNameFor(model => model.HighQualiCerf1)">High Qualification(PG) Proof</label>
+
+                                    @* @Html.DisplayFor(model => model.HighQualiCerf1) *@
+                                    @* <img src="@Url.Content("~/Images/" + Model.HighQualiCerf1)" width="108px" height="148px" alt="Add Proof"> *@
+                                    @if (Model != null && !string.IsNullOrEmpty(Model.HighQualiCerf1))
+                                    {
+                                        @if (Model.HighQualiCerf1.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <embed src="@Url.Content("~/Images/" + Model.HighQualiCerf1)" type="application/pdf" width="200px" height="200px" />
+                                        }
+                                        else if (Model.HighQualiCerf1.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf1.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf1.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <img src="@Url.Content("~/Images/" + Model.HighQualiCerf1)" width="108px" height="148px" alt="Add Proof" />
+                                        }
+                                        else
+                                        {
+                                            <span>Unsupported file format</span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span>No High Quali Cerf1 provided</span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="highQualification(UG)">High Qualification(UG):</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for=" Html.DisplayNameFor(model => model.HighQuali2Navigation)">High Qualification(UG)</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.HighQuali2Navigation.QualiName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HighQualiInstituteName2)">College/University Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.HighQualiInstituteName2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HighQualiMark2)">Marks Obtained</label>
+
+                                <input type="text" id="marksInput1" readonly value="@Html.DisplayFor(model => model.HighQualiMark2)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.HighQualiPassYear2)">Passed Out Year</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.HighQualiPassYear2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HighQualiCerf2)">High Qualification(UG) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.HighQualiCerf2) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.HighQualiCerf2)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.HighQualiCerf2))
+                                {
+                                    @if (Model.HighQualiCerf2.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.HighQualiCerf2)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.HighQualiCerf2.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf2.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf2.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.HighQualiCerf2)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No HighQuali Cerf provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="hsc">HSC:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.HscSchoolName)">School Name and Location</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.HscSchoolName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.HscMark)">Marks Obtained</label>
+
+                                <input type="text" id="marksInput2" readonly value="@Html.DisplayFor(model => model.HscMark)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HscPassYear)">Passed Out Year</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.HscPassYear)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.HscCerf)">HSC Proof</label>
+
+                                @* @Html.DisplayFor(model => model.HscCerf) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.HscCerf)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.HscCerf))
+                                {
+                                    @if (Model.HscCerf.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.HscCerf)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.HscCerf.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HscCerf.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HscCerf.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.HscCerf)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Hsc Cerf provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="sslc">SSLC:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.SslcSchoolName)">School Name and Location</label>
+
+                                <input type="text" id="marksInput3" readonly value=" @Html.DisplayFor(model => model.SslcSchoolName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SslcMark)">Marks Obtained</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SslcMark)" />
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SslcPassYear)">Passed out Year</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SslcPassYear)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SslcCerf)">SSLC Proof</label>
+
+                                @*  @Html.DisplayFor(model => model.SslcCerf) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.SslcCerf)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.SslcCerf))
+                                {
+                                    @if (Model.SslcCerf.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.SslcCerf)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.SslcCerf.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.SslcCerf.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.SslcCerf.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.SslcCerf)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Sslc Cerf provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="otherCertif1">Other Certificate 1:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfName1)">Course Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OtherCerfName1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfInstitute1)">Institute Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfInstitute1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfMark1)">Marks Obtained</label>
+
+                                <input type="text"  id="marksInput4" readonly value="@Html.DisplayFor(model => model.OtherCerfMark1)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfDuration1)">Duration</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OtherCerfDuration1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfPassYear1)">Passed Out Year</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfPassYear1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerf1)">Other Certificate(1) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.OtherCerf1) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.OtherCerf1)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.OtherCerf1))
+                                {
+                                    @if (Model.OtherCerf1.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.OtherCerf1)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.OtherCerf1.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf1.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf1.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.OtherCerf1)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Other Cerf1 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="otherCertif2">Other Certificate 2:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfName2)">Course Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfName2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfInstitute2)">Institute Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfInstitute2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfMark2)">Marks Obtained</label>
+
+                                <input type="text" id="marksInput5" readonly value=" @Html.DisplayFor(model => model.OtherCerfMark2)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfDuration2)">Duration</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfDuration2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfPassYear2)">Passed Out Year</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfPassYear2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerf2)">Other Certificate(2) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.OtherCerf2) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.OtherCerf2)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.OtherCerf2))
+                                {
+                                    @if (Model.OtherCerf2.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.OtherCerf2)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.OtherCerf2.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf2.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf2.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.OtherCerf2)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No OtherCerf2 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="otherCertif3">Other Certificate 3:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfName3)">Course Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfName3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfInstitute3)">Institute Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfInstitute3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfMark3)">Marks Obtained</label>
+
+                                <input type="text" id="marksInput6" readonly value="@Html.DisplayFor(model => model.OtherCerfMark3)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfDuration3)">Duration</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfDuration3)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerfPassYear3)">Passed Out Year</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OtherCerfPassYear3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class=" form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OtherCerf3)">Other Certificate(3) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.OtherCerf3) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.OtherCerf3)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.OtherCerf3))
+                                {
+                                    @if (Model.OtherCerf3.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.OtherCerf3)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.OtherCerf3.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf3.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf3.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.OtherCerf3)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No OtherCerf3 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="text-center">
+
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab2')">Back</button>
+                    <a style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab4')">Next</button>
+                </div>
+
+            </div>
+
+            <!--Pre.Professional Details Tab  -->
+            <div id="tab4" class="tab-content">
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="Exp">Total Experience:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.ExpYears)">Overall Experience in Years</label>
+                                <input type="text" readonly value="@String.Format("{0:0.00}", Model.ExpYears)" />
+                                @* <input type="text" readonly value="@Html.DisplayFor(model => model.ExpYears)" /> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preCompany1">Previous Company 1:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmp1)">Company Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmp1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpSdt1)">Start Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpSdt1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpEdt1)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEdt1)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpDoc1)">Previous Company(1) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.PreWorkCmpDoc1) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc1)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PreWorkCmpDoc1))
+                                {
+                                    @if (Model.PreWorkCmpDoc1.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc1)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc1.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc1)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Pre work cmp Doc1 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preCompany2">Previous Company 2:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmp2)">Company Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmp2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpSdt2)">Start Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpSdt2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpEdt2)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEdt2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpDoc2)">Previous Company(2) Proof</label>
+
+                                @*   @Html.DisplayFor(model => model.PreWorkCmpDoc2) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc2)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PreWorkCmpDoc2))
+                                {
+                                    @if (Model.PreWorkCmpDoc2.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc2)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc2.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc2.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc2.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc2)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Pre work cmp Doc2 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preCompany3">Previous Company 3:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmp3)">Company Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmp3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpSdt3)">Start date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpSdt3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpEdt3)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEdt3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpDoc3)">Previous Company(3) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.PreWorkCmpDoc3) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc3)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PreWorkCmpDoc3))
+                                {
+                                    @if (Model.PreWorkCmpDoc3.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc3)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc3.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc3.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc3.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc3)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Prewoek cmp Doc3 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preCompany4">Previous Company 4:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmp4)">Company Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmp4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpSdt4)">Start Date</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmpSdt4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpEdt4)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEdt4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpDoc4)">Previous Company(4) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.PreWorkCmpDoc4) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc4)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PreWorkCmpDoc4))
+                                {
+                                    @if (Model.PreWorkCmpDoc4.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc4)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc4.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc4.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc4.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PreWorkCmp4)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Pre Work Cmp Doc4 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preCompany5">Previous Company 5:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmp5)">Company Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmp5)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpSdt5)">Start Date</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmpSdt5)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpEdt5)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEdt5)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PreWorkCmpDoc5)">Previous Company(5) Proof</label>
+
+                                @* @Html.DisplayFor(model => model.PreWorkCmpDoc5) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc5)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.PreWorkCmpDoc5))
+                                {
+                                    @if (Model.PreWorkCmpDoc5.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc5)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc5.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc5.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc5.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.PreWorkCmpDoc5)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Pre Work Cmp Doc5 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="seviceBrk1">Service Break 1:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.WorkExBreak1)">Reason</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreak1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreakSdt1)">Start Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakSdt1)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreakEdt1)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakEdt1)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="seviceBrk2">Service Break 2:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreak2)">Reason</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreak2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.WorkExBreakSdt2)">Start Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakSdt2)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreakEdt2)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakEdt2)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="seviceBrk3">Service Break 3:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreak3)">Reason</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.WorkExBreak3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreakSdt3)">Start Date</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.WorkExBreakSdt3)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.WorkExBreakEdt3)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakEdt3)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="seviceBrk4">Service Break 4:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.WorkExBreak4)">Reason</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreak4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.WorkExBreakSdt4)">Start Date</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.WorkExBreakSdt4)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.WorkExBreakEdt4)">End Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.WorkExBreakEdt4)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="preSalDet">Previous Salary Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpCtc)">Last Company CTC</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.PreWorkCmpCtc)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpEpfStatus)">Previous Company ESI Status</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEpfStatus)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.PreWorkCmpEsiStatus)">Previous Company EPF Status</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PreWorkCmpEsiStatus)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+
+                <div class="text-center">
+
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" onclick="showTab('tab3')">Back</button>
+                    <a style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" onclick="showTab('tab5')">Next</button>
+                </div>
+
+            </div>
+
+            <!-- New Joinee Tab -->
+            <div id="tab5" class="tab-content">
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpDetails">Employee Job Details:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpCreateDate)">Employee Details Create Date</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpCreateDate)" />
+                            </div>
+                        </div>
+                        @* <div class="col-md-4">
+                        <div class="form-group">
+                        <label for=" @Html.DisplayNameFor(model => model.RetainOldEmpCode)">Reatain Old Employee Code</label>
+
+                        @Html.DisplayFor(model => model.RetainOldEmpCode)
+                        </div>
+                        </div> *@
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EmpDept)">Department</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpDept)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpDesignation)">Designation</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpDesignation)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpRoleNavigation)">Role</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpRoleNavigation.EmpRole)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpDoj)">Date of Joining</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpDoj)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpOnboardCtg)">Onboard Category</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpOnboardCtg)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.Contractor)">Contractor Id</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Contractor.ContractorId)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.ReportingTo)">Reporting To?</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.ReportingTo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.EmpCurrentStatus)">Employee Current Status</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpCurrentStatus)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EmpOldCode)">Employee Old Code</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpOldCode)" />
+                            </div>
+                        </div>
+                    </div>
+                </div><br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpSalDetails">Employee Salary Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for="  @Html.DisplayNameFor(model => model.SalaryPaidByNavigation)">Company for Pay</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalaryPaidByNavigation.CompanyName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.PaymentMode)">Payment Mode</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.PaymentMode)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SalAccEligibility)">Eligible for Bank Salary?</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalAccEligibility)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SalAccNo)">Salary Bank Account No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalAccNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SalBankNameNavigation)">Salary Bank Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.SalBankNameNavigation.BankName)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.SalBankIfsc)">Salary Bank IFSC</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalBankIfsc)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.SalBankBranch)">Salary Bank Branch</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.SalBankBranch)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.SalBenfCode)">Beneficiary Code</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalBenfCode)" />
+                            </div>
+                        </div>
+                    </div>
+                </div><br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="Empform11Details">Employee Form XI Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+
+                                <label for=" @Html.DisplayNameFor(model => model.Form11Willingness)">Form XI Willingness</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Form11Willingness)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.Form11Eligibility)">Form XI Eligibility?</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.Form11Eligibility)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.Form11No)">Form XI No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Form11No)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.Form11Doc1)">Form XI Attachment1</label>
+
+                                @*  @Html.DisplayFor(model => model.Form11Doc1) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Form11Doc1)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Form11Doc1))
+                                {
+                                    @if (Model.Form11Doc1.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Form11Doc1)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Form11Doc1.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Form11Doc1)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Form11Doc1 provided</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.Form11Doc2)">Form XI Attachment2</label>
+
+                                @*  @Html.DisplayFor(model => model.Form11Doc2) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Form11Doc2)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Form11Doc2))
+                                {
+                                    @if (Model.Form11Doc2.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Form11Doc2)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Form11Doc2.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Form11Doc2)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Form11 Doc2 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpESIEPFDetails">Employee ESI & EPF Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EsiEpfEligibilityNavigation)">Eligibility for ESI & EPF?</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EsiEpfEligibilityNavigation.LegName)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EsiJdt)">ESI Join Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EsiJdt)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EsiNo)">ESI No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EsiNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EsiNomineeName)">ESI Nominee Name</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.EsiNomineeName)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EpfJdt)">EPF Join Date</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EpfJdt)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.EpfNo)">EPF No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EpfNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EpfNomineeName)">EPF Nominee Name</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EpfNomineeName)" />
+                            </div>
+                        </div>
+                    </div>
+                </div><br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="EmpSalWageDetails">Employee Salary & Wages Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.SalCriteria)">Salary/Wages?</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.SalCriteria)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EmpSal)">Salary(If Cater A)</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpSal)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EmpWageShift)">Wages per Shift(10 hrs)</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpWageShift)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EmpWageHr)">Wages Per Hour</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpWageHr)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.EmpWageDay)">Wages per Day(12 hrs)</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpWageDay)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="  @Html.DisplayNameFor(model => model.RoomRent)">Room Rent</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.RoomRent)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.MessDeduction)">Mess Deduction</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.MessDeduction)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="OffAssDet">Office Asset Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OffEmail)">Official Mail Id</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OffEmail)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OffMobile)">Official Mobile No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OffMobile)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.AssetEligibility)">Eligibility For Assets</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.AssetEligibility)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.Assets)">Assets</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.Assets)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="text-center">
+
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px ; margin:10px;" class=" btn btn-sm btn-primary" onclick="showTab('tab4')">Back</button>
+                    <a style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary" onclick="showTab('tab6')">Next</button>
+                </div>
+
+            </div>
+
+            <!-- Verification Tab -->
+            <div id="tab6" class="tab-content">
+
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="Source">Source/Ref Details:</label>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OnboardVia)">Source of Onboard</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OnboardVia)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OnboardRefNo)">Source of Onboard Ref No.</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OnboardRefNo)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OnboardRefName1)">Referral Person 1</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OnboardRefName1)" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.OnboardRefName2)">Referral Person 2</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OnboardRefName2)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="Attachment">Other Attachments:</label>
+                    <div class="row">
+
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.Attachment1)">Other Attachment 1</label>
+
+                                @* @Html.DisplayFor(model => model.Attachment1) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Attachment1)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Attachment1))
+                                {
+                                    @if (Model.Attachment1.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Attachment1)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment1.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Attachment1)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Attachment1 provided</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.Attachment2)">Other Attachment 2</label>
+
+                                @* @Html.DisplayFor(model => model.Attachment2) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Attachment2)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Attachment2))
+                                {
+                                    @if (Model.Attachment2.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Attachment2)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment2.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment2.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment2.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Attachment2)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Attachment2 provided</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.Attachment3)">Other Attachment 3</label>
+
+                                @* @Html.DisplayFor(model => model.Attachment3) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Attachment3)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Attachment3))
+                                {
+                                    @if (Model.Attachment3.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Attachment3)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment3.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment3.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment3.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Attachment3)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Attachment3 provided</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.Attachment4)">Other Attachment 4</label>
+
+                                @* @Html.DisplayFor(model => model.Attachment4) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Attachment4)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Attachment4))
+                                {
+                                    @if (Model.Attachment4.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Attachment4)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment4.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Attachment4)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Attachment4 provided</span>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.Attachment5)">Other Attachment 5</label>
+
+                                @* @Html.DisplayFor(model => model.Attachment5) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.Attachment5)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Attachment5))
+                                {
+                                    @if (Model.Attachment5.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.Attachment5)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment5.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.Attachment5)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Attachment5 provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                    <label class="heads" for="Verification">Aadhar & Docs Verification:</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="@Html.DisplayNameFor(model => model.AadharVerf)">Aadhar Card Verified?</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.AadharVerf)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.AadharVerfProof)">Aadhar Card Verified Proof</label>
+
+                                @*  @Html.DisplayFor(model => model.AadharVerfProof) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.AadharVerfProof)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.AadharVerfProof))
+                                {
+                                    @if (Model.AadharVerfProof.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.AadharVerfProof)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.AadharVerfProof.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.AadharVerfProof)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No Aadhar Ver Proof provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.CerfVerf)">Certificate/Docs Verified?</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.CerfVerf)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OriginalDocSubmission)">Docs Collected for Company Security?</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OriginalDocSubmission)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OriginalDocList)">Original Docs list       </label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OriginalDocList)" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OriginalDocAck)">Acknowledgement Given for<br /> Docs Collection</label>
+
+                                <input type="text" readonly value="@Html.DisplayFor(model => model.OriginalDocAck)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OriginalDocAckNo)">Acknowledgement<br /> No.</label>
+
+                                <input type="text" readonly value=" @Html.DisplayFor(model => model.OriginalDocAckNo)" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for=" @Html.DisplayNameFor(model => model.OriginalDocAckProof)">Acknowledgement<br /> Proof</label>
+
+                                @* @Html.DisplayFor(model => model.OriginalDocAckProof) *@
+                                @* <img src="@Url.Content("~/Images/" + Model.OriginalDocAckProof)" width="108px" height="148px" alt="Add Proof"> *@
+                                @if (Model != null && !string.IsNullOrEmpty(Model.OriginalDocAckProof))
+                                {
+                                    @if (Model.OriginalDocAckProof.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="@Url.Content("~/Images/" + Model.OriginalDocAckProof)" type="application/pdf" width="200px" height="200px" />
+                                    }
+                                    else if (Model.OriginalDocAckProof.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="@Url.Content("~/Images/" + Model.OriginalDocAckProof)" width="108px" height="148px" alt="Add Proof" />
+                                    }
+                                    else
+                                    {
+                                        <span>Unsupported file format</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No OriginalDocAckProof provided</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                @*   <div style="border:black 1px solid; padding: 5px;">
+                <label class="heads" for="releave">Working/Releaving Status:</label>
+                <div class="row">
+
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for=" @Html.DisplayNameFor(model => model.EmpDoe)">DOE</label>
+
+                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpDoe)" />
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for=" @Html.DisplayNameFor(model => model.ReleavedReason)">Releaved Reason  </label>
+
+                <input type="text" readonly value="@Html.DisplayFor(model => model.ReleavedReason)" />
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for="@Html.DisplayNameFor(model => model.OriginalDocHandover)">Original Docs Handover?</label>
+
+                <input type="text" readonly value=" @Html.DisplayFor(model => model.OriginalDocHandover)" />
+                </div>
+                </div>
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for="@Html.DisplayNameFor(model => model.OriginalDocAckBack)">Original Docs Acknowledgement<br /> Given Back?</label>
+
+                <input type="text" readonly value=" @Html.DisplayFor(model => model.OriginalDocAckBack)" />
+                </div>
+                </div>
+
+
+                </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                <label class="heads" for="Emptype">Employee Type:</label>
+                <div class="row">
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for=" @Html.DisplayNameFor(model => model.RetainOldEmpCode)">Retain Old Employee Code Yes/No:</label>
+
+                <input type="text" readonly value="@Html.DisplayFor(model => model.RetainOldEmpCode)" />
+                </div>
+                </div>
+
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for=" @Html.DisplayNameFor(model => model.EmpRejoinDate)">Employee Rejoin Date</label>
+
+                <input type="text" readonly value="@Html.DisplayFor(model => model.EmpRejoinDate)" />
+                </div>
+                </div>
+
+
+
+                <div class="col-md-4">
+                <div class="form-group">
+                <label for=" @Html.DisplayNameFor(model => model.EmpCtgNavigation)">Employee Category</label>
+
+                <input type="text" readonly value=" @Html.DisplayFor(model => model.EmpCtgNavigation.CtgCode)" />
+                </div>
+                </div>
+                </div>
+                </div>
+                <br />
+                <div style="border:black 1px solid; padding: 5px;">
+                <div class="row">
+
+                </div>
+                </div>
+                </div>
+
+                <br /> *@
+               
+               
+                <div class="text-center">
+                    <form asp-action="Delete" style="text-align:center">
+                        <input type="hidden" asp-for="EmpCode" />
+                            <input type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" value="Back" class="btn btn-sm btn-primary" onclick="showTab('tab5')">
+                        <a style="width:100px;height:auto; padding-top:2px; padding-bottom:2px; margin:10px;" class="btn btn-sm btn-primary " asp-action="Index">Back to List</a>
+                        <input type="submit" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" value="Delete" class="btn btn-sm btn-dark" asp-action="Delete" />
+
+               
+                            @*  <a  style="color:white"></a> *@
+
+                    </form>
+                </div>
+            </div>
+
+     </ng-form>
+            
+
+                @* <form asp-action="Delete" style="text-align:center">
+                    <input type="hidden" asp-for="EmpCode" />
+                    <input type="submit" value="Delete" class="btn btn-danger" /> |
+                    <input type="button" value="Back to List" class=" btn btn-danger" asp-action="Index">|
+                    <button type="button" style="width:100px; padding-top:2px; padding-bottom:2px; margin:10px;" onclick="showTab('tab5')">Back</button>
+                     <a  style="color:white"></a> 
+
+                </form> *@
+       
+    
+            
+    </form>
+    
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<script>
+    function showTab(tabId) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove('active');
+        }
+
+        // Show the selected tab content
+        var selectedTab = document.getElementById(tabId);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+        }
+    }
+
+
+    // Get the input element
+    var marksInput = document.getElementById('marksInput');
+
+    // Parse the value to float
+    var marksValue = parseFloat(marksInput.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue = marksValue * 100;
+
+    // Update the input value with the percentage
+    marksInput.value = percentageValue.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput1 = document.getElementById('marksInput1');
+
+    // Parse the value to float
+    var marksValue1 = parseFloat(marksInput1.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue1 = marksValue1 * 100;
+
+    // Update the input value with the percentage
+    marksInput1.value = percentageValue1.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput2 = document.getElementById('marksInput2');
+
+    // Parse the value to float
+    var marksValue2 = parseFloat(marksInput2.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue2 = marksValue2 * 100;
+
+    // Update the input value with the percentage
+    marksInput2.value = percentageValue2.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput3 = document.getElementById('marksInput3');
+
+    // Parse the value to float
+    var marksValue3 = parseFloat(marksInput3.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue3 = marksValue3 * 100;
+
+    // Update the input value with the percentage
+    marksInput3.value = percentageValue3.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput4 = document.getElementById('marksInput4');
+
+    // Parse the value to float
+    var marksValue4 = parseFloat(marksInput4.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue4 = marksValue4 * 100;
+
+    // Update the input value with the percentage
+    marksInput4.value = percentageValue4.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput5 = document.getElementById('marksInput5');
+
+    // Parse the value to float
+    var marksValue5 = parseFloat(marksInput5.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue5 = marksValue5 * 100;
+
+    // Update the input value with the percentage
+    marksInput5.value = percentageValue5.toFixed(1); // Round to 1 decimal place
+
+    // Get the input element
+    var marksInput6 = document.getElementById('marksInput6');
+
+    // Parse the value to float
+    var marksValue6 = parseFloat(marksInput6.value);
+
+    // Convert the decimal to percentage format
+    var percentageValue6 = marksValue6 * 100;
+
+    // Update the input value with the percentage
+    marksInput6.value = percentageValue6.toFixed(1); // Round to 1 decimal place
+</script>

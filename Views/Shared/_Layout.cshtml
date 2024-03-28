@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Accura_Innovatives</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Accura_Innovatives.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="Img-logo" style="top:0;left:35%; position:absolute ">
+    <img src="~/Image/logo.png" alt="logo" style=" left:25%;top:0; position:absolute" />
+    </div>
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Accura_Innovatives</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="EmployeeMasterData1" asp-action="Index">Employee Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="BulkUpload">Bulk Upload</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> *@
+    </header> 
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+    <button id="showMenuBtn" style="top:0; right:0; position:absolute;width:auto;">
+        <img id="Menu" src="~/Image/menu-icon.webp" alt="menu-logo" style="width:75px;"/>
+    </button>
+        <div id="nav" class="nav" style="position:absolute; right:0; top:65px; ">
+            <ul class="menu-nav flex-grow-1">
+            <li class="nav-item" style="width:90px">
+                        <a class="nav-link text-white" style="width:90px" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="nav-item" style="width:90px">
+                        <a class="nav-link text-white" style="width:90px" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </li>
+            <li class="nav-item" style="width:90px">
+                <a class="nav-link text-white" style="width:90px" href=" http://www.sunbond.in/aboutus.html">About</a>
+            </li>
+            <li class="nav-item" style="width:90px">
+                <a class="nav-link text-white" style="width:90px" href="http://www.sunbond.in/contactus.html">Contact</a>
+            </li>
+            <li class="nav-item" style="width:90px">
+                <a class="nav-link text-white"  style="width:90px" href=" @Url.Action("Index", "Login")">Logout</a>
+            </li>
+        </ul>
+        </div>
+            <button id="showModuleBtn" class="module text-black" style="top:0; left:0; padding:3px; position:absolute;width:130px">
+                <img id="Module" src="~/Image/module-black-icon.png" alt="module-logo" style="width:75px;" />
+            </button>
+            <div id="navbar" class="navbar" style="position:absolute; left:0; top:45px; ">
+                <ul class="navbar-nav flex-grow-1" style="width:130px">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Production" asp-action="Production">Production</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="loses">Expenditure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="EmployeeMasterData1" asp-action="Index">HRM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="QualityComplain">Quality Complain</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SalesReturn">Sales Return</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="GRNProcess">GRN Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Survey">Survey</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SalesTeamTracking">Sales Team Tracking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Task">Task</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="ERP">ERP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="DMS">DMS</a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                // Get references to the button and the menu
+                const showModuleBtn = document.getElementById('showModuleBtn');
+                const module = document.getElementById('navbar');
+
+                // Add a click event listener to the button
+                showModuleBtn.addEventListener('click', function () {
+                    // Toggle the display property of the menu
+                    if (module.style.display === 'none') {
+                        module.style.display = 'block';
+                    } else {
+                        module.style.display = 'none';
+                    }
+                });
+
+
+                // Get references to the button and the menu
+                const showMenuBtn = document.getElementById('showMenuBtn');
+                const menu = document.getElementById('nav');
+
+                // Add a click event listener to the button
+                showMenuBtn.addEventListener('click', function () {
+                    // Toggle the display property of the menu
+                    if (menu.style.display === 'none') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+            </script>
+
+
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            @* @await RenderSectionAsync("Scripts", required: false) *@
+            @RenderBody()
+        </main>
+    </div>
+@* 
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Accura_Innovatives - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
