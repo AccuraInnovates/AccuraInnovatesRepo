@@ -2192,6 +2192,8 @@ namespace Accura_Innovatives.Controllers
             var employeeMasterData1 = await _context.EmployeeMasterData1s.FindAsync(id);
             var SalCal = _context.SalaryCalculations.Where(x => x.EmpCode == id).FirstOrDefault();
             if (SalCal != null) { _context.SalaryCalculations.Remove(SalCal); }
+            var Att = _context.Attendances.Where(x => x.EmpCode == id).FirstOrDefault();
+            if (Att != null) { _context.Attendances.Remove(Att); }
             if (employeeMasterData1 != null)
             {
                 _context.EmployeeMasterData1s.Remove(employeeMasterData1);
