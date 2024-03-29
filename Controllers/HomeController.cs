@@ -1126,9 +1126,9 @@ namespace Accura_Innovatives.Controllers
                                         isHeaderSkipped = true;
                                         continue;
                                     }
-                                    //int count = reader.FieldCount;
+
                                     EmployeeMasterData1 e = new EmployeeMasterData1();
-                                  //  EmployeeViewModel emp = new EmployeeViewModel();
+
                                     e.EmpCtg = reader.GetValue(0).ToString();
                                     if (int.TryParse(reader.GetValue(1).ToString(), out int result0))
                                     {
