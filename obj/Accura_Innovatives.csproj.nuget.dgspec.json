@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
         "packagesPath": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\",
+=======
+    "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
+        "projectName": "Accura_Innovatives",
+        "projectPath": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
+        "packagesPath": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\",
+>>>>>>> d37b546b955f4e3a496edcb1faa2702da9bb1a83
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Accura Dev 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Accura Dev 2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

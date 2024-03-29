@@ -29,23 +29,6 @@ namespace Accura_Innovatives.Controllers
             hostingenvironment = hc;
         }
 
-        // GET: EmployeeMasterData1
-        //public async Task<IActionResult> Index(string searchBy, string search, int i)
-        //{
-        //    var employeeMaster1Context = _context.EmployeeMasterData1s.Include(e => e.BloodGrpNavigation).Include(e => e.Contractor).Include(e => e.EmpCtgNavigation).Include(e => e.EmpRoleNavigation).Include(e => e.EsiEpfEligibilityNavigation).Include(e => e.HighQuali2Navigation).Include(e => e.HighQualiNavigation).Include(e => e.NationalityNavigation).Include(e => e.PerBnkNameNavigation).Include(e => e.SalBankNameNavigation).Include(e => e.SalaryPaidByNavigation);
-        //    if (searchBy == "EmpName")
-        //    {
-        //        return View(_context.EmployeeMasterData1s.Where(x => x.EmpName == search || search == null).ToList());
-        //    }
-        //    else if (searchBy == "EmpCode")
-        //    {
-        //        int code = Convert.ToInt32(search);
-        //        return View(_context.EmployeeMasterData1s.Where(x => x.EmpCode == code || search == null).ToList());
-        //    }
-        //    return View(await employeeMaster1Context.ToListAsync());
-        //}
-
-
         public async Task<IActionResult> Index(string searchString, string sortOrder, int pageNumber = 1, int pageSize = 3)
         {
 
