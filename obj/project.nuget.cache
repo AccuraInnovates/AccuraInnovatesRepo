@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OftxP7YwdsPF0fIEj68eWhvFwms2YwmGSCJUB7kXscOho3mdqYTZYnL30u8TILc8179O/s0FYBAkZR114AE+oA==",
+  "dgSpecHash": "aRqeaYOeUiLoiyA06orruCR5mhtrAnaV/QqXkt1w0HmeL9WZd08A+TwIHtTSZrPE4E7mNEDXnWigfWgf+ZVP8g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Accura Dev 1\\source\\repos\\Accura_Innovatives\\Accura_Innovatives\\Accura_Innovatives.csproj",
+  "projectFilePath": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Accura Dev 1\\.nuget\\packages\\aspose.pdf\\24.2.0\\aspose.pdf.24.2.0.nupkg.sha512",
     "C:\\Users\\Accura Dev 1\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
