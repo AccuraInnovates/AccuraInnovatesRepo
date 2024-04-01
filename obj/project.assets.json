@@ -13765,23 +13765,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Accura Dev 2\\.nuget\\packages\\": {},
+    "C:\\Users\\Accura Dev 1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
+      "projectUniqueName": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
       "projectName": "Accura_Innovatives",
-      "projectPath": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
-      "packagesPath": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\",
+      "projectPath": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\Accura_Innovatives.csproj",
+      "packagesPath": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Accura Dev 2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Accura Dev 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -13917,6 +13917,12 @@
     }
   },
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",
