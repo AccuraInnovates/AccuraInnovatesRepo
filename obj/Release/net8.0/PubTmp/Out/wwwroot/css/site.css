@@ -1,0 +1,316 @@
+html {
+    font-size: 14px;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.header img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    background-color: blue;
+    align-content: center;
+}
+
+.header {
+    display: flex;
+    text-align: center;
+    /*align-items:center;*/
+    justify-content: space-between;
+    padding: 10px;
+    /*background-color: blue;*/
+    box-shadow: 0 2px 4px rgb(128, 128, 128);
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/*.logout-button img{
+    display:block;
+    max-width:10px;
+    height:auto;
+    background-color:aquamarine;
+}*/
+.top-section {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: blue;
+    box-shadow: 0 2px 4px rgb(128, 128, 128);
+}
+
+.logo img {
+    /*max-width: 100px;*/
+    /*height: auto;*/
+    display: block;
+    margin: 0 auto;
+    /*background-color: blue;*/
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.company-name h1 {
+    margin: 0;
+    color: #4800ff;
+    font-size: 24px;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background-image: linear-gradient(blue, purple,pink );*/
+    background-image: url("../Image/Welding.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+
+.login-container {
+    background-color: #808080;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #258cfb;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.tablinks {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    float: left;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+    .tablinks.active {
+        background-color: #fff;
+        border: 1px solid #fff;
+    }
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+.navbar {
+    display: none;
+    vertical-align: bottom;
+    align-content: center;
+}
+
+    .navbar:hover {
+        background-color: #808080;
+        color: black;
+        background-image: url(../Image/BG3.jpg);
+        background-repeat: no-repeat;
+    }
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    /*align-items:center;*/
+}
+
+li a {
+    display: inline-block;
+    background-color: #808080;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #258cfb;
+    width: auto;
+    margin: 2px auto;
+    align-items: center;
+    /*align-content:center;*/
+    text-align: center;
+}
+
+.EmailForForgotPassword label {
+    float: left;
+    width: 30px;
+}
+
+.EmailForForgotPassword input[type=text] {
+    width: 80px;
+}
+
+button .logout-button {
+    width: 100%;
+    border: none;
+    /*background-color: #007bff;
+    color: #fff;*/
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav {
+    /*background-color: #ccc;*/
+    color: black;
+    /*background-image: url(../Image/BG2.jpg);*/
+    display: none;
+    vertical-align: bottom;
+    align-content: center
+}
+
+
+    .nav a {
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 5px;
+        width: auto;
+    }
+
+        .nav a:hover {
+            background-color: #808080;
+            color: black;
+            background-image: url(../Image/BG3.jpg);
+            background-repeat: no-repeat;
+        }
+
+
+/*.home:hover {
+    background-image: url(../Image/BG3.jpg);
+    background-repeat: no-repeat;
+}*/
+
+.form-container {
+    width: auto; /* Adjust the width as needed */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    left: 0;
+    right: 0;
+    position: absolute;
+    /*text-align: center;*/
+    background-color: #ccc;
+    background-image: url(../Image/BG3.jpg);
+    background-repeat: no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .form-container label {
+        margin-bottom: 8px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .form-container select,
+    .form-container input {
+        padding: 8px;
+        margin-right: 8px;
+        margin-bottom: 12px;
+    }
+
+    .form-container button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.content {
+    max-width: auto;
+    width: 100%;
+    padding: 20px;
+}
