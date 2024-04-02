@@ -105,6 +105,10 @@
       "PackagePath": "staticwebassets\\Image\\right-arrow.jpg"
     },
     {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\0ef7c2ae-1586-45e2-8185-84de74ba7e46_10004_2_22.pdf",
+      "PackagePath": "staticwebassets\\Images\\0ef7c2ae-1586-45e2-8185-84de74ba7e46_10004_2_22.pdf"
+    },
+    {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\10004_1.JPG"
     },
@@ -241,12 +245,20 @@
       "PackagePath": "staticwebassets\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf"
     },
     {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\53eaf12c-5407-40f4-a2e3-cc5c4a7e217e_10004_1.JPG",
+      "PackagePath": "staticwebassets\\Images\\53eaf12c-5407-40f4-a2e3-cc5c4a7e217e_10004_1.JPG"
+    },
+    {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG"
     },
     {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5851b4aa-825c-451e-8974-856fe0180662_10004_2_22.pdf",
+      "PackagePath": "staticwebassets\\Images\\5851b4aa-825c-451e-8974-856fe0180662_10004_2_22.pdf"
     },
     {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf",
@@ -285,8 +297,16 @@
       "PackagePath": "staticwebassets\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf"
     },
     {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\8b31fda8-feae-4472-96cf-d45e721b5d55_10004_2_22.pdf",
+      "PackagePath": "staticwebassets\\Images\\8b31fda8-feae-4472-96cf-d45e721b5d55_10004_2_22.pdf"
+    },
+    {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\988db6e5-5dd2-4700-8543-b4eba89542c9_10004_1.JPG",
+      "PackagePath": "staticwebassets\\Images\\988db6e5-5dd2-4700-8543-b4eba89542c9_10004_1.JPG"
     },
     {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg",
@@ -341,6 +361,10 @@
       "PackagePath": "staticwebassets\\Images\\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf"
     },
     {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg",
+      "PackagePath": "staticwebassets\\Images\\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf",
       "PackagePath": "staticwebassets\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf"
     },
@@ -367,6 +391,10 @@
     {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e9e135d6-8312-432a-a4e6-b3998751ae54_10004_5.pdf",
       "PackagePath": "staticwebassets\\Images\\e9e135d6-8312-432a-a4e6-b3998751ae54_10004_5.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ea302747-4496-466f-9fe9-c95ca7c330f5_10004_1.JPG",
+      "PackagePath": "staticwebassets\\Images\\ea302747-4496-466f-9fe9-c95ca7c330f5_10004_1.JPG"
     },
     {
       "Id": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf",

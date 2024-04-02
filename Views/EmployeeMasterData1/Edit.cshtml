@@ -268,25 +268,31 @@
                                     <div id="imagePreview"></div>
                                 </div>
                                 <label asp-for="ProfilePhoto" class="control-label">Previously added:</label>
-                                @if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName != null && Model.ProfilePhoto.FileName != "" && Model.ProfilePhoto.FileName != "NULL" && Model.ProfilePhoto.FileName.Length > 0)
+                                @if (Model != null && Model.ProfilePhoto != null)
                                 {
-                                @if (Model.ProfilePhoto != null)
-                                {
-                                    <img src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.ProfilePhoto != null)
-                                {
-                                <embed src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
-                                }
-                               else
-                                {
-                                    <span>No File Provided</span>
+
+                                    @if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName != null && Model.ProfilePhoto.FileName != "" && Model.ProfilePhoto.FileName != "NULL" && Model.ProfilePhoto.FileName.Length > 0)
+                                    {
+                                        @if (Model.ProfilePhoto != null)
+                                        {
+                                            <img src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
+                                        }
+                                        else if (Model.ProfilePhoto != null)
+                                        {
+                                            <embed src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
+                                        }
+                                        else
+                                        {
+                                            <span>No File Provided</span>
+                                        }
                                     }
-                                }
-                                else
-                                {
-                                    <span>No File Provided</span>
-                                }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
+                                } 
+                              
+
                             </div>
                         </div>
                     </div>
