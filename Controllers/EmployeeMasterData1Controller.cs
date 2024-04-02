@@ -68,7 +68,7 @@ namespace Accura_Innovatives.Controllers
             ViewBag.Success = TempData["SuccessMessage"];
              return View(result);
         }
-
+        //
         //public IActionResult SalaryDetailsUpload()
         //{
         //    var salaryEmpCodes = _context.SalaryCalculations.Select(s => s.EmpCode).ToList();
