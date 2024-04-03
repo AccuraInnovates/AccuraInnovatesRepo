@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y8p2OCM+f1CnZ3xq7KZa1J+Q/kJ0XdIn+21jc/Q/rPY=",
+  "Hash": "+RHdiEyXh/2nRweSO2/hs/RSahYmk3fvEf4qO99vros=",
   "Source": "Accura_Innovatives",
   "BasePath": "_content/Accura_Innovatives",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Accura_Innovatives\\wwwroot",
       "Source": "Accura_Innovatives",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Accura Dev 2\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\Accura Dev 1\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.1\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Accura_Innovatives.styles.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Accura_Innovatives.styles.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Accura_Innovatives.styles.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Accura_Innovatives.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Accura_Innovatives.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Accura_Innovatives.bundle.scp.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Accura_Innovatives.bundle.scp.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Accura_Innovatives.bundle.scp.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Accura_Innovatives.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Accura_Innovatives.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance sample......xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance sample......xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Attendance sample......xlsx",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Attendance sample......xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Attendance_Sample.xlsx",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Attendance_Sample.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample_1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample_1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Attendance_Sample_1.xlsx",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Attendance_Sample_1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample_Final.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Attendance_Sample_Final.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Attendance_Sample_Final.xlsx",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Attendance_Sample_Final.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\AZ_Consolidated  Attendance Details for Feb 2024 for Import.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\AZ_Consolidated  Attendance Details for Feb 2024 for Import.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/AZ_Consolidated  Attendance Details for Feb 2024 for Import.xlsx",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\AZ_Consolidated  Attendance Details for Feb 2024 for Import.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Jan-24 import format sample.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Jan-24 import format sample.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Jan-24 import format sample.xlsx",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Jan-24 import format sample.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Jan-24 import format sample_1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\AttendanceUploads\\Jan-24 import format sample_1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "AttendanceUploads/Jan-24 import format sample_1.xlsx",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\AttendanceUploads\\Jan-24 import format sample_1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\ComOffSalAdvJan-2024_HR.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\ComOffSalAdvJan-2024_HR.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "CompOffAdvancesUploads/ComOffSalAdvJan-2024_HR.xlsx",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\CompOffAdvancesUploads\\ComOffSalAdvJan-2024_HR.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample - Jan.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample - Jan.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "CompOffAdvancesUploads/CompAdvancesSample - Jan.xlsx",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample - Jan.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "CompOffAdvancesUploads/CompAdvancesSample.xlsx",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\CompOffAdvancesUploads\\CompAdvancesSample.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\Feb month Saalry Advance import file.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\Feb month Saalry Advance import file.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "CompOffAdvancesUploads/Feb month Saalry Advance import file.xlsx",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\CompOffAdvancesUploads\\Feb month Saalry Advance import file.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\One time Saalry Advance import file.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\CompOffAdvancesUploads\\One time Saalry Advance import file.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "CompOffAdvancesUploads/One time Saalry Advance import file.xlsx",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\CompOffAdvancesUploads\\One time Saalry Advance import file.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\css\\site.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\css\\styles.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\css\\styles.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "css/styles.css",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\favicon.ico",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG1.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG1.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/BG1.jpg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\BG1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG2.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG2.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/BG2.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\BG2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG3.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BG3.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/BG3.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\BG3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BlueBG.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\BlueBG.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/BlueBG.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\BlueBG.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\favicon.ico",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\favicon.ico",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/favicon.ico",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\gradient-backgrounds.webp",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\gradient-backgrounds.webp",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/gradient-backgrounds.webp",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\gradient-backgrounds.webp"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\left-arrow.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\left-arrow.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/left-arrow.png",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\left-arrow.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\logo.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\logo.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/logo.png",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\logout-button.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\logout-button.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/logout-button.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\logout-button.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\menu-icon.webp",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\menu-icon.webp",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/menu-icon.webp",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\menu-icon.webp"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\module-black-icon.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\module-black-icon.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/module-black-icon.png",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\module-black-icon.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\right-arrow.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\right-arrow.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/right-arrow.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\right-arrow.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\Welding.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Image\\Welding.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Image/Welding.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\Image\\Welding.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_1.JPG",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_1.JPG",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_1.JPG",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_1.JPG"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_10.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_10.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_10.pdf",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_10.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_2.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_2.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_2.pdf",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_2.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_3.jpeg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_3.jpeg",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_4.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_4.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_4.pdf",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_4.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_5.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_5.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_5.pdf",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_5.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_6.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_6.pdf",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_6.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_7.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_7.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_7.pdf",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_7.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_8.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_8.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_8.pdf",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_8.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_9.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_9.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10004_9.pdf",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10004_9.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_1.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_1.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_1.jpg",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_10.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_10.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_10.jpg",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_10.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_11.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_11.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_11.pdf",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_11.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_13.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_13.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_13.jpg",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_13.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_14.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_14.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_14.jpg",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_14.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_15.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_15.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_15.jpg",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_15.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_2.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_2.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_2.pdf",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_2.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_3.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_3.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_3.png",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_3.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_4.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_4.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_4.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_4.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_6.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_6.pdf",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_6.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_7.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_7.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_7.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_7.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_8.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_8.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_8.jpg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_8.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_9.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10052_9.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10052_9.pdf",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10052_9.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_1.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_1.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10232_1.pdf",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10232_1.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_2.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_2.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10232_2.pdf",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10232_2.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_3.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_3.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10232_3.pdf",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10232_3.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_9.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10232_9.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/10232_9.pdf",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\10232_9.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf",
       "AssetKind": "All",
@@ -1157,10 +1157,67 @@
       "OriginalItemSpec": "wwwroot\\Images\\187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\26af44d0-5ea3-4aa2-831e-49e2601d2044_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/26af44d0-5ea3-4aa2-831e-49e2601d2044_10004_6.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\26af44d0-5ea3-4aa2-831e-49e2601d2044_10004_6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\40b7cb4a-40e7-42c4-bca2-06d361f2d108_10004_6.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/40b7cb4a-40e7-42c4-bca2-06d361f2d108_10004_6.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\40b7cb4a-40e7-42c4-bca2-06d361f2d108_10004_6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4811fd2c-4440-4134-9a5f-c6b83b729e8c_10004_1.JPG",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/4811fd2c-4440-4134-9a5f-c6b83b729e8c_10004_1.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\4811fd2c-4440-4134-9a5f-c6b83b729e8c_10004_1.JPG"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf",
       "AssetKind": "All",
@@ -1176,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf",
       "AssetKind": "All",
@@ -1195,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG",
       "AssetKind": "All",
@@ -1214,10 +1271,29 @@
       "OriginalItemSpec": "wwwroot\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf",
       "AssetKind": "All",
@@ -1233,10 +1309,29 @@
       "OriginalItemSpec": "wwwroot\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5b177470-0213-48aa-aa8f-df9e1ac20766_10004_3.jpeg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/5b177470-0213-48aa-aa8f-df9e1ac20766_10004_3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\5b177470-0213-48aa-aa8f-df9e1ac20766_10004_3.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg",
       "AssetKind": "All",
@@ -1252,10 +1347,29 @@
       "OriginalItemSpec": "wwwroot\\Images\\62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\68e4b27a-f2b9-4a39-a2cf-817433632a9c_10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\66225209-8d50-4664-bc08-79f0696e47cc_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/66225209-8d50-4664-bc08-79f0696e47cc_10004_6.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\66225209-8d50-4664-bc08-79f0696e47cc_10004_6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\68e4b27a-f2b9-4a39-a2cf-817433632a9c_10004_3.jpeg",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/68e4b27a-f2b9-4a39-a2cf-817433632a9c_10004_3.jpeg",
       "AssetKind": "All",
@@ -1271,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\68e4b27a-f2b9-4a39-a2cf-817433632a9c_10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\6ac48ed1-7629-485e-bd05-8bd5b793f56d_10004_2_22.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\6ac48ed1-7629-485e-bd05-8bd5b793f56d_10004_2_22.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/6ac48ed1-7629-485e-bd05-8bd5b793f56d_10004_2_22.pdf",
       "AssetKind": "All",
@@ -1290,10 +1404,29 @@
       "OriginalItemSpec": "wwwroot\\Images\\6ac48ed1-7629-485e-bd05-8bd5b793f56d_10004_2_22.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7953f2f5-71b0-42f6-a9fc-a067bfd21fc8_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/7953f2f5-71b0-42f6-a9fc-a067bfd21fc8_10004_6.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\7953f2f5-71b0-42f6-a9fc-a067bfd21fc8_10004_6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf",
       "AssetKind": "All",
@@ -1309,10 +1442,48 @@
       "OriginalItemSpec": "wwwroot\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf",
       "AssetKind": "All",
@@ -1328,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG",
       "AssetKind": "All",
@@ -1347,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a7e6bbc7-8b58-47e2-93e9-e63d370ad9bb_10004_2_22.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a7e6bbc7-8b58-47e2-93e9-e63d370ad9bb_10004_2_22.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/a7e6bbc7-8b58-47e2-93e9-e63d370ad9bb_10004_2_22.pdf",
       "AssetKind": "All",
@@ -1366,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\a7e6bbc7-8b58-47e2-93e9-e63d370ad9bb_10004_2_22.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a8bec3eb-2b8e-404a-a0f0-0a95afffca26_10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a8bec3eb-2b8e-404a-a0f0-0a95afffca26_10004_3.jpeg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/a8bec3eb-2b8e-404a-a0f0-0a95afffca26_10004_3.jpeg",
       "AssetKind": "All",
@@ -1385,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\a8bec3eb-2b8e-404a-a0f0-0a95afffca26_10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ac04ced8-fd1b-46e3-b4e6-c7d5b4b0da6a_10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ac04ced8-fd1b-46e3-b4e6-c7d5b4b0da6a_10004_3.jpeg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/ac04ced8-fd1b-46e3-b4e6-c7d5b4b0da6a_10004_3.jpeg",
       "AssetKind": "All",
@@ -1404,10 +1575,48 @@
       "OriginalItemSpec": "wwwroot\\Images\\ac04ced8-fd1b-46e3-b4e6-c7d5b4b0da6a_10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\b722ca99-a750-4163-b1cc-93c4d330ef89_10004_7.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/b722ca99-a750-4163-b1cc-93c4d330ef89_10004_7.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\b722ca99-a750-4163-b1cc-93c4d330ef89_10004_7.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ba12eb44-c233-45f8-acd8-81e8c2b603ea_10004_3.jpeg",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/ba12eb44-c233-45f8-acd8-81e8c2b603ea_10004_3.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ba12eb44-c233-45f8-acd8-81e8c2b603ea_10004_3.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf",
       "AssetKind": "All",
@@ -1423,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf",
       "AssetKind": "All",
@@ -1442,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf",
       "AssetKind": "All",
@@ -1461,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf",
       "AssetKind": "All",
@@ -1480,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e119a32a-e0b6-4037-91e3-2a4e5a9f6249_10004_6.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e119a32a-e0b6-4037-91e3-2a4e5a9f6249_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/e119a32a-e0b6-4037-91e3-2a4e5a9f6249_10004_6.pdf",
       "AssetKind": "All",
@@ -1499,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\e119a32a-e0b6-4037-91e3-2a4e5a9f6249_10004_6.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf",
       "AssetKind": "All",
@@ -1518,10 +1727,29 @@
       "OriginalItemSpec": "wwwroot\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ec41f86f-d9a8-4e4a-9f2f-d82b86c1dc3e_10004_6.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/ec41f86f-d9a8-4e4a-9f2f-d82b86c1dc3e_10004_6.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ec41f86f-d9a8-4e4a-9f2f-d82b86c1dc3e_10004_6.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx",
       "AssetKind": "All",
@@ -1537,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg",
       "AssetKind": "All",
@@ -1556,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx",
       "AssetKind": "All",
@@ -1575,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\fedb37c5-535f-42f6-95eb-b86f4a029e15_10004_4.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\fedb37c5-535f-42f6-95eb-b86f4a029e15_10004_4.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Images/fedb37c5-535f-42f6-95eb-b86f4a029e15_10004_4.pdf",
       "AssetKind": "All",
@@ -1594,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\fedb37c5-535f-42f6-95eb-b86f4a029e15_10004_4.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\js\\site.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1613,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1632,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1651,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1670,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1689,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1708,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1727,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1746,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1765,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1784,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1803,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1822,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1841,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1860,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1879,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1898,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1917,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1936,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1955,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1974,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1993,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2012,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2031,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2050,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2069,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2088,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2107,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2126,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2145,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2164,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2183,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2202,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2221,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2240,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2259,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2278,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2297,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2316,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2335,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2354,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2373,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2392,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2411,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2430,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2449,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2468,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2487,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2506,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2525,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2544,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2563,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2582,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2601,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2620,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2639,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2658,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2677,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2696,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/Jan-24 import format sample.xlsx",
       "AssetKind": "All",
@@ -2715,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
       "AssetKind": "All",
@@ -2734,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\Salary_Process_Master (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\Salary_Process_Master (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/Salary_Process_Master (1).xlsx",
       "AssetKind": "All",
@@ -2753,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\Salary_Process_Master (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/SalaryDetailsUpload (1).xlsx",
       "AssetKind": "All",
@@ -2772,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1)_1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1)_1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/SalaryDetailsUpload (1)_1.xlsx",
       "AssetKind": "All",
@@ -2791,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload (1)_1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/SalaryDetailsUpload.xlsx",
       "AssetKind": "All",
@@ -2810,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload_New Joiners.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload_New Joiners.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryDeatilsUploads/SalaryDetailsUpload_New Joiners.xlsx",
       "AssetKind": "All",
@@ -2829,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload_New Joiners.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2 (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2 (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/Feb_1Emp_V2 (1).xlsx",
       "AssetKind": "All",
@@ -2848,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2 (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/Feb_1Emp_V2.xlsx",
       "AssetKind": "All",
@@ -2867,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\Feb_1Emp_V2.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx",
       "AssetKind": "All",
@@ -2886,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS_V1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS_V1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS_V1.xlsx",
       "AssetKind": "All",
@@ -2905,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\NEW EMPLOYEES LIST FOR FEB-2024 SALARY PROCESS_V1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1) (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1) (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/Salary_Process_Master (1) (1).xlsx",
       "AssetKind": "All",
@@ -2924,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1) (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/Salary_Process_Master (1).xlsx",
       "AssetKind": "All",
@@ -2943,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "SalaryProcessMasterUploads/Salary_Process_Master.xlsx",
       "AssetKind": "All",
@@ -2962,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\SalaryProcessMasterUploads\\Salary_Process_Master.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\10232_1.pdf",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\10232_1.pdf",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/10232_1.pdf",
       "AssetKind": "All",
@@ -2981,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\10232_1.pdf"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\asp-net-logo-png-1.png",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\asp-net-logo-png-1.png",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/asp-net-logo-png-1.png",
       "AssetKind": "All",
@@ -3000,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\asp-net-logo-png-1.png"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/AWR-10000_Edited (1).xlsx",
       "AssetKind": "All",
@@ -3019,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\AWR-10000_Edited (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (2).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (2).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/AWR-10000_Edited (2).xlsx",
       "AssetKind": "All",
@@ -3038,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\AWR-10000_Edited (2).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (3).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited (3).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/AWR-10000_Edited (3).xlsx",
       "AssetKind": "All",
@@ -3057,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\AWR-10000_Edited (3).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\AWR-10000_Edited.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/AWR-10000_Edited.xlsx",
       "AssetKind": "All",
@@ -3076,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\AWR-10000_Edited.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\B1B1B020.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\B1B1B020.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/B1B1B020.xlsx",
       "AssetKind": "All",
@@ -3095,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\B1B1B020.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\bulk file.csv",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\bulk file.csv",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/bulk file.csv",
       "AssetKind": "All",
@@ -3114,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\bulk file.csv"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\BULK UPLOAD 1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\BULK UPLOAD 1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/BULK UPLOAD 1.xlsx",
       "AssetKind": "All",
@@ -3133,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\BULK UPLOAD 1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Copy of Employee_Master_Data_Rev_00_28-Nov-2023 (6).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Copy of Employee_Master_Data_Rev_00_28-Nov-2023 (6).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Copy of Employee_Master_Data_Rev_00_28-Nov-2023 (6).xlsx",
       "AssetKind": "All",
@@ -3152,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Copy of Employee_Master_Data_Rev_00_28-Nov-2023 (6).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Copy of Employee1-det.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Copy of Employee1-det.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Copy of Employee1-det.xlsx",
       "AssetKind": "All",
@@ -3171,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Copy of Employee1-det.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Employee.xlsx",
       "AssetKind": "All",
@@ -3190,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Employee.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Employee_1.xlsx",
       "AssetKind": "All",
@@ -3209,10 +3437,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Employee_1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_Master_Data_1.xls",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_Master_Data_1.xls",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Employee_Master_Data_1.xls",
       "AssetKind": "All",
@@ -3228,10 +3456,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Employee_Master_Data_1.xls"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_Master_Data_2.xls",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee_Master_Data_2.xls",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Employee_Master_Data_2.xls",
       "AssetKind": "All",
@@ -3247,10 +3475,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Employee_Master_Data_2.xls"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee1.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\Employee1.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/Employee1.xlsx",
       "AssetKind": "All",
@@ -3266,10 +3494,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Employee1.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\EmployeeMasterData1_CheckImage.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\EmployeeMasterData1_CheckImage.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/EmployeeMasterData1_CheckImage.xlsx",
       "AssetKind": "All",
@@ -3285,10 +3513,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\EmployeeMasterData1_CheckImage.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\img.jpg",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Uploads\\img.jpg",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "Uploads/img.jpg",
       "AssetKind": "All",
@@ -3304,10 +3532,10 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\img.jpg"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL SL Jan-2024_HR.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL SL Jan-2024_HR.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "YearlyLeaveUploads/CL SL Jan-2024_HR.xlsx",
       "AssetKind": "All",
@@ -3323,10 +3551,10 @@
       "OriginalItemSpec": "wwwroot\\YearlyLeaveUploads\\CL SL Jan-2024_HR.xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL_SL_Sample (1).xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL_SL_Sample (1).xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "YearlyLeaveUploads/CL_SL_Sample (1).xlsx",
       "AssetKind": "All",
@@ -3342,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\YearlyLeaveUploads\\CL_SL_Sample (1).xlsx"
     },
     {
-      "Identity": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL_SL_Sample.xlsx",
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\YearlyLeaveUploads\\CL_SL_Sample.xlsx",
       "SourceId": "Accura_Innovatives",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
       "BasePath": "_content/Accura_Innovatives",
       "RelativePath": "YearlyLeaveUploads/CL_SL_Sample.xlsx",
       "AssetKind": "All",

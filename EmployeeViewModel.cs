@@ -12,9 +12,9 @@ namespace Accura_Innovatives
 
         [Required(ErrorMessage = "The Name field is required.")]
         public string EmpName { get; set; } = null!;
-        [Required(ErrorMessage = "The AadharName field is required.")]
-        public string? EmpAadharName { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? EmpAadharName { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public string? EmpPanName { get; set; } 
 
         public string? EmpCertifName { get; set; } 
@@ -28,7 +28,7 @@ namespace Accura_Innovatives
         public string Gender { get; set; } = null!;
 
         public string? BloodGrp { get; set; }
-
+        [Required(ErrorMessage = "This field is required.")]
         public string? AadharNo { get; set; } 
 
         public IFormFile? AadharCard { get; set; }
@@ -48,39 +48,39 @@ namespace Accura_Innovatives
         public string? PassportVal { get; set; }
 
         public IFormFile? PassportCard { get; set; }
-
+        [Required(ErrorMessage = "The Aadhar Date Of Birth field is required.")]
         public string? AadharDob { get; set; } 
 
         public string? Dob { get; set; }
-
-        public string? PresentAddressLine1 { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? PresentAddressLine1 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public string? PresentAddressLine2 { get; set; }
-
-        public string? PresentAddressCity { get; set; } 
-
-        public string? PresentAddressState { get; set; } 
-
+        
+        public string? PresentAddressCity { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? PresentAddressState { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public int? PresentAddressZipcode { get; set; }
-
+        [Required(ErrorMessage = "This field is required.")]
         public string? PermAddressLine1 { get; set; } 
 
         public string? PermAddressLine2 { get; set; }
-
-        public string? PermAddressCity { get; set; } 
-
-        public string? PermAddressState { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? PermAddressCity { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? PermAddressState { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public int? PermAddressZipcode { get; set; }
-
+        [Required(ErrorMessage = "This field is required.")]
         public string? CommAddressLine1 { get; set; } 
 
         public string? CommAddressLine2 { get; set; }
-
-        public string? CommAddressCity { get; set; } 
-
-        public string? CommAddressState { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? CommAddressCity { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? CommAddressState { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public int? CommAddressZipcode { get; set; }
 
         public string? Nationality { get; set; }
@@ -88,7 +88,7 @@ namespace Accura_Innovatives
         public string? MaritalStatus { get; set; }
 
         public string? PerEmail { get; set; }
-
+        [Required(ErrorMessage = "This field is required.")]
         public string? PerMobile { get; set; } 
 
         public string? PerAccNo { get; set; }
@@ -98,17 +98,17 @@ namespace Accura_Innovatives
         public string? PerBnkIfsc { get; set; }
 
         public string? PerBnkBranch { get; set; }
-
-        public string? FamMemName1 { get; set; } 
-
-        public string? FamMemRel1 { get; set; } 
-
-        public string? FamMemContact1 { get; set; } 
-
-        public string? FamMemName2 { get; set; } 
-
-        public string? FamMemRel2 { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? FamMemName1 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? FamMemRel1 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? FamMemContact1 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? FamMemName2 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? FamMemRel2 { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public string? FamMemContact2 { get; set; } 
 
         public string? FamMemName3 { get; set; }
@@ -128,11 +128,11 @@ namespace Accura_Innovatives
         public string? FamMemRel5 { get; set; }
 
         public string? FamMemContact5 { get; set; }
-
-        public string? EmerContactName { get; set; } 
-
-        public string? EmerContactRel { get; set; } 
-
+        [Required(ErrorMessage = "This field is required.")]
+        public string? EmerContactName { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
+        public string? EmerContactRel { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public string? EmerContactNo { get; set; } 
 
         public string? HighQuali { get; set; }
@@ -283,8 +283,8 @@ namespace Accura_Innovatives
 
         public string EmpDesignation { get; set; } = null!;
 
-        public string? EmpRole { get; set; } 
-
+        public string? EmpRole { get; set; }
+        [Required(ErrorMessage = "This field is required.")]
         public string? EmpDoj { get; set; }
 
         public string? EmpOnboardCtg { get; set; } 
@@ -398,7 +398,7 @@ namespace Accura_Innovatives
         public string? ReleavedReason { get; set; }
 
         public string? EmpRejoinDate { get; set; }
-
+        [Required(ErrorMessage = "This field is required.")]
         public int? ReportingTo { get; set; }
 
         public int? EmpOldCode { get; set; }

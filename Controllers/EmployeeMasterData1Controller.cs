@@ -68,7 +68,7 @@ namespace Accura_Innovatives.Controllers
             ViewBag.Success = TempData["SuccessMessage"];
              return View(result);
         }
-
+        //
         //public IActionResult SalaryDetailsUpload()
         //{
         //    var salaryEmpCodes = _context.SalaryCalculations.Select(s => s.EmpCode).ToList();
@@ -842,7 +842,7 @@ namespace Accura_Innovatives.Controllers
                 ViewData["SalaryPaidBy"] = new SelectList(_context.CompanyMs, "CompanyName", "CompanyName", emp.SalaryPaidBy);
 
                 EmployeeViewModel e = new EmployeeViewModel();
-                if(emp.EmpSal != null)
+                if (emp.EmpSal != null)
                 {
                     Sal = (double)emp.EmpSal;
                 }
@@ -851,7 +851,7 @@ namespace Accura_Innovatives.Controllers
                     WagesPerDAy = (double)emp.EmpWageDay;
                 }
                 AadharDob = emp.AadharDob;
-               Dob = emp.Dob;
+                Dob = emp.Dob;
                 Doj = emp.EmpDoj;
                 DrvLinVal = emp.DrvLinVal;
                 PassportVal = emp.PassportVal;
@@ -875,7 +875,7 @@ namespace Accura_Innovatives.Controllers
                 WorkExBreakEdt4 = emp.WorkExBreakEdt4;
                 EsiJdt = emp.EsiJdt;
                 EpfJdt = emp.EpfJdt;
-                
+
 
                 e.EmpCtg = emp.EmpCtg;
                 e.EmpCode = emp.EmpCode;
@@ -984,7 +984,14 @@ namespace Accura_Innovatives.Controllers
                 e.EmerContactNo = emp.EmerContactNo;
                 e.HighQuali = emp.HighQuali;
                 e.HighQualiInstituteName = emp.HighQualiInstituteName;
-                e.HighQualiMark = emp.HighQualiMark;
+                if(emp.HighQualiMark != null)
+                {
+                    e.HighQualiMark = emp.HighQualiMark;
+                }
+                else
+                {
+                    e.HighQualiMark = 0;
+                }
                 e.HighQualiPassYear = emp.HighQualiPassYear;
                 if (emp.HighQualiCerf1 != null && emp.HighQualiCerf1 != "")
                 {
@@ -997,7 +1004,14 @@ namespace Accura_Innovatives.Controllers
                 }
                 e.HighQuali2 = emp.HighQuali2;
                 e.HighQualiInstituteName2 = emp.HighQualiInstituteName2;
-                e.HighQualiMark2 = emp.HighQualiMark2;
+                if (emp.HighQualiMark2 != null)
+                {
+                    e.HighQualiMark2 = emp.HighQualiMark2;
+                }
+                else
+                {
+                    e.HighQualiMark2 = 0;
+                }
                 e.HighQualiPassYear2 = emp.HighQualiPassYear2;
                 if (emp.HighQualiCerf2 != null && emp.HighQualiCerf2 != "")
                 {
@@ -1009,7 +1023,14 @@ namespace Accura_Innovatives.Controllers
                     }
                 }
                 e.HscSchoolName = emp.HscSchoolName;
-                e.HscMark = emp.HscMark;
+                if(emp.HscMark != null)
+                {
+                    e.HscMark = emp.HscMark;
+                }
+                else
+                {
+                    e.HscMark = 0;
+                }
                 e.HscPassYear = emp.HscPassYear;
                 if (emp.HscCerf != null && emp.HscCerf != "")
                 {
@@ -1021,7 +1042,14 @@ namespace Accura_Innovatives.Controllers
                     }
                 }
                 e.SslcSchoolName = emp.SslcSchoolName;
-                e.SslcMark = emp.SslcMark;
+                if(emp.SslcMark != null)
+                {
+                    e.SslcMark = emp.SslcMark;
+                }
+                else
+                {
+                    e.SslcMark = 0;
+                }
                 e.SslcPassYear = emp.SslcPassYear;
                 if (emp.SslcCerf != null && emp.SslcCerf != "")
                 {
@@ -1034,7 +1062,14 @@ namespace Accura_Innovatives.Controllers
                 }
                 e.OtherCerfName1 = emp.OtherCerfName1;
                 e.OtherCerfInstitute1 = emp.OtherCerfInstitute1;
+                if(emp.OtherCerfMark1 !=null)
+                { 
                 e.OtherCerfMark1 = emp.OtherCerfMark1;
+                }
+                else
+                {
+                    e.OtherCerfMark1 = 0;
+                }
                 e.OtherCerfDuration1 = emp.OtherCerfDuration1;
                 e.OtherCerfPassYear1 = emp.OtherCerfPassYear1;
                 if (emp.OtherCerf1 != null && emp.OtherCerf1 != "")
@@ -1048,7 +1083,15 @@ namespace Accura_Innovatives.Controllers
                 }
                 e.OtherCerfName2 = emp.OtherCerfName2;
                 e.OtherCerfInstitute2 = emp.OtherCerfInstitute2;
-                e.OtherCerfMark2 = emp.OtherCerfMark2;
+                if(emp.OtherCerfMark2 != null)
+                {
+                    e.OtherCerfMark2 = emp.OtherCerfMark2;
+                }
+                else
+                {
+                    e.OtherCerfMark2 = 0;
+                }
+                
                 e.OtherCerfDuration2 = emp.OtherCerfDuration2;
                 e.OtherCerfPassYear2 = emp.OtherCerfPassYear2;
                 if (emp.OtherCerf2 != null && emp.OtherCerf2 != "")
@@ -1062,7 +1105,14 @@ namespace Accura_Innovatives.Controllers
                 }
                 e.OtherCerfName3 = emp.OtherCerfName3;
                 e.OtherCerfInstitute3 = emp.OtherCerfInstitute3;
-                e.OtherCerfMark3 = emp.OtherCerfMark3;
+                if(emp.OtherCerfMark3 != null)
+                {
+                    e.OtherCerfMark3 = emp.OtherCerfMark3;
+                }
+                else
+                {
+                    e.OtherCerfMark3 = 0;
+                }
                 e.OtherCerfDuration3 = emp.OtherCerfDuration3;
                 e.OtherCerfPassYear3 = emp.OtherCerfPassYear3;
                 if (emp.OtherCerf3 != null && emp.OtherCerf3 != "")
