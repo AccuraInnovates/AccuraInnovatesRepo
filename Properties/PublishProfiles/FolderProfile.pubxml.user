@@ -4,8 +4,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
+<<<<<<< HEAD
+    <_PublishTargetUrl>C:\Users\Accura Dev 2\Desktop\Application Build</_PublishTargetUrl>
+    <History>True|2024-03-30T04:02:02.5322629Z;</History>
+=======
     <_PublishTargetUrl>C:\Users\Accura Dev 1\Desktop\Payroll</_PublishTargetUrl>
     <History>True|2024-04-01T11:57:38.2225172Z;</History>
+>>>>>>> 28ca3015f0ccdc7be106801f4c03fa3adf4c9a68
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
