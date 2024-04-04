@@ -510,14 +510,23 @@ namespace Accura_Innovatives.Controllers
                     emp.TcCard.CopyTo(new FileStream(filePath, FileMode.Create));
                 }
                 else { emp.TcCard = null; }
+                double Exp = 0;
+                if (emp.ExpYears != null)
+                {
+                    Exp = Math.Round((double)emp.ExpYears, 2); // Rounds to 2 decimal places
+                }
+                else
+                {
+                    Exp = 0;
+                }
                 EmployeeMasterData1 e = new EmployeeMasterData1
                 {
                     EmpCtg = emp.EmpCtg,
                     EmpCode = emp.EmpCode,
                     EmpName = emp.EmpName,
                     EmpAadharName = emp.EmpAadharName,
-                    EmpPanName= emp.EmpPanName,
-                    EmpCertifName= emp.EmpCertifName,
+                    EmpPanName = emp.EmpPanName,
+                    EmpCertifName = emp.EmpCertifName,
                     EmpNameInBank = emp.EmpNameInBank,
                     EmpBcardName = emp.EmpBcardName,
                     EmpPhoto = filename,
@@ -545,7 +554,7 @@ namespace Accura_Innovatives.Controllers
                     PermAddressCity = emp.PermAddressCity,
                     PermAddressState = emp.PermAddressState,
                     PermAddressZipcode = emp.PermAddressZipcode,
-                    CommAddressLine1= emp.CommAddressLine1,
+                    CommAddressLine1 = emp.CommAddressLine1,
                     CommAddressLine2 = emp.CommAddressLine2,
                     CommAddressCity = emp.CommAddressCity,
                     CommAddressState = emp.CommAddressState,
@@ -569,7 +578,7 @@ namespace Accura_Innovatives.Controllers
                     FamMemContact3 = emp.FamMemContact3,
                     FamMemName4 = emp.FamMemName4,
                     FamMemRel4 = emp.FamMemRel4,
-                    FamMemContact4= emp.FamMemContact4,
+                    FamMemContact4 = emp.FamMemContact4,
                     FamMemName5 = emp.FamMemName5,
                     FamMemRel5 = emp.FamMemRel5,
                     FamMemContact5 = emp.FamMemContact5,
@@ -578,41 +587,41 @@ namespace Accura_Innovatives.Controllers
                     EmerContactNo = emp.EmerContactNo,
                     HighQuali = emp.HighQuali,
                     HighQualiInstituteName = emp.HighQualiInstituteName,
-                    HighQualiMark = emp.HighQualiMark/100,
+                    HighQualiMark = emp.HighQualiMark / 100,
                     HighQualiPassYear = emp.HighQualiPassYear,
                     HighQualiCerf1 = PGFilename,
-                    HighQuali2= emp.HighQuali2,
+                    HighQuali2 = emp.HighQuali2,
                     HighQualiInstituteName2 = emp.HighQualiInstituteName2,
-                    HighQualiMark2 = emp.HighQualiMark2/100,
-                    HighQualiPassYear2= emp.HighQualiPassYear2,
-                    HighQualiCerf2= UGFilename,
-                    HscSchoolName= emp.HscSchoolName,
-                    HscMark = emp.HscMark/100,
+                    HighQualiMark2 = emp.HighQualiMark2 / 100,
+                    HighQualiPassYear2 = emp.HighQualiPassYear2,
+                    HighQualiCerf2 = UGFilename,
+                    HscSchoolName = emp.HscSchoolName,
+                    HscMark = emp.HscMark / 100,
                     HscPassYear = emp.HscPassYear,
                     HscCerf = HscFilename,
                     SslcSchoolName = emp.SslcSchoolName,
-                    SslcMark = emp.SslcMark/100,
+                    SslcMark = emp.SslcMark / 100,
                     SslcPassYear = emp.SslcPassYear,
                     SslcCerf = SslcFilename,
                     OtherCerfName1 = emp.OtherCerfName1,
                     OtherCerfInstitute1 = emp.OtherCerfInstitute1,
-                    OtherCerfMark1 = emp.OtherCerfMark1/100,
+                    OtherCerfMark1 = emp.OtherCerfMark1 / 100,
                     OtherCerfDuration1 = emp.OtherCerfDuration1,
                     OtherCerfPassYear1 = emp.OtherCerfPassYear1,
                     OtherCerf1 = OtCer1Filename,
                     OtherCerfName2 = emp.OtherCerfName2,
                     OtherCerfInstitute2 = emp.OtherCerfInstitute2,
-                    OtherCerfMark2 = emp.OtherCerfMark2/100,
+                    OtherCerfMark2 = emp.OtherCerfMark2 / 100,
                     OtherCerfDuration2 = emp.OtherCerfDuration2,
                     OtherCerfPassYear2 = emp.OtherCerfPassYear2,
                     OtherCerf2 = OtCer2Filename,
                     OtherCerfName3 = emp.OtherCerfName3,
                     OtherCerfInstitute3 = emp.OtherCerfInstitute3,
-                    OtherCerfMark3 = emp.OtherCerfMark3/100,
+                    OtherCerfMark3 = emp.OtherCerfMark3 / 100,
                     OtherCerfDuration3 = emp.OtherCerfDuration3,
                     OtherCerfPassYear3 = emp.OtherCerfPassYear3,
                     OtherCerf3 = OtCer3Filename,
-                    ExpYears = emp.ExpYears,
+                    ExpYears = Exp,
                     PreWorkCmp1 = emp.PreWorkCmp1,
                     PreWorkCmpSdt1 = emp.PreWorkCmpSdt1,
                     PreWorkCmpEdt1 = emp.PreWorkCmpEdt1,
@@ -658,7 +667,7 @@ namespace Accura_Innovatives.Controllers
                     PaymentMode = emp.PaymentMode,
                     SalAccEligibility = emp.SalAccEligibility,
                     SalAccNo = emp.SalAccNo,
-                    SalBankName =  emp.SalBankName,
+                    SalBankName = emp.SalBankName,
                     SalBankIfsc = emp.SalBankIfsc,
                     SalBankBranch = emp.SalBankBranch,
                     SalBenfCode = emp.SalBenfCode,
@@ -710,9 +719,9 @@ namespace Accura_Innovatives.Controllers
                     EmpRejoinDate = emp.EmpRejoinDate,
                     ReportingTo = emp.ReportingTo,
                     EmpOldCode = emp.EmpOldCode,
-                    EmpCreateDate = emp.EmpCreateDate,
+                    EmpCreateDate = emp.EmpCreateDate, 
                     TcCard = TcFilename,
-                };
+            };
                 _context.Add(e);
                 _context.SaveChanges();
                 //ViewBag.success = "Record Added";
@@ -875,8 +884,6 @@ namespace Accura_Innovatives.Controllers
                 WorkExBreakEdt4 = emp.WorkExBreakEdt4;
                 EsiJdt = emp.EsiJdt;
                 EpfJdt = emp.EpfJdt;
-
-
                 e.EmpCtg = emp.EmpCtg;
                 e.EmpCode = emp.EmpCode;
                 e.EmpName = emp.EmpName;
@@ -889,10 +896,44 @@ namespace Accura_Innovatives.Controllers
                 {
                     ProfilePic = emp.EmpPhoto;
                     string path = "./wwwroot/Images/" + emp.EmpPhoto;
-                    using (var stream = System.IO.File.OpenRead(path))
+                    //using (var stream = System.IO.File.OpenRead(path))
+                    //{
+                    //    e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+
+                    //int retries = 3;
+                    //bool fileOpened1 = false;
+                    //while (retries > 0 && !fileOpened1)
+                    //{
+                    //    try
+                    //    {
+                    //        using (var stream = System.IO.File.OpenRead(path))
+                    //        {
+                    //            e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //        }
+                    //        fileOpened1 = true;
+                    //    }
+                    //    catch (System.IO.IOException)
+                    //    {
+                    //        // File is being used by another process, retry after a delay
+                    //        System.Threading.Thread.Sleep(1000); // Wait for 1 second
+                    //        retries--;
+                    //    }
+                    //}
+                    try
                     {
-                        e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path));
+                        }
                     }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
+                    }
+
+
                 }
                 e.Gender = emp.Gender;
                 e.BloodGrp = emp.BloodGrp;
@@ -901,9 +942,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     AadharPic = emp.AadharCard;
                     string path1 = "./wwwroot/Images/" + emp.AadharCard;
-                    using (var stream = System.IO.File.OpenRead(path1))
+                    //using (var stream = System.IO.File.OpenRead(path1))
+                    //{
+                    //    e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}                    
+                    try
                     {
-                        e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path1, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path1));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PanNo = emp.PanNo;
@@ -911,9 +964,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PanPic = emp.PanCard;
                     string path2 = "./wwwroot/Images/" + emp.PanCard;
-                    using (var stream = System.IO.File.OpenRead(path2))
+                    //using (var stream = System.IO.File.OpenRead(path2))
+                    //{
+                    //    e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path2, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path2));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 
@@ -923,9 +988,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     DrvLinPic = emp.DrvLinCard;
                     string path3 = "./wwwroot/Images/" + emp.DrvLinCard;
-                    using (var stream = System.IO.File.OpenRead(path3))
+                    //using (var stream = System.IO.File.OpenRead(path3))
+                    //{
+                    //    e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path3, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path3));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PassportNo = emp.PassportNo;
@@ -934,9 +1011,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PassportPic = emp.PassportCard;
                     string path4 = "./wwwroot/Images/" + emp.PassportCard;
-                    using (var stream = System.IO.File.OpenRead(path4))
+                    //using (var stream = System.IO.File.OpenRead(path4))
+                    //{
+                    //    e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path4, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path4));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.AadharDob = emp.AadharDob;
@@ -997,9 +1086,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PG = emp.HighQualiCerf1;
                     string path5 = "./wwwroot/Images/" + emp.HighQualiCerf1;
-                    using (var stream = System.IO.File.OpenRead(path5))
+                    //using (var stream = System.IO.File.OpenRead(path5))
+                    //{
+                    //    e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path5, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path5));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.HighQuali2 = emp.HighQuali2;
@@ -1017,9 +1118,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     UG = emp.HighQualiCerf2;
                     string path6 = "./wwwroot/Images/" + emp.HighQualiCerf2;
-                    using (var stream = System.IO.File.OpenRead(path6))
+                    //using (var stream = System.IO.File.OpenRead(path6))
+                    //{
+                    //    e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path6, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path6));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.HscSchoolName = emp.HscSchoolName;
@@ -1036,9 +1149,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     Hsc = emp.HscCerf;
                     string path7 = "./wwwroot/Images/" + emp.HscCerf;
-                    using (var stream = System.IO.File.OpenRead(path7))
+                    //using (var stream = System.IO.File.OpenRead(path7))
+                    //{
+                    //    e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path7, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path7));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.SslcSchoolName = emp.SslcSchoolName;
@@ -1055,9 +1180,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     Sslc = emp.SslcCerf;
                     string path8 = "./wwwroot/Images/" + emp.SslcCerf;
-                    using (var stream = System.IO.File.OpenRead(path8))
+                    //using (var stream = System.IO.File.OpenRead(path8))
+                    //{
+                    //    e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path8, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path8));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName1 = emp.OtherCerfName1;
@@ -1076,9 +1213,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     OtCer1 = emp.OtherCerf1;
                     string path9 = "./wwwroot/Images/" + emp.OtherCerf1;
-                    using (var stream = System.IO.File.OpenRead(path9))
+                    //using (var stream = System.IO.File.OpenRead(path9))
+                    //{
+                    //    e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path9, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path9));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName2 = emp.OtherCerfName2;
@@ -1098,9 +1247,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     OtCer2 = emp.OtherCerf2;
                     string path10 = "./wwwroot/Images/" + emp.OtherCerf2;
-                    using (var stream = System.IO.File.OpenRead(path10))
+                    //using (var stream = System.IO.File.OpenRead(path10))
+                    //{
+                    //    e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path10, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path10));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName3 = emp.OtherCerfName3;
@@ -1119,12 +1280,24 @@ namespace Accura_Innovatives.Controllers
                 {
                     OtCer3 = emp.OtherCerf3;
                     string path11 = "./wwwroot/Images/" + emp.OtherCerf3;
-                    using (var stream = System.IO.File.OpenRead(path11))
+                    //using (var stream = System.IO.File.OpenRead(path11))
+                    //{
+                    //    e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path11, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path11));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
-                e.ExpYears = emp.ExpYears;
+                 e.ExpYears = emp.ExpYears;
                 e.PreWorkCmp1 = emp.PreWorkCmp1;
                 e.PreWorkCmpSdt1 = emp.PreWorkCmpSdt1;
                 e.PreWorkCmpEdt1 = emp.PreWorkCmpEdt1;
@@ -1132,9 +1305,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc1 = emp.PreWorkCmpDoc1;
                     string path12 = "./wwwroot/Images/" + emp.PreWorkCmpDoc1;
-                    using (var stream = System.IO.File.OpenRead(path12))
+                    //using (var stream = System.IO.File.OpenRead(path12))
+                    //{
+                    //    e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path12, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path12));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp2 = emp.PreWorkCmp2;
@@ -1144,9 +1329,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc2 = emp.PreWorkCmpDoc2;
                     string path13 = "./wwwroot/Images/" + emp.PreWorkCmpDoc2;
-                    using (var stream = System.IO.File.OpenRead(path13))
+                    //using (var stream = System.IO.File.OpenRead(path13))
+                    //{
+                    //    e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path13, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path13));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp3 = emp.PreWorkCmp3;
@@ -1156,9 +1353,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc3 = emp.PreWorkCmpDoc3;
                     string path14 = "./wwwroot/Images/" + emp.PreWorkCmpDoc3;
-                    using (var stream = System.IO.File.OpenRead(path14))
+                    //using (var stream = System.IO.File.OpenRead(path14))
+                    //{
+                    //    e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path14, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path14));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp4 = emp.PreWorkCmp4;
@@ -1168,9 +1377,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc4 = emp.PreWorkCmpDoc4;
                     string path15 = "./wwwroot/Images/" + emp.PreWorkCmpDoc4;
-                    using (var stream = System.IO.File.OpenRead(path15))
+                    //using (var stream = System.IO.File.OpenRead(path15))
+                    //{
+                    //    e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path15, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path15));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp5 = emp.PreWorkCmp5;
@@ -1180,9 +1401,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc5 = emp.PreWorkCmpDoc5;
                     string path16 = "./wwwroot/Images/" + emp.PreWorkCmpDoc5;
-                    using (var stream = System.IO.File.OpenRead(path16))
+                    //using (var stream = System.IO.File.OpenRead(path16))
+                    //{
+                    //    e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path16, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path16));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.WorkExBreak1 = emp.WorkExBreak1;
@@ -1222,18 +1455,42 @@ namespace Accura_Innovatives.Controllers
                 {
                     Doc1 = emp.Form11Doc1;
                     string path17 = "./wwwroot/Images/" + emp.Form11Doc1;
-                    using (var stream = System.IO.File.OpenRead(path17))
+                    //using (var stream = System.IO.File.OpenRead(path17))
+                    //{
+                    //    e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path17, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path17));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Form11Doc2 != null && emp.Form11Doc2 != "")
                 {
                     Doc2 = emp.Form11Doc2;
                     string path18 = "./wwwroot/Images/" + emp.Form11Doc2;
-                    using (var stream = System.IO.File.OpenRead(path18))
+                    //using (var stream = System.IO.File.OpenRead(path18))
+                    //{
+                    //    e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path18, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path18));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.EsiJdt = emp.EsiJdt;
@@ -1261,45 +1518,105 @@ namespace Accura_Innovatives.Controllers
                 {
                     Attachment1Pic = emp.Attachment1;
                     string path19 = "./wwwroot/Images/" + emp.Attachment1;
-                    using (var stream = System.IO.File.OpenRead(path19))
+                    //using (var stream = System.IO.File.OpenRead(path19))
+                    //{
+                    //    e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path19, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path19));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment2 != null && emp.Attachment2 != "")
                 {
                     Attachment2Pic = emp.Attachment2;
                     string path20 = "./wwwroot/Images/" + emp.Attachment2;
-                    using (var stream = System.IO.File.OpenRead(path20))
+                    //using (var stream = System.IO.File.OpenRead(path20))
+                    //{
+                    //    e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path20, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path20));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment3 != null && emp.Attachment3 != "")
                 {
                     Attachment3Pic = emp.Attachment3;
                     string path21 = "./wwwroot/Images/" + emp.Attachment3;
-                    using (var stream = System.IO.File.OpenRead(path21))
+                    //using (var stream = System.IO.File.OpenRead(path21))
+                    //{
+                    //    e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path21, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path21));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment4 != null && emp.Attachment4 != "")
                 {
                     Attachment4Pic = emp.Attachment4;
                     string path22 = "./wwwroot/Images/" + emp.Attachment4;
-                    using (var stream = System.IO.File.OpenRead(path22))
+                    //using (var stream = System.IO.File.OpenRead(path22))
+                    //{
+                    //    e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path22, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path22));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment5 != null && emp.Attachment5 != "")
                 {
                     Attachment5Pic = emp.Attachment5;
                     string path23 = "./wwwroot/Images/" + emp.Attachment5;
-                    using (var stream = System.IO.File.OpenRead(path23))
+                    //using (var stream = System.IO.File.OpenRead(path23))
+                    //{
+                    //    e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path23, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path23));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.AadharVerf = emp.AadharVerf;
@@ -1307,9 +1624,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     AadVer = emp.AadharVerfProof;
                     string path24 = "./wwwroot/Images/" + emp.AadharVerfProof;
-                    using (var stream = System.IO.File.OpenRead(path24))
+                    //using (var stream = System.IO.File.OpenRead(path24))
+                    //{
+                    //    e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path24, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path24));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 
@@ -1322,9 +1651,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     OrgDoc = emp.OriginalDocAckProof;
                     string path25 = "./wwwroot/Images/" + emp.OriginalDocAckProof;
-                    using (var stream = System.IO.File.OpenRead(path25))
+                    //using (var stream = System.IO.File.OpenRead(path25))
+                    //{
+                    //    e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path25, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path25));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.EmpCurrentStatus = emp.EmpCurrentStatus;
@@ -1340,9 +1681,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     TC = emp.TcCard;
                     string path26 = "./wwwroot/Images/" + emp.TcCard;
-                    using (var stream = System.IO.File.OpenRead(path26))
+                    //using (var stream = System.IO.File.OpenRead(path26))
+                    //{
+                    //    e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path26, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path26));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 

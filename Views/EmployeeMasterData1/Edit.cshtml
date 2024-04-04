@@ -227,7 +227,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label asp-for="PerMobile" class="control-label">Personal Phone No*:</label>
-                                <input asp-for="PerMobile" class="form-control" />
+                                <input asp-for="PerMobile" class="form-control" required/>
                                 <span asp-validation-for="PerMobile" class="text-danger"></span>
                             </div>
                         </div>
@@ -268,17 +268,20 @@
                                     <div id="imagePreview"></div>
                                 </div>
                                 <label asp-for="ProfilePhoto" class="control-label">Previously added:</label>
-                                @if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName != null && Model.ProfilePhoto.FileName != "" && Model.ProfilePhoto.FileName != "NULL" && Model.ProfilePhoto.FileName.Length > 0)
+                                @if (Model != null && Model.ProfilePhoto != null)
                                 {
-                                @if (Model.ProfilePhoto != null)
+
+                                    @if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName != null && Model.ProfilePhoto.FileName != "" && Model.ProfilePhoto.FileName != "NULL" && Model.ProfilePhoto.FileName.Length > 0)
+                                {
+                                @if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.ProfilePhoto.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.ProfilePhoto.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
                                 {
                                     <img src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
                                 }
-                                else if (Model.ProfilePhoto != null)
+                                else if (Model.ProfilePhoto != null && Model.ProfilePhoto.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
                                 {
-                                <embed src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" />
+                                    <embed src="~/images/@Model.ProfilePhoto.FileName" width="200px" height="200px" type="application/pdf" />
                                 }
-                               else
+                                else
                                 {
                                     <span>No File Provided</span>
                                     }
@@ -287,6 +290,13 @@
                                 {
                                     <span>No File Provided</span>
                                 }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
+                              
+
                             </div>
                         </div>
                     </div>
@@ -307,7 +317,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label asp-for="EmpAadharName" class="control-label">Aadhar Name*:</label>
-                                <input asp-for="EmpAadharName" class="form-control" />
+                                <input asp-for="EmpAadharName" class="form-control" required />
                                 <span asp-validation-for="EmpAadharName" class="text-danger"></span>
                             </div>
                         </div>
@@ -329,7 +339,6 @@
                                 <span asp-validation-for="Dob" class="text-danger"></span>
                                 <label asp-for="Dob" class="control-label">Previously selected:</label>
                                 <input asp-for="Dob" type="text" class="form-control" readonly />
-
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -341,19 +350,26 @@
                                     <div id="aadharImagePreview"></div>
                                 </div>
                                 <label asp-for="AadharCard" class="control-label">Previously selected:</label>
-                                @if (Model.AadharCard != null && Model.AadharCard.FileName != null && Model.AadharCard.FileName != "" && Model.AadharCard.FileName != "NULL" && Model.AadharCard.FileName.Length > 0)
+                                @if (Model != null && Model.AadharCard != null)
                                 {
-                                @if (Model.AadharCard != null && Model.AadharCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <img src="~/images/@Model.AadharCard.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.AadharCard != null && Model.AadharCard.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.AadharCard.FileName" width="200px" height="200px" type="application/pdf" />
-                                }
-                                else
-                                {
-                                    <span>No File Provided</span>
+                                    @if (Model.AadharCard != null && Model.AadharCard.FileName != null && Model.AadharCard.FileName != "" && Model.AadharCard.FileName != "NULL" && Model.AadharCard.FileName.Length > 0)
+                                    {
+                                        @if (Model.AadharCard != null && Model.AadharCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <img src="~/images/@Model.AadharCard.FileName" width="200px" height="200px" />
+                                        }
+                                        else if (Model.AadharCard != null && Model.AadharCard.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <embed src="~/images/@Model.AadharCard.FileName" width="200px" height="200px" type="application/pdf" />
+                                        }
+                                        else
+                                        {
+                                            <span>No File Provided</span>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
                                     }
                                 }
                                 else
@@ -391,6 +407,8 @@
                                     <div id="panImagePreview"></div>
                                 </div>
                                 <label asp-for="PanCard" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.PanCard != null)
+                                {
                                 @if (Model.PanCard != null && Model.PanCard.FileName != null && Model.PanCard.FileName != "" && Model.PanCard.FileName != "NULL" && Model.PanCard.FileName.Length > 0)
                                 {
                                 @if (Model.PanCard != null && Model.PanCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PanCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PanCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -410,6 +428,11 @@
                                 {
                                     <span>No File Provided</span>
                                 }
+                                }
+                                  else
+                            {
+                                <span>No File Provided</span>
+                            }
                             </div>
                         </div>
                     </div>
@@ -474,6 +497,8 @@
                                     <div id="drivingLicenceImagePreview"></div>
                                 </div>
                                 <label asp-for="DrvLinCard" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.DrvLinCard != null)
+                                {
                                 @if (Model.DrvLinCard != null && Model.DrvLinCard.FileName != null && Model.DrvLinCard.FileName != "" && Model.DrvLinCard.FileName != "NULL" && Model.DrvLinCard.FileName.Length > 0)
                                 {
                                 @if (Model.DrvLinCard != null && Model.DrvLinCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.DrvLinCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.DrvLinCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -488,6 +513,11 @@
                                 {
                                     <span>No File Provided</span>
                                     }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
                                 }
                                 else
                                 {
@@ -526,6 +556,8 @@
                                     <div id="passportImagePreview"></div>
                                 </div>
                                 <label asp-for="PassportCard" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.PassportCard != null)
+                                {
                                  @if (Model.PassportCard != null && Model.PassportCard.FileName != null && Model.PassportCard.FileName !="" && Model.PassportCard.FileName != "NULL" && Model.PassportCard.FileName.Length>0)
                                 {
                                     @if (Model.PassportCard != null && Model.PassportCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PassportCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PassportCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -542,6 +574,11 @@
                                     }
                                 }
                                 else{
+                                    <span>No File Provided</span>
+                                }
+                                }
+                                else
+                                {
                                     <span>No File Provided</span>
                                 }
                             </div>
@@ -935,6 +972,8 @@
                                     <div id="TCImagePreview"></div>
                                 </div>
                                 <label asp-for="TcCard" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.TcCard != null)
+                                {
                                 @if (Model.TcCard != null && Model.TcCard.FileName != null && Model.TcCard.FileName != "" && Model.TcCard.FileName != "NULL" && Model.TcCard.FileName.Length > 0)
                                 {
                                 @if (Model.TcCard != null && Model.TcCard.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.TcCard.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.TcCard.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -949,6 +988,11 @@
                                 {
                                     <span>No File Provided</span>
                                     }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
                                 }
                                 else
                                 {
@@ -1001,6 +1045,8 @@
                                     <div id="PGImagePreview"></div>
                                 </div>
                                 <label asp-for="HighQualiCerf1" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.HighQualiCerf1 != null)
+                                {
                                 @if (Model.HighQualiCerf1 != null && Model.HighQualiCerf1.FileName != null && Model.HighQualiCerf1.FileName != "" && Model.HighQualiCerf1.FileName != "NULL" && Model.HighQualiCerf1.FileName.Length > 0)
                                 {
                                 @if (Model.HighQualiCerf1 != null && Model.HighQualiCerf1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1015,6 +1061,11 @@
                                 {
                                     <span>No File Provided</span>
                                     }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
                                 }
                                 else
                                 {
@@ -1066,6 +1117,8 @@
                                     <div id="UGImagePreview"></div>
                                 </div>
                                 <label asp-for="HighQualiCerf2" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.HighQualiCerf2 != null)
+                                {
                                 @if (Model.HighQualiCerf2 != null && Model.HighQualiCerf2.FileName != null && Model.HighQualiCerf2.FileName != "" && Model.HighQualiCerf2.FileName != "NULL" && Model.HighQualiCerf2.FileName.Length > 0)
                                 {
                                  @if (Model.HighQualiCerf2 != null && Model.HighQualiCerf2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HighQualiCerf2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1085,6 +1138,11 @@
                                 {
                                         <span>No File Provided</span>
                                 }
+                                }
+                                  else
+                            {
+                                <span>No File Provided</span>
+                            }
                             </div>
                         </div>
                     </div>
@@ -1125,6 +1183,8 @@
                                     <div id="12ImagePreview"></div>
                                 </div>
                                 <label asp-for="HscCerf" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.HscCerf != null)
+                                {
                                 @if (Model.HscCerf != null && Model.HscCerf.FileName != null && Model.HscCerf.FileName != "" && Model.HscCerf.FileName != "NULL" && Model.HscCerf.FileName.Length > 0)
                                 {
                                 @if (Model.HscCerf != null && Model.HscCerf.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.HscCerf.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.HscCerf.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1144,6 +1204,11 @@
                                 {
                                     <span>No File Provided</span>
                                 }
+                                }
+                                  else
+                            {
+                                <span>No File Provided</span>
+                            }
                             </div>
                         </div>
                     </div>
@@ -1184,6 +1249,8 @@
                                     <div id="10ImagePreview"></div>
                                 </div>
                                 <label asp-for="SslcCerf" class="control-label">Previously added:</label>
+                                @if (Model != null && Model.HighQualiCerf1 != null)
+                                {
                                 @if (Model.SslcCerf != null && Model.SslcCerf.FileName != null && Model.SslcCerf.FileName != "" && Model.SslcCerf.FileName != "NULL" && Model.SslcCerf.FileName.Length > 0)
                                 {
                                     @if (Model.SslcCerf != null && Model.SslcCerf.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.SslcCerf.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.SslcCerf.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1198,6 +1265,11 @@
                                     {
                                         <span>No File Provided</span>
                                     }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
                                 }
                                 else
                                 {
@@ -1261,6 +1333,8 @@
                             <div id="otherCerti1ImagePreview"></div>
                         
                         <label asp-for="OtherCerf1" class="control-label">Previously added:</label>
+                        @if (Model != null && Model.OtherCerf1 != null)
+                                {
                         @if (Model.OtherCerf1 != null && Model.OtherCerf1.FileName != null && Model.OtherCerf1.FileName != "" && Model.OtherCerf1.FileName != "NULL" && Model.OtherCerf1.FileName.Length > 0)
                         {
                             @if (Model.OtherCerf1 != null && Model.OtherCerf1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1280,6 +1354,11 @@
                         {
                             <span>No File Provided</span>
                         }
+                        }
+                            else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <button id="otherCertificates1" type="button" onclick="toggleOtherCertificates1()" style="width:200px;"> + / - Certificates </button>
@@ -1342,6 +1421,8 @@
                             <div id="otherCerti2ImagePreview"></div>
                         
                         <label asp-for="OtherCerf2" class="control-label">Previously added:</label>
+                        @if (Model != null && Model.OtherCerf2 != null)
+                                {
                         @if (Model.OtherCerf2 != null && Model.OtherCerf2.FileName != null && Model.OtherCerf2.FileName != "" && Model.OtherCerf2.FileName != "NULL" && Model.OtherCerf2.FileName.Length > 0)
                         {
                             @if (Model.OtherCerf2 != null && Model.OtherCerf2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1361,6 +1442,11 @@
                         {
                             <span>No File Provided</span>
                         }
+                        }
+                          else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <button id="otherCertificates2" type="button" onclick="toggleOtherCertificates2()" style="width:200px;"> + / - Certificate </button>
@@ -1426,6 +1512,8 @@
                                 <div id="otherCerti3ImagePreview"></div>
                             
                             <label asp-for="OtherCerf3" class="control-label">Previously added:</label>
+                            @if (Model != null && Model.OtherCerf3 != null)
+                                {
                             @if (Model.OtherCerf3 != null && Model.OtherCerf3.FileName != null && Model.OtherCerf3.FileName != "" && Model.OtherCerf3.FileName != "NULL" && Model.OtherCerf3.FileName.Length > 0)
                             {
                                 @if (Model.OtherCerf3 != null && Model.OtherCerf3.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf3.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OtherCerf3.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1440,6 +1528,11 @@
                                 {
                                     <span>No File Provided</span>
                                 }
+                            }
+                            else
+                            {
+                                <span>No File Provided</span>
+                            }
                             }
                             else
                             {
@@ -1472,7 +1565,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label asp-for="ExpYears" class="control-label">Overall Experience in Years:</label>
-                                <input asp-for="ExpYears" class="form-control" value="@String.Format("{0:0.00}", Model.ExpYears)" />
+                                <input asp-for="ExpYears" class="form-control"  />
                                 <span asp-validation-for="ExpYears" class="text-danger"></span>
                             </div>
                         </div>
@@ -1520,25 +1613,32 @@
                             <div id="workProofImagePreview1"></div>
                         
                         <label asp-for="PreWorkCmpDoc1" class="control-label">Previously added:</label>
-                        @if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName != null && Model.PreWorkCmpDoc1.FileName != "" && Model.PreWorkCmpDoc1.FileName != "NULL" && Model.PreWorkCmpDoc1.FileName.Length > 0)
-                        {
-                            @if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                        @if (Model != null && Model.PreWorkCmpDoc1 != null)
                             {
-                                <img src="~/images/@Model.PreWorkCmpDoc1.FileName" width="200px" height="200px" />
+                                @if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName != null && Model.PreWorkCmpDoc1.FileName != "" && Model.PreWorkCmpDoc1.FileName != "NULL" && Model.PreWorkCmpDoc1.FileName.Length > 0)
+                                {
+                                    @if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.PreWorkCmpDoc1.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.PreWorkCmpDoc1.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>No File Provided</span>
+                                }
                             }
-                            else if (Model.PreWorkCmpDoc1 != null && Model.PreWorkCmpDoc1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                            {
-                                <embed src="~/images/@Model.PreWorkCmpDoc1.FileName" width="200px" height="200px" type="application/pdf" />
-                            }
-                            else
+                              else
                             {
                                 <span>No File Provided</span>
                             }
-                        }
-                        else
-                        {
-                            <span>No File Provided</span>
-                        }
                         </div>
                         <br />
                         <div class="col-md-4">
@@ -1591,6 +1691,8 @@
                             <div id="workProofImagePreview2"></div>
                        
                          <label asp-for="PreWorkCmpDoc2" class="control-label">Previously added:</label>
+                         @if (Model != null && Model.PreWorkCmpDoc2 != null)
+                                {
                         @if (Model.PreWorkCmpDoc2 != null && Model.PreWorkCmpDoc2.FileName != null && Model.PreWorkCmpDoc2.FileName != "" && Model.PreWorkCmpDoc2.FileName != "NULL" && Model.PreWorkCmpDoc2.FileName.Length > 0)
                         {
                             @if (Model.PreWorkCmpDoc2 != null && Model.PreWorkCmpDoc2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1610,6 +1712,11 @@
                         {
                             <span>No File Provided</span>
                         }
+                        }
+                          else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <button id="addMorePreCmp1" type="button" onclick="toggleAddMorePreCmp1()" style="width:200px;"> + / - Previous Company </button>
@@ -1659,6 +1766,8 @@
                             <div id="workProofImagePreview3"></div>
                        
                         <label asp-for="PreWorkCmpDoc3" class="control-label">Previously added:</label>
+                        @if (Model != null && Model.PreWorkCmpDoc3 != null)
+                                {
                         @if (Model.PreWorkCmpDoc3 != null && Model.PreWorkCmpDoc3.FileName != null && Model.PreWorkCmpDoc3.FileName != "" && Model.PreWorkCmpDoc3.FileName != "NULL" && Model.PreWorkCmpDoc3.FileName.Length > 0)
                         {
                             @if (Model.PreWorkCmpDoc3 != null && Model.PreWorkCmpDoc3.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc3.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc3.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1678,6 +1787,11 @@
                         {
                             <span>No File Provided</span>
                         }
+                        }
+                          else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <button id="addMorePreCmp2" type="button" onclick="toggleAddMorePreCmp2()" style="width:200px;"> + / - Previous Company </button>
@@ -1728,6 +1842,8 @@
                         <div class="col-md-4" id="uploaded-image-container">
                             <div id="workProofImagePreview4"></div>
                             <label asp-for="PreWorkCmpDoc4" class="control-label">Previously added:</label>
+                            @if (Model != null && Model.PreWorkCmpDoc4 != null)
+                                {
                             @if (Model.PreWorkCmpDoc4 != null && Model.PreWorkCmpDoc4.FileName != null && Model.PreWorkCmpDoc4.FileName != "" && Model.PreWorkCmpDoc4.FileName != "NULL" && Model.PreWorkCmpDoc4.FileName.Length > 0)
                             {
                                 @if (Model.PreWorkCmpDoc4 != null && Model.PreWorkCmpDoc4.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc4.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc4.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -1744,6 +1860,11 @@
                                 }
                             }
                             else
+                            {
+                                <span>No File Provided</span>
+                            }
+                            }
+                              else
                             {
                                 <span>No File Provided</span>
                             }
@@ -1796,26 +1917,33 @@
                                     <div id="workProofImagePreview5"></div>
                                 
                             <label asp-for="PreWorkCmpDoc5" class="control-label">Previously added:</label>
-                            @if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName != null && Model.PreWorkCmpDoc5.FileName != "" && Model.PreWorkCmpDoc5.FileName != "NULL" && Model.PreWorkCmpDoc5.FileName.Length > 0)
+                            @if (Model != null && Model.PreWorkCmpDoc5 != null)
                             {
-                                @if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc5.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName != null && Model.PreWorkCmpDoc5.FileName != "" && Model.PreWorkCmpDoc5.FileName != "NULL" && Model.PreWorkCmpDoc5.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.PreWorkCmpDoc5.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.PreWorkCmpDoc5.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc5.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.PreWorkCmpDoc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.PreWorkCmpDoc5.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.PreWorkCmpDoc5 != null && Model.PreWorkCmpDoc5.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.PreWorkCmpDoc5.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
                                     <span>No File Provided</span>
                                 }
                             }
-                            else
+                              else
                             {
                                 <span>No File Provided</span>
                             }
-                                
+
                         </div>
                     </div>
                 </div>
@@ -2211,15 +2339,22 @@
                                 </div>
                             </div>
                             <label asp-for="Form11Doc1" class="control-label">Previously added:</label>
-                            @if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName != null && Model.Form11Doc1.FileName != "" && Model.Form11Doc1.FileName != "NULL" && Model.Form11Doc1.FileName.Length > 0)
+                            @if (Model != null && Model.Form11Doc1 != null)
                             {
-                                @if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName != null && Model.Form11Doc1.FileName != "" && Model.Form11Doc1.FileName != "NULL" && Model.Form11Doc1.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.Form11Doc1.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.Form11Doc1.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.Form11Doc1.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Form11Doc1 != null && Model.Form11Doc1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.Form11Doc1.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
@@ -2241,15 +2376,22 @@
                                 </div>
                             </div>
                             <label asp-for="Form11Doc2" class="control-label">Previously added:</label>
-                            @if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName != null && Model.Form11Doc2.FileName != "" && Model.Form11Doc2.FileName != "NULL" && Model.Form11Doc2.FileName.Length > 0)
+                            @if (Model != null && Model.Form11Doc2 != null)
                             {
-                                @if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName != null && Model.Form11Doc2.FileName != "" && Model.Form11Doc2.FileName != "NULL" && Model.Form11Doc2.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.Form11Doc2.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.Form11Doc2.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Form11Doc2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.Form11Doc2.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Form11Doc2 != null && Model.Form11Doc2.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.Form11Doc2.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
@@ -2482,15 +2624,22 @@
                                 </div>
                             </div>
                             <label asp-for="Attachment1" class="control-label">Previously added:</label>
-                            @if (Model.Attachment1 != null && Model.Attachment1.FileName != null && Model.Attachment1.FileName != "" && Model.Attachment1.FileName != "NULL" && Model.Attachment1.FileName.Length > 0)
+                            @if (Model != null && Model.Attachment1 != null)
                             {
-                                @if (Model.Attachment1 != null && Model.Attachment1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.Attachment1 != null && Model.Attachment1.FileName != null && Model.Attachment1.FileName != "" && Model.Attachment1.FileName != "NULL" && Model.Attachment1.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.Attachment1.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.Attachment1 != null && Model.Attachment1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.Attachment1.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.Attachment1 != null && Model.Attachment1.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment1.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.Attachment1.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment1 != null && Model.Attachment1.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.Attachment1.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
@@ -2501,6 +2650,7 @@
                             {
                                 <span>No File Provided</span>
                             }
+                          
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
@@ -2512,6 +2662,8 @@
                                 </div>
                             </div>
                              <label asp-for="Attachment2" class="control-label">Previously added:</label>
+                             @if (Model != null && Model.Attachment2 != null)
+                            {
                             @if (Model.Attachment2 != null && Model.Attachment2.FileName != null && Model.Attachment2.FileName != "" && Model.Attachment2.FileName != "NULL" && Model.Attachment2.FileName.Length > 0)
                             {
                                 @if (Model.Attachment2 != null && Model.Attachment2.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment2.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment2.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -2531,6 +2683,11 @@
                             {
                                 <span>No File Provided</span>
                             }
+                            }
+                              else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
@@ -2542,6 +2699,8 @@
                                 </div>
                             </div>
                              <label asp-for="Attachment3" class="control-label">Previously added:</label>
+                             @if (Model != null && Model.Attachment3 != null)
+                            {
                             @if (Model.Attachment3 != null && Model.Attachment3.FileName != null && Model.Attachment3.FileName != "" && Model.Attachment3.FileName != "NULL" && Model.Attachment3.FileName.Length > 0)
                             {
                                 @if (Model.Attachment3 != null && Model.Attachment3.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment3.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment3.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
@@ -2561,6 +2720,11 @@
                             {
                                 <span>No File Provided</span>
                             }
+                            }
+                            else
+                            {
+                                <span>No File Provided</span>
+                            }
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
@@ -2572,22 +2736,29 @@
                                 </div>
                             </div>
                              <label asp-for="Attachment4" class="control-label">Previously added:</label>
-                            @if (Model.Attachment4 != null && Model.Attachment4.FileName != null && Model.Attachment4.FileName != "" && Model.Attachment4.FileName != "NULL" && Model.Attachment4.FileName.Length > 0)
+                             @if (Model != null && Model.Attachment4 != null)
                             {
-                                @if (Model.Attachment4 != null && Model.Attachment4.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.Attachment4 != null && Model.Attachment4.FileName != null && Model.Attachment4.FileName != "" && Model.Attachment4.FileName != "NULL" && Model.Attachment4.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.Attachment4.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.Attachment4 != null && Model.Attachment4.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.Attachment4.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.Attachment4 != null && Model.Attachment4.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment4.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.Attachment4.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment4 != null && Model.Attachment4.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.Attachment4.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
                                     <span>No File Provided</span>
                                 }
                             }
-                            else
+                              else
                             {
                                 <span>No File Provided</span>
                             }
@@ -2603,15 +2774,22 @@
                                 </div>
                             </div>
                              <label asp-for="Attachment5" class="control-label">Previously added:</label>
-                            @if (Model.Attachment5 != null && Model.Attachment5.FileName != null && Model.Attachment5.FileName != "" && Model.Attachment5.FileName != "NULL" && Model.Attachment5.FileName.Length > 0)
+                             @if (Model != null && Model.Attachment5 != null)
                             {
-                                @if (Model.Attachment5 != null && Model.Attachment5.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.Attachment5 != null && Model.Attachment5.FileName != null && Model.Attachment5.FileName != "" && Model.Attachment5.FileName != "NULL" && Model.Attachment5.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.Attachment5.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.Attachment5 != null && Model.Attachment5.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.Attachment5.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.Attachment5 != null && Model.Attachment5.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.Attachment5.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.Attachment5.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.Attachment5 != null && Model.Attachment5.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.Attachment5.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
@@ -2645,15 +2823,22 @@
                                     <div id="aadharCardVerifiedImagePreview"></div>
                                 </div>
                                 <label asp-for="AadharVerfProof" class="control-label">Previously added:</label>
-                                @if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName != null && Model.AadharVerfProof.FileName != "" && Model.AadharVerfProof.FileName != "NULL" && Model.AadharVerfProof.FileName.Length > 0)
+                                @if (Model != null && Model.AadharVerfProof != null)
                                 {
-                                    @if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    @if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName != null && Model.AadharVerfProof.FileName != "" && Model.AadharVerfProof.FileName != "NULL" && Model.AadharVerfProof.FileName.Length > 0)
                                     {
-                                        <img src="~/images/@Model.AadharVerfProof.FileName" width="200px" height="200px" />
-                                    }
-                                    else if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                    {
-                                        <embed src="~/images/@Model.AadharVerfProof.FileName" width="200px" height="200px" type="application/pdf" />
+                                        @if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.AadharVerfProof.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <img src="~/images/@Model.AadharVerfProof.FileName" width="200px" height="200px" />
+                                        }
+                                        else if (Model.AadharVerfProof != null && Model.AadharVerfProof.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                        {
+                                            <embed src="~/images/@Model.AadharVerfProof.FileName" width="200px" height="200px" type="application/pdf" />
+                                        }
+                                        else
+                                        {
+                                            <span>No File Provided</span>
+                                        }
                                     }
                                     else
                                     {
@@ -2720,15 +2905,22 @@
                                 </div>
                             </div>
                             <label asp-for="OriginalDocAckProof" class="control-label">Previously added:</label>
-                            @if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName != null && Model.OriginalDocAckProof.FileName != "" && Model.OriginalDocAckProof.FileName != "NULL" && Model.OriginalDocAckProof.FileName.Length > 0)
+                            @if (Model != null && Model.OriginalDocAckProof != null)
                             {
-                                @if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                @if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName != null && Model.OriginalDocAckProof.FileName != "" && Model.OriginalDocAckProof.FileName != "NULL" && Model.OriginalDocAckProof.FileName.Length > 0)
                                 {
-                                    <img src="~/images/@Model.OriginalDocAckProof.FileName" width="200px" height="200px" />
-                                }
-                                else if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    <embed src="~/images/@Model.OriginalDocAckProof.FileName" width="200px" height="200px" type="application/pdf" />
+                                    @if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.FileName.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) || Model.OriginalDocAckProof.FileName.EndsWith(".png", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <img src="~/images/@Model.OriginalDocAckProof.FileName" width="200px" height="200px" />
+                                    }
+                                    else if (Model.OriginalDocAckProof != null && Model.OriginalDocAckProof.FileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        <embed src="~/images/@Model.OriginalDocAckProof.FileName" width="200px" height="200px" type="application/pdf" />
+                                    }
+                                    else
+                                    {
+                                        <span>No File Provided</span>
+                                    }
                                 }
                                 else
                                 {
