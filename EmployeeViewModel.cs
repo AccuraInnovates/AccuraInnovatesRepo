@@ -54,7 +54,7 @@ namespace Accura_Innovatives
         public string? Dob { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public string? PresentAddressLine1 { get; set; }
-        
+        [Required(ErrorMessage = "This field is required.")]
         public string? PresentAddressLine2 { get; set; }
         
         public string? PresentAddressCity { get; set; }

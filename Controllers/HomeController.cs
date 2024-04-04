@@ -1419,8 +1419,7 @@ namespace Accura_Innovatives.Controllers
                                     {
                                         if (float.TryParse(reader.GetValue(100).ToString(), out float result11))
                                         {
-                                            //e.ExpYears = result11;
-                                            e.ExpYears = Math.Round((double)result11, 2);
+                                            e.ExpYears = result11;
                                         }
                                     }
                                     if (reader.GetValue(101) != null)
