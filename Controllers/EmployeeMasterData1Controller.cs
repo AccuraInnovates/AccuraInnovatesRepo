@@ -68,7 +68,7 @@ namespace Accura_Innovatives.Controllers
             ViewBag.Success = TempData["SuccessMessage"];
              return View(result);
         }
-        //
+        
         //public IActionResult SalaryDetailsUpload()
         //{
         //    var salaryEmpCodes = _context.SalaryCalculations.Select(s => s.EmpCode).ToList();
@@ -510,6 +510,15 @@ namespace Accura_Innovatives.Controllers
                     emp.TcCard.CopyTo(new FileStream(filePath, FileMode.Create));
                 }
                 else { emp.TcCard = null; }
+                double Exp = 0;
+                if (emp.ExpYears != null)
+                {
+                    Exp = Math.Round((double)emp.ExpYears, 2); // Rounds to 2 decimal places
+                }
+                else
+                {
+                    Exp = 0;
+                }
                 EmployeeMasterData1 e = new EmployeeMasterData1
                 {
                     EmpCtg = emp.EmpCtg,
@@ -612,7 +621,7 @@ namespace Accura_Innovatives.Controllers
                     OtherCerfDuration3 = emp.OtherCerfDuration3,
                     OtherCerfPassYear3 = emp.OtherCerfPassYear3,
                     OtherCerf3 = OtCer3Filename,
-                    ExpYears = emp.ExpYears,
+                    ExpYears = Exp,
                     PreWorkCmp1 = emp.PreWorkCmp1,
                     PreWorkCmpSdt1 = emp.PreWorkCmpSdt1,
                     PreWorkCmpEdt1 = emp.PreWorkCmpEdt1,
@@ -875,8 +884,6 @@ namespace Accura_Innovatives.Controllers
                 WorkExBreakEdt4 = emp.WorkExBreakEdt4;
                 EsiJdt = emp.EsiJdt;
                 EpfJdt = emp.EpfJdt;
-
-
                 e.EmpCtg = emp.EmpCtg;
                 e.EmpCode = emp.EmpCode;
                 e.EmpName = emp.EmpName;
@@ -889,10 +896,44 @@ namespace Accura_Innovatives.Controllers
                 {
                     ProfilePic = emp.EmpPhoto;
                     string path = "./wwwroot/Images/" + emp.EmpPhoto;
-                    using (var stream = System.IO.File.OpenRead(path))
+                    //using (var stream = System.IO.File.OpenRead(path))
+                    //{
+                    //    e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+
+                    //int retries = 3;
+                    //bool fileOpened1 = false;
+                    //while (retries > 0 && !fileOpened1)
+                    //{
+                    //    try
+                    //    {
+                    //        using (var stream = System.IO.File.OpenRead(path))
+                    //        {
+                    //            e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //        }
+                    //        fileOpened1 = true;
+                    //    }
+                    //    catch (System.IO.IOException)
+                    //    {
+                    //        // File is being used by another process, retry after a delay
+                    //        System.Threading.Thread.Sleep(1000); // Wait for 1 second
+                    //        retries--;
+                    //    }
+                    //}
+                    try
                     {
-                        e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.ProfilePhoto = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path));
+                        }
                     }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
+                    }
+
+
                 }
                 e.Gender = emp.Gender;
                 e.BloodGrp = emp.BloodGrp;
@@ -901,9 +942,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     AadharPic = emp.AadharCard;
                     string path1 = "./wwwroot/Images/" + emp.AadharCard;
-                    using (var stream = System.IO.File.OpenRead(path1))
+                    //using (var stream = System.IO.File.OpenRead(path1))
+                    //{
+                    //    e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}                    
+                    try
                     {
-                        e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path1, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.AadharCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path1));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PanNo = emp.PanNo;
@@ -911,9 +964,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PanPic = emp.PanCard;
                     string path2 = "./wwwroot/Images/" + emp.PanCard;
-                    using (var stream = System.IO.File.OpenRead(path2))
+                    //using (var stream = System.IO.File.OpenRead(path2))
+                    //{
+                    //    e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path2, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PanCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path2));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 
@@ -923,9 +988,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     DrvLinPic = emp.DrvLinCard;
                     string path3 = "./wwwroot/Images/" + emp.DrvLinCard;
-                    using (var stream = System.IO.File.OpenRead(path3))
+                    //using (var stream = System.IO.File.OpenRead(path3))
+                    //{
+                    //    e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path3, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.DrvLinCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path3));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PassportNo = emp.PassportNo;
@@ -934,9 +1011,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PassportPic = emp.PassportCard;
                     string path4 = "./wwwroot/Images/" + emp.PassportCard;
-                    using (var stream = System.IO.File.OpenRead(path4))
+                    //using (var stream = System.IO.File.OpenRead(path4))
+                    //{
+                    //    e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path4, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PassportCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path4));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.AadharDob = emp.AadharDob;
@@ -984,7 +1073,7 @@ namespace Accura_Innovatives.Controllers
                 e.EmerContactNo = emp.EmerContactNo;
                 e.HighQuali = emp.HighQuali;
                 e.HighQualiInstituteName = emp.HighQualiInstituteName;
-                if(emp.HighQualiMark != null)
+                if (emp.HighQualiMark != null)
                 {
                     e.HighQualiMark = emp.HighQualiMark;
                 }
@@ -997,9 +1086,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PG = emp.HighQualiCerf1;
                     string path5 = "./wwwroot/Images/" + emp.HighQualiCerf1;
-                    using (var stream = System.IO.File.OpenRead(path5))
+                    //using (var stream = System.IO.File.OpenRead(path5))
+                    //{
+                    //    e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path5, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HighQualiCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path5));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.HighQuali2 = emp.HighQuali2;
@@ -1017,13 +1118,25 @@ namespace Accura_Innovatives.Controllers
                 {
                     UG = emp.HighQualiCerf2;
                     string path6 = "./wwwroot/Images/" + emp.HighQualiCerf2;
-                    using (var stream = System.IO.File.OpenRead(path6))
+                    //using (var stream = System.IO.File.OpenRead(path6))
+                    //{
+                    //    e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path6, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HighQualiCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path6));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.HscSchoolName = emp.HscSchoolName;
-                if(emp.HscMark != null)
+                if (emp.HscMark != null)
                 {
                     e.HscMark = emp.HscMark;
                 }
@@ -1036,13 +1149,25 @@ namespace Accura_Innovatives.Controllers
                 {
                     Hsc = emp.HscCerf;
                     string path7 = "./wwwroot/Images/" + emp.HscCerf;
-                    using (var stream = System.IO.File.OpenRead(path7))
+                    //using (var stream = System.IO.File.OpenRead(path7))
+                    //{
+                    //    e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path7, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.HscCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path7));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.SslcSchoolName = emp.SslcSchoolName;
-                if(emp.SslcMark != null)
+                if (emp.SslcMark != null)
                 {
                     e.SslcMark = emp.SslcMark;
                 }
@@ -1055,16 +1180,28 @@ namespace Accura_Innovatives.Controllers
                 {
                     Sslc = emp.SslcCerf;
                     string path8 = "./wwwroot/Images/" + emp.SslcCerf;
-                    using (var stream = System.IO.File.OpenRead(path8))
+                    //using (var stream = System.IO.File.OpenRead(path8))
+                    //{
+                    //    e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path8, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.SslcCerf = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path8));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName1 = emp.OtherCerfName1;
                 e.OtherCerfInstitute1 = emp.OtherCerfInstitute1;
-                if(emp.OtherCerfMark1 !=null)
-                { 
-                e.OtherCerfMark1 = emp.OtherCerfMark1;
+                if (emp.OtherCerfMark1 != null)
+                {
+                    e.OtherCerfMark1 = emp.OtherCerfMark1;
                 }
                 else
                 {
@@ -1076,14 +1213,26 @@ namespace Accura_Innovatives.Controllers
                 {
                     OtCer1 = emp.OtherCerf1;
                     string path9 = "./wwwroot/Images/" + emp.OtherCerf1;
-                    using (var stream = System.IO.File.OpenRead(path9))
+                    //using (var stream = System.IO.File.OpenRead(path9))
+                    //{
+                    //    e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path9, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path9));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName2 = emp.OtherCerfName2;
                 e.OtherCerfInstitute2 = emp.OtherCerfInstitute2;
-                if(emp.OtherCerfMark2 != null)
+                if (emp.OtherCerfMark2 != null)
                 {
                     e.OtherCerfMark2 = emp.OtherCerfMark2;
                 }
@@ -1091,21 +1240,33 @@ namespace Accura_Innovatives.Controllers
                 {
                     e.OtherCerfMark2 = 0;
                 }
-                
+
                 e.OtherCerfDuration2 = emp.OtherCerfDuration2;
                 e.OtherCerfPassYear2 = emp.OtherCerfPassYear2;
                 if (emp.OtherCerf2 != null && emp.OtherCerf2 != "")
                 {
                     OtCer2 = emp.OtherCerf2;
                     string path10 = "./wwwroot/Images/" + emp.OtherCerf2;
-                    using (var stream = System.IO.File.OpenRead(path10))
+                    //using (var stream = System.IO.File.OpenRead(path10))
+                    //{
+                    //    e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path10, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path10));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.OtherCerfName3 = emp.OtherCerfName3;
                 e.OtherCerfInstitute3 = emp.OtherCerfInstitute3;
-                if(emp.OtherCerfMark3 != null)
+                if (emp.OtherCerfMark3 != null)
                 {
                     e.OtherCerfMark3 = emp.OtherCerfMark3;
                 }
@@ -1119,9 +1280,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     OtCer3 = emp.OtherCerf3;
                     string path11 = "./wwwroot/Images/" + emp.OtherCerf3;
-                    using (var stream = System.IO.File.OpenRead(path11))
+                    //using (var stream = System.IO.File.OpenRead(path11))
+                    //{
+                    //    e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path11, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OtherCerf3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path11));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.ExpYears = emp.ExpYears;
@@ -1132,9 +1305,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc1 = emp.PreWorkCmpDoc1;
                     string path12 = "./wwwroot/Images/" + emp.PreWorkCmpDoc1;
-                    using (var stream = System.IO.File.OpenRead(path12))
+                    //using (var stream = System.IO.File.OpenRead(path12))
+                    //{
+                    //    e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path12, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path12));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp2 = emp.PreWorkCmp2;
@@ -1144,9 +1329,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc2 = emp.PreWorkCmpDoc2;
                     string path13 = "./wwwroot/Images/" + emp.PreWorkCmpDoc2;
-                    using (var stream = System.IO.File.OpenRead(path13))
+                    //using (var stream = System.IO.File.OpenRead(path13))
+                    //{
+                    //    e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path13, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path13));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp3 = emp.PreWorkCmp3;
@@ -1156,9 +1353,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc3 = emp.PreWorkCmpDoc3;
                     string path14 = "./wwwroot/Images/" + emp.PreWorkCmpDoc3;
-                    using (var stream = System.IO.File.OpenRead(path14))
+                    //using (var stream = System.IO.File.OpenRead(path14))
+                    //{
+                    //    e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path14, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path14));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp4 = emp.PreWorkCmp4;
@@ -1168,9 +1377,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc4 = emp.PreWorkCmpDoc4;
                     string path15 = "./wwwroot/Images/" + emp.PreWorkCmpDoc4;
-                    using (var stream = System.IO.File.OpenRead(path15))
+                    //using (var stream = System.IO.File.OpenRead(path15))
+                    //{
+                    //    e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path15, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path15));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.PreWorkCmp5 = emp.PreWorkCmp5;
@@ -1180,9 +1401,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     PreWorkDoc5 = emp.PreWorkCmpDoc5;
                     string path16 = "./wwwroot/Images/" + emp.PreWorkCmpDoc5;
-                    using (var stream = System.IO.File.OpenRead(path16))
+                    //using (var stream = System.IO.File.OpenRead(path16))
+                    //{
+                    //    e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path16, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.PreWorkCmpDoc5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path16));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.WorkExBreak1 = emp.WorkExBreak1;
@@ -1222,18 +1455,42 @@ namespace Accura_Innovatives.Controllers
                 {
                     Doc1 = emp.Form11Doc1;
                     string path17 = "./wwwroot/Images/" + emp.Form11Doc1;
-                    using (var stream = System.IO.File.OpenRead(path17))
+                    //using (var stream = System.IO.File.OpenRead(path17))
+                    //{
+                    //    e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path17, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Form11Doc1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path17));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Form11Doc2 != null && emp.Form11Doc2 != "")
                 {
                     Doc2 = emp.Form11Doc2;
                     string path18 = "./wwwroot/Images/" + emp.Form11Doc2;
-                    using (var stream = System.IO.File.OpenRead(path18))
+                    //using (var stream = System.IO.File.OpenRead(path18))
+                    //{
+                    //    e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path18, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Form11Doc2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path18));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.EsiJdt = emp.EsiJdt;
@@ -1261,45 +1518,105 @@ namespace Accura_Innovatives.Controllers
                 {
                     Attachment1Pic = emp.Attachment1;
                     string path19 = "./wwwroot/Images/" + emp.Attachment1;
-                    using (var stream = System.IO.File.OpenRead(path19))
+                    //using (var stream = System.IO.File.OpenRead(path19))
+                    //{
+                    //    e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path19, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment1 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path19));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment2 != null && emp.Attachment2 != "")
                 {
                     Attachment2Pic = emp.Attachment2;
                     string path20 = "./wwwroot/Images/" + emp.Attachment2;
-                    using (var stream = System.IO.File.OpenRead(path20))
+                    //using (var stream = System.IO.File.OpenRead(path20))
+                    //{
+                    //    e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path20, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment2 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path20));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment3 != null && emp.Attachment3 != "")
                 {
                     Attachment3Pic = emp.Attachment3;
                     string path21 = "./wwwroot/Images/" + emp.Attachment3;
-                    using (var stream = System.IO.File.OpenRead(path21))
+                    //using (var stream = System.IO.File.OpenRead(path21))
+                    //{
+                    //    e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path21, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment3 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path21));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment4 != null && emp.Attachment4 != "")
                 {
                     Attachment4Pic = emp.Attachment4;
                     string path22 = "./wwwroot/Images/" + emp.Attachment4;
-                    using (var stream = System.IO.File.OpenRead(path22))
+                    //using (var stream = System.IO.File.OpenRead(path22))
+                    //{
+                    //    e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path22, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment4 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path22));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 if (emp.Attachment5 != null && emp.Attachment5 != "")
                 {
                     Attachment5Pic = emp.Attachment5;
                     string path23 = "./wwwroot/Images/" + emp.Attachment5;
-                    using (var stream = System.IO.File.OpenRead(path23))
+                    //using (var stream = System.IO.File.OpenRead(path23))
+                    //{
+                    //    e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path23, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.Attachment5 = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path23));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.AadharVerf = emp.AadharVerf;
@@ -1307,9 +1624,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     AadVer = emp.AadharVerfProof;
                     string path24 = "./wwwroot/Images/" + emp.AadharVerfProof;
-                    using (var stream = System.IO.File.OpenRead(path24))
+                    //using (var stream = System.IO.File.OpenRead(path24))
+                    //{
+                    //    e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path24, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.AadharVerfProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path24));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 
@@ -1322,9 +1651,21 @@ namespace Accura_Innovatives.Controllers
                 {
                     OrgDoc = emp.OriginalDocAckProof;
                     string path25 = "./wwwroot/Images/" + emp.OriginalDocAckProof;
-                    using (var stream = System.IO.File.OpenRead(path25))
+                    //using (var stream = System.IO.File.OpenRead(path25))
+                    //{
+                    //    e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path25, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.OriginalDocAckProof = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path25));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
                 e.EmpCurrentStatus = emp.EmpCurrentStatus;
@@ -1340,15 +1681,27 @@ namespace Accura_Innovatives.Controllers
                 {
                     TC = emp.TcCard;
                     string path26 = "./wwwroot/Images/" + emp.TcCard;
-                    using (var stream = System.IO.File.OpenRead(path26))
+                    //using (var stream = System.IO.File.OpenRead(path26))
+                    //{
+                    //    e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                    //}
+                    try
                     {
-                        e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
+                        using (var stream = new FileStream(path26, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            e.TcCard = new FormFile(stream, 0, stream.Length, null, Path.GetFileName(path26));
+                        }
+                    }
+                    catch (IOException ex)
+                    {
+                        // Handle IOException
+                        Console.WriteLine("Failed to open file: " + ex.Message);
                     }
                 }
 
                 return View(e);
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 ViewBag.ErrorMessage = "An Error Occured: Please Try Again Later...";
                 return View();
@@ -1360,10 +1713,11 @@ namespace Accura_Innovatives.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,EmployeeViewModel emp)
+        public async Task<IActionResult> Edit(int id, EmployeeViewModel emp)
         {
-            try { 
-                if(emp.EmpSal != Sal || emp.EmpWageDay != WagesPerDAy)
+            try
+            {
+                if (emp.EmpSal != Sal || emp.EmpWageDay != WagesPerDAy)
                 {
                     SalaryCalculation s = _context.SalaryCalculations.Where(x => x.EmpCode == id).FirstOrDefault();
                     if (s != null)
@@ -1384,7 +1738,7 @@ namespace Accura_Innovatives.Controllers
                 {
                     emp.EmpDoj = Doj;
                 }
-                if(emp.AadharDob == "NULL" || emp.AadharDob == null)
+                if (emp.AadharDob == "NULL" || emp.AadharDob == null)
                 {
                     emp.AadharDob = AadharDob;
                 }
@@ -1484,635 +1838,635 @@ namespace Accura_Innovatives.Controllers
                 {
                     emp.EpfJdt = EpfJdt;
                 }
-                
+
 
                 string filename = "";
 
 
-            if (emp.ProfilePhoto != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                filename = Guid.NewGuid().ToString() + "_" + emp.ProfilePhoto.FileName;
-                string filePath = Path.Combine(uploadFolder, filename);
-                emp.ProfilePhoto.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (ProfilePic != null && ProfilePic  != "" && ProfilePic !="NULL")
-            {
-                filename = ProfilePic;
-            }
-            else
-            {
-                emp.ProfilePhoto = null;
-            }
-            string aadharFilename = "";
-            if (emp.AadharCard != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                aadharFilename = Guid.NewGuid().ToString() + "_" + emp.AadharCard.FileName;
-                string filePath = Path.Combine(uploadFolder, aadharFilename);
-                emp.AadharCard.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (AadharPic != null && AadharPic != "")
-            {
-                aadharFilename = AadharPic;
-            }
-            else
-            {
-                emp.AadharCard = null;
-            }
-            string panFilename = "";
-            if (emp.PanCard != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                panFilename = Guid.NewGuid().ToString() + "_" + emp.PanCard.FileName;
-                string filePath = Path.Combine(uploadFolder, panFilename);
-                emp.PanCard.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PanPic != null && PanPic != "")
-            {
-                panFilename = PanPic;
-            }
-            else
-            {
-                emp.PanCard = null;
-            }
-            string drvFilename = "";
-            if (emp.DrvLinCard != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                drvFilename = Guid.NewGuid().ToString() + "_" + emp.DrvLinCard.FileName;
-                string filePath = Path.Combine(uploadFolder, drvFilename);
-                emp.DrvLinCard.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (DrvLinPic != null && DrvLinPic != "")
-            {
-                drvFilename = DrvLinPic;
-            }
-            else
-            {
-                emp.DrvLinCard = null;
-            }
-            string passFilename = "";
-            if (emp.PassportCard != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                passFilename = Guid.NewGuid().ToString() + "_" + emp.PassportCard.FileName;
-                string filePath = Path.Combine(uploadFolder, passFilename);
-                emp.PassportCard.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PassportPic != null && PassportPic != "")
-            {
-                passFilename = PassportPic;
-            }
-            else { emp.PassportCard = null; }
-            string PGFilename = "";
-            if (emp.HighQualiCerf1 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PGFilename = Guid.NewGuid().ToString() + "_" + emp.HighQualiCerf1.FileName;
-                string filePath = Path.Combine(uploadFolder, PGFilename);
-                emp.HighQualiCerf1.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PG != null && PG != "")
-            {
-                PGFilename = PG;
-            }
-            else
-            {
-                emp.HighQualiCerf1 = null;
-            }
-            string UGFilename = "";
-            if (emp.HighQualiCerf2 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                UGFilename = Guid.NewGuid().ToString() + "_" + emp.HighQualiCerf2.FileName;
-                string filePath = Path.Combine(uploadFolder, UGFilename);
-                emp.HighQualiCerf2.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (UG != null && UG != "")
-            {
-                UGFilename = UG;
-            }
-            else
-            {
-                emp.HighQualiCerf2 = null;
-            }
-            string HscFilename = "";
-            if (emp.HscCerf != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                HscFilename = Guid.NewGuid().ToString() + "_" + emp.HscCerf.FileName;
-                string filePath = Path.Combine(uploadFolder, HscFilename);
-                emp.HscCerf.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Hsc != null && Hsc != "")
-            {
-                HscFilename = Hsc;
-            }
-            else
-            {
-                emp.HscCerf = null;
-            }
-            string SslcFilename = "";
-            if (emp.SslcCerf != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                SslcFilename = Guid.NewGuid().ToString() + "_" + emp.SslcCerf.FileName;
-                string filePath = Path.Combine(uploadFolder, SslcFilename);
-                emp.SslcCerf.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Sslc != null && Sslc != "")
-            {
-                SslcFilename = Sslc;
-            }
-            else
-            {
-                emp.SslcCerf = null;
-            }
-            string Doc1Filename = "";
-            if (emp.Form11Doc1 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Doc1Filename = Guid.NewGuid().ToString() + "_" + emp.Form11Doc1.FileName;
-                string filePath = Path.Combine(uploadFolder, Doc1Filename);
-                emp.Form11Doc1.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Doc1 != null && Doc1 != "")
-            {
-                Doc1Filename = Doc1;
-            }
-            else
-            {
-                emp.Form11Doc1 = null;
-            }
-            string Doc2Filename = "";
-            if (emp.Form11Doc2 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Doc2Filename = Guid.NewGuid().ToString() + "_" + emp.Form11Doc2.FileName;
-                string filePath = Path.Combine(uploadFolder, Doc2Filename);
-                emp.Form11Doc2.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Doc2 != null && Doc2 != "")
-            {
-                Doc2Filename = Doc2;
-            }
-            else
-            {
-                emp.Form11Doc2 = null;
-            }
-            string OtCer1Filename = "";
-            if (emp.OtherCerf1 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                OtCer1Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf1.FileName;
-                string filePath = Path.Combine(uploadFolder, OtCer1Filename);
-                emp.OtherCerf1.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (OtCer1 != null && OtCer1 != "")
-            {
-                OtCer1Filename = OtCer1;
-            }
-            else
-            {
-                emp.OtherCerf1 = null;
-            }
-            string OtCer2Filename = "";
-            if (emp.OtherCerf2 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                OtCer2Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf2.FileName;
-                string filePath = Path.Combine(uploadFolder, OtCer2Filename);
-                emp.OtherCerf2.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (OtCer2 != null && OtCer2 != "")
-            {
-                OtCer2Filename = OtCer2;
-            }
-            else { emp.OtherCerf2 = null; }
-            string OtCer3Filename = "";
-            if (emp.OtherCerf3 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                OtCer3Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf3.FileName;
-                string filePath = Path.Combine(uploadFolder, OtCer3Filename);
-                emp.OtherCerf3.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (OtCer3 != null && OtCer3 != "")
-            {
-                OtCer3Filename = OtCer3;
-            }
-            else { emp.OtherCerf3 = null; }
-            string PreWorkDoc1Filename = "";
-            if (emp.PreWorkCmpDoc1 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PreWorkDoc1Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc1.FileName;
-                string filePath = Path.Combine(uploadFolder, PreWorkDoc1Filename);
-                emp.PreWorkCmpDoc1.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PreWorkDoc1 != null && PreWorkDoc1 != "")
-            {
-                PreWorkDoc1Filename = PreWorkDoc1;
-            }
-            else { emp.PreWorkCmpDoc1 = null; }
-            string PreWorkDoc2Filename = "";
-            if (emp.PreWorkCmpDoc2 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PreWorkDoc2Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc2.FileName;
-                string filePath = Path.Combine(uploadFolder, PreWorkDoc2Filename);
-                emp.PreWorkCmpDoc2.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PreWorkDoc2 != null && PreWorkDoc2 != "")
-            {
-                PreWorkDoc2Filename = PreWorkDoc2;
-            }
-            else
-            {
-                emp.PreWorkCmpDoc2 = null;
-            }
-            string PreWorkDoc3Filename = "";
-            if (emp.PreWorkCmpDoc3 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PreWorkDoc3Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc3.FileName;
-                string filePath = Path.Combine(uploadFolder, PreWorkDoc3Filename);
-                emp.PreWorkCmpDoc3.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PreWorkDoc3 != null && PreWorkDoc3 != "")
-            {
-                PreWorkDoc3Filename = PreWorkDoc3;
-            }
-            else
-            {
-                emp.PreWorkCmpDoc3 = null;
-            }
-            string PreWorkDoc4Filename = "";
-            if (emp.PreWorkCmpDoc4 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PreWorkDoc4Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc4.FileName;
-                string filePath = Path.Combine(uploadFolder, PreWorkDoc4Filename);
-                emp.PreWorkCmpDoc4.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PreWorkDoc4 != null && PreWorkDoc4 != "")
-            {
-                PreWorkDoc4Filename = PreWorkDoc4;
-            }
-            else
-            {
-                emp.PreWorkCmpDoc4 = null;
-            }
-            string PreWorkDoc5Filename = "";
-            if (emp.PreWorkCmpDoc5 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                PreWorkDoc5Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc5.FileName;
-                string filePath = Path.Combine(uploadFolder, PreWorkDoc5Filename);
-                emp.PreWorkCmpDoc5.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (PreWorkDoc5 != null && PreWorkDoc5 != "")
-            {
-                PreWorkDoc5Filename = PreWorkDoc5;
-            }
-            else
-            {
-                emp.PreWorkCmpDoc5 = null;
-            }
-            string Att1Filename = "";
-            if (emp.Attachment1 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Att1Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment1.FileName;
-                string filePath = Path.Combine(uploadFolder, Att1Filename);
-                emp.Attachment1.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Attachment1Pic != null && Attachment1Pic != "")
-            {
-                Att1Filename = Attachment1Pic;
-            }
-            else
-            {
-                emp.Attachment1 = null;
-            }
-            string Att2Filename = "";
-            if (emp.Attachment2 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Att2Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment2.FileName;
-                string filePath = Path.Combine(uploadFolder, Att2Filename);
-                emp.Attachment2.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Attachment2Pic != null && Attachment2Pic != "")
-            {
-                Att2Filename = Attachment2Pic;
-            }
-            else
-            {
-                emp.Attachment2 = null;
-            }
-            string Att3Filename = "";
-            if (emp.Attachment3 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Att3Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment3.FileName;
-                string filePath = Path.Combine(uploadFolder, Att3Filename);
-                emp.Attachment3.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Attachment3Pic != null && Attachment3Pic != "")
-            {
-                Att3Filename = Attachment3Pic;
-            }
-            else
-            {
-                emp.Attachment3 = null;
-            }
-            string Att4Filename = "";
-            if (emp.Attachment4 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Att4Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment4.FileName;
-                string filePath = Path.Combine(uploadFolder, Att4Filename);
-                emp.Attachment4.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Attachment4Pic != null && Attachment4Pic != "")
-            {
-                Att4Filename = Attachment4Pic;
-            }
-            else { emp.Attachment4 = null; }
-            string Att5Filename = "";
-            if (emp.Attachment5 != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                Att5Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment5.FileName;
-                string filePath = Path.Combine(uploadFolder, Att5Filename);
-                emp.Attachment5.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (Attachment5Pic != null && Attachment5Pic != "")
-            {
-                Att5Filename = Attachment5Pic;
-            }
-            else
-            {
-                emp.Attachment5 = null;
-            }
-            string AadVerFilename = "";
-            if (emp.AadharVerfProof != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                AadVerFilename = Guid.NewGuid().ToString() + "_" + emp.AadharVerfProof.FileName;
-                string filePath = Path.Combine(uploadFolder, AadVerFilename);
-                emp.AadharVerfProof.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (AadVer != null && AadVer != "")
-            {
-                AadVerFilename = AadVer;
-            }
-            else
-            {
-                emp.AadharVerfProof = null;
-            }
-            string OrgDocFilename = "";
-            if (emp.OriginalDocAckProof != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                OrgDocFilename = Guid.NewGuid().ToString() + "_" + emp.OriginalDocAckProof.FileName;
-                string filePath = Path.Combine(uploadFolder, OrgDocFilename);
-                emp.OriginalDocAckProof.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (OrgDoc != null && OrgDoc != "")
-            {
-                OrgDocFilename = OrgDoc;
-            }
-            else
-            {
-                emp.OriginalDocAckProof = null;
-            }
-            string TcFilename = "";
-            if (emp.TcCard != null)
-            {
-                string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
-                TcFilename = Guid.NewGuid().ToString() + "_" + emp.TcCard.FileName;
-                string filePath = Path.Combine(uploadFolder, TcFilename);
-                emp.TcCard.CopyTo(new FileStream(filePath, FileMode.Create));
-            }
-            else if (TC != null && TC != "")
-            {
-                TcFilename = TC;
-            }
-            else { emp.TcCard = null; }
-            emp.EmpOnboardCtg = emp.EmpCtg;
-            EmployeeMasterData1 em = new EmployeeMasterData1
-            {
-                EmpCtg = emp.EmpCtg,
-                EmpCode = emp.EmpCode,
-                EmpName = emp.EmpName,
-                EmpAadharName = emp.EmpAadharName,
-                EmpPanName = emp.EmpPanName,
-                EmpCertifName = emp.EmpCertifName,
-                EmpNameInBank = emp.EmpNameInBank,
-                EmpBcardName = emp.EmpBcardName,
-                EmpPhoto = filename,
-                Gender = emp.Gender,
-                BloodGrp = emp.BloodGrp,
-                AadharNo = emp.AadharNo,
-                AadharCard = aadharFilename,
-                PanNo = emp.PanNo,
-                PanCard = panFilename,
-                DrvLinNo = emp.DrvLinNo,
-                DrvLinVal = emp.DrvLinVal,
-                DrvLinCard = drvFilename,
-                PassportNo = emp.PassportNo,
-                PassportVal = emp.PassportVal,
-                PassportCard = passFilename,
-                AadharDob = emp.AadharDob,
-                Dob = emp.Dob,
-                PresentAddressLine1 = emp.PresentAddressLine1,
-                PresentAddressLine2 = emp.PresentAddressLine2,
-                PresentAddressCity = emp.PresentAddressCity,
-                PresentAddressState = emp.PresentAddressState,
-                PresentAddressZipcode = emp.PresentAddressZipcode,
-                PermAddressLine1 = emp.PermAddressLine1,
-                PermAddressLine2 = emp.PermAddressLine2,
-                PermAddressCity = emp.PermAddressCity,
-                PermAddressState = emp.PermAddressState,
-                PermAddressZipcode = emp.PermAddressZipcode,
-                CommAddressLine1 = emp.CommAddressLine1,
-                CommAddressLine2 = emp.CommAddressLine2,
-                CommAddressCity = emp.CommAddressCity,
-                CommAddressState = emp.CommAddressState,
-                CommAddressZipcode = emp.CommAddressZipcode,
-                Nationality = emp.Nationality,
-                MaritalStatus = emp.MaritalStatus,
-                PerEmail = emp.PerEmail,
-                PerMobile = emp.PerMobile,
-                PerAccNo = emp.PerAccNo,
-                PerBnkName = emp.PerBnkName,
-                PerBnkIfsc = emp.PerBnkIfsc,
-                PerBnkBranch = emp.PerBnkBranch,
-                FamMemName1 = emp.FamMemName1,
-                FamMemRel1 = emp.FamMemRel1,
-                FamMemContact1 = emp.FamMemContact1,
-                FamMemName2 = emp.FamMemName2,
-                FamMemRel2 = emp.FamMemRel2,
-                FamMemContact2 = emp.FamMemContact2,
-                FamMemName3 = emp.FamMemName3,
-                FamMemRel3 = emp.FamMemRel3,
-                FamMemContact3 = emp.FamMemContact3,
-                FamMemName4 = emp.FamMemName4,
-                FamMemRel4 = emp.FamMemRel4,
-                FamMemContact4 = emp.FamMemContact4,
-                FamMemName5 = emp.FamMemName5,
-                FamMemRel5 = emp.FamMemRel5,
-                FamMemContact5 = emp.FamMemContact5,
-                EmerContactName = emp.EmerContactName,
-                EmerContactRel = emp.EmerContactRel,
-                EmerContactNo = emp.EmerContactNo,
-                HighQuali = emp.HighQuali,
-                HighQualiInstituteName = emp.HighQualiInstituteName,
-                HighQualiMark = emp.HighQualiMark/100,
-                HighQualiPassYear = emp.HighQualiPassYear,
-                HighQualiCerf1 = PGFilename,
-                HighQuali2 = emp.HighQuali2,
-                HighQualiInstituteName2 = emp.HighQualiInstituteName2,
-                HighQualiMark2 = emp.HighQualiMark2/100,
-                HighQualiPassYear2 = emp.HighQualiPassYear2,
-                HighQualiCerf2 = UGFilename,
-                HscSchoolName = emp.HscSchoolName,
-                HscMark = emp.HscMark/100,
-                HscPassYear = emp.HscPassYear,
-                HscCerf = HscFilename,
-                SslcSchoolName = emp.SslcSchoolName,
-                SslcMark = emp.SslcMark/100,
-                SslcPassYear = emp.SslcPassYear,
-                SslcCerf = SslcFilename,
-                OtherCerfName1 = emp.OtherCerfName1,
-                OtherCerfInstitute1 = emp.OtherCerfInstitute1,
-                OtherCerfMark1 = emp.OtherCerfMark1/100,
-                OtherCerfDuration1 = emp.OtherCerfDuration1,
-                OtherCerfPassYear1 = emp.OtherCerfPassYear1,
-                OtherCerf1 = OtCer1Filename,
-                OtherCerfName2 = emp.OtherCerfName2,
-                OtherCerfInstitute2 = emp.OtherCerfInstitute2,
-                OtherCerfMark2 = emp.OtherCerfMark2/100,
-                OtherCerfDuration2 = emp.OtherCerfDuration2,
-                OtherCerfPassYear2 = emp.OtherCerfPassYear2,
-                OtherCerf2 = OtCer2Filename,
-                OtherCerfName3 = emp.OtherCerfName3,
-                OtherCerfInstitute3 = emp.OtherCerfInstitute3,
-                OtherCerfMark3 = emp.OtherCerfMark3/100,
-                OtherCerfDuration3 = emp.OtherCerfDuration3,
-                OtherCerfPassYear3 = emp.OtherCerfPassYear3,
-                OtherCerf3 = OtCer3Filename,
-                ExpYears = emp.ExpYears,
-                PreWorkCmp1 = emp.PreWorkCmp1,
-                PreWorkCmpSdt1 = emp.PreWorkCmpSdt1,
-                PreWorkCmpEdt1 = emp.PreWorkCmpEdt1,
-                PreWorkCmpDoc1 = PreWorkDoc1Filename,
-                PreWorkCmp2 = emp.PreWorkCmp2,
-                PreWorkCmpSdt2 = emp.PreWorkCmpSdt2,
-                PreWorkCmpEdt2 = emp.PreWorkCmpEdt2,
-                PreWorkCmpDoc2 = PreWorkDoc2Filename,
-                PreWorkCmp3 = emp.PreWorkCmp3,
-                PreWorkCmpSdt3 = emp.PreWorkCmpSdt3,
-                PreWorkCmpEdt3 = emp.PreWorkCmpEdt3,
-                PreWorkCmpDoc3 = PreWorkDoc3Filename,
-                PreWorkCmp4 = emp.PreWorkCmp4,
-                PreWorkCmpSdt4 = emp.PreWorkCmpSdt4,
-                PreWorkCmpEdt4 = emp.PreWorkCmpEdt4,
-                PreWorkCmpDoc4 = PreWorkDoc4Filename,
-                PreWorkCmp5 = emp.PreWorkCmp5,
-                PreWorkCmpSdt5 = emp.PreWorkCmpSdt5,
-                PreWorkCmpEdt5 = emp.PreWorkCmpEdt5,
-                PreWorkCmpDoc5 = PreWorkDoc5Filename,
-                WorkExBreak1 = emp.WorkExBreak1,
-                WorkExBreakSdt1 = emp.WorkExBreakSdt1,
-                WorkExBreakEdt1 = emp.WorkExBreakEdt1,
-                WorkExBreak2 = emp.WorkExBreak2,
-                WorkExBreakSdt2 = emp.WorkExBreakSdt2,
-                WorkExBreakEdt2 = emp.WorkExBreakEdt2,
-                WorkExBreak3 = emp.WorkExBreak3,
-                WorkExBreakSdt3 = emp.WorkExBreakSdt3,
-                WorkExBreakEdt3 = emp.WorkExBreakEdt3,
-                WorkExBreak4 = emp.WorkExBreak4,
-                WorkExBreakSdt4 = emp.WorkExBreakSdt4,
-                WorkExBreakEdt4 = emp.WorkExBreakEdt4,
-                PreWorkCmpCtc = emp.PreWorkCmpCtc,
-                PreWorkCmpEpfStatus = emp.PreWorkCmpEpfStatus,
-                PreWorkCmpEsiStatus = emp.PreWorkCmpEsiStatus,
-                EmpDept = emp.EmpDept,
-                EmpDesignation = emp.EmpDesignation,
-                EmpRole = emp.EmpRole,
-                EmpDoj = emp.EmpDoj,
-                EmpOnboardCtg = emp.EmpOnboardCtg,
-                ContractorId = emp.ContractorId,
-                SalaryPaidBy = emp.SalaryPaidBy,
-                PaymentMode = emp.PaymentMode,
-                SalAccEligibility = emp.SalAccEligibility,
-                SalAccNo = emp.SalAccNo,
-                SalBankName = emp.SalBankName,
-                SalBankIfsc = emp.SalBankIfsc,
-                SalBankBranch = emp.SalBankBranch,
-                SalBenfCode = emp.SalBenfCode,
-                EsiEpfEligibility = emp.EsiEpfEligibility,
-                Form11Willingness = emp.Form11Willingness,
-                Form11Eligibility = emp.Form11Eligibility,
-                Form11No = emp.Form11No,
-                Form11Doc1 = Doc1Filename,
-                Form11Doc2 = Doc2Filename,
-                EsiJdt = emp.EsiJdt,
-                EpfJdt = emp.EpfJdt,
-                EsiNo = emp.EsiNo,
-                EsiNomineeName = emp.EsiNomineeName,
-                EpfNo = emp.EpfNo,
-                EpfNomineeName = emp.EpfNomineeName,
-                SalCriteria = emp.SalCriteria,
-                EmpSal = emp.EmpSal,
-                EmpWageShift = emp.EmpWageShift,
-                EmpWageHr = emp.EmpWageHr,
-                EmpWageDay = emp.EmpWageDay,
-                RoomRent = emp.RoomRent,
-                MessDeduction = emp.MessDeduction,
-                OffEmail = emp.OffEmail,
-                OffMobile = emp.OffMobile,
-                AssetEligibility = emp.AssetEligibility,
-                Assets = emp.Assets,
-                OnboardVia = emp.OnboardVia,
-                OnboardRefNo = emp.OnboardRefNo,
-                OnboardRefName1 = emp.OnboardRefName1,
-                OnboardRefName2 = emp.OnboardRefName2,
-                Attachment1 = Att1Filename,
-                Attachment2 = Att2Filename,
-                Attachment3 = Att3Filename,
-                Attachment4 = Att4Filename,
-                Attachment5 = Att5Filename,
-                AadharVerf = emp.AadharVerf,
-                AadharVerfProof = AadVerFilename,
-                CerfVerf = emp.CerfVerf,
-                OriginalDocSubmission = emp.OriginalDocSubmission,
-                OriginalDocList = emp.OriginalDocList,
-                OriginalDocAck = emp.OriginalDocAck,
-                OriginalDocAckNo = emp.OriginalDocAckNo,
-                OriginalDocAckProof = OrgDocFilename,
-                EmpCurrentStatus = emp.EmpCurrentStatus,
-                EmpDoe = emp.EmpDoe,
-                OriginalDocHandover = emp.OriginalDocHandover,
-                OriginalDocAckBack = emp.OriginalDocAckBack,
-                ReleavedReason = emp.ReleavedReason,
-                EmpRejoinDate = emp.EmpRejoinDate,
-                ReportingTo = emp.ReportingTo,
-                EmpOldCode = emp.EmpOldCode,
-                EmpCreateDate = emp.EmpCreateDate,
-                TcCard = TcFilename,
-            };
+                if (emp.ProfilePhoto != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    filename = Guid.NewGuid().ToString() + "_" + emp.ProfilePhoto.FileName;
+                    string filePath = Path.Combine(uploadFolder, filename);
+                    emp.ProfilePhoto.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (ProfilePic != null && ProfilePic != "" && ProfilePic != "NULL")
+                {
+                    filename = ProfilePic;
+                }
+                else
+                {
+                    emp.ProfilePhoto = null;
+                }
+                string aadharFilename = "";
+                if (emp.AadharCard != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    aadharFilename = Guid.NewGuid().ToString() + "_" + emp.AadharCard.FileName;
+                    string filePath = Path.Combine(uploadFolder, aadharFilename);
+                    emp.AadharCard.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (AadharPic != null && AadharPic != "")
+                {
+                    aadharFilename = AadharPic;
+                }
+                else
+                {
+                    emp.AadharCard = null;
+                }
+                string panFilename = "";
+                if (emp.PanCard != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    panFilename = Guid.NewGuid().ToString() + "_" + emp.PanCard.FileName;
+                    string filePath = Path.Combine(uploadFolder, panFilename);
+                    emp.PanCard.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PanPic != null && PanPic != "")
+                {
+                    panFilename = PanPic;
+                }
+                else
+                {
+                    emp.PanCard = null;
+                }
+                string drvFilename = "";
+                if (emp.DrvLinCard != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    drvFilename = Guid.NewGuid().ToString() + "_" + emp.DrvLinCard.FileName;
+                    string filePath = Path.Combine(uploadFolder, drvFilename);
+                    emp.DrvLinCard.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (DrvLinPic != null && DrvLinPic != "")
+                {
+                    drvFilename = DrvLinPic;
+                }
+                else
+                {
+                    emp.DrvLinCard = null;
+                }
+                string passFilename = "";
+                if (emp.PassportCard != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    passFilename = Guid.NewGuid().ToString() + "_" + emp.PassportCard.FileName;
+                    string filePath = Path.Combine(uploadFolder, passFilename);
+                    emp.PassportCard.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PassportPic != null && PassportPic != "")
+                {
+                    passFilename = PassportPic;
+                }
+                else { emp.PassportCard = null; }
+                string PGFilename = "";
+                if (emp.HighQualiCerf1 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PGFilename = Guid.NewGuid().ToString() + "_" + emp.HighQualiCerf1.FileName;
+                    string filePath = Path.Combine(uploadFolder, PGFilename);
+                    emp.HighQualiCerf1.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PG != null && PG != "")
+                {
+                    PGFilename = PG;
+                }
+                else
+                {
+                    emp.HighQualiCerf1 = null;
+                }
+                string UGFilename = "";
+                if (emp.HighQualiCerf2 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    UGFilename = Guid.NewGuid().ToString() + "_" + emp.HighQualiCerf2.FileName;
+                    string filePath = Path.Combine(uploadFolder, UGFilename);
+                    emp.HighQualiCerf2.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (UG != null && UG != "")
+                {
+                    UGFilename = UG;
+                }
+                else
+                {
+                    emp.HighQualiCerf2 = null;
+                }
+                string HscFilename = "";
+                if (emp.HscCerf != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    HscFilename = Guid.NewGuid().ToString() + "_" + emp.HscCerf.FileName;
+                    string filePath = Path.Combine(uploadFolder, HscFilename);
+                    emp.HscCerf.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Hsc != null && Hsc != "")
+                {
+                    HscFilename = Hsc;
+                }
+                else
+                {
+                    emp.HscCerf = null;
+                }
+                string SslcFilename = "";
+                if (emp.SslcCerf != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    SslcFilename = Guid.NewGuid().ToString() + "_" + emp.SslcCerf.FileName;
+                    string filePath = Path.Combine(uploadFolder, SslcFilename);
+                    emp.SslcCerf.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Sslc != null && Sslc != "")
+                {
+                    SslcFilename = Sslc;
+                }
+                else
+                {
+                    emp.SslcCerf = null;
+                }
+                string Doc1Filename = "";
+                if (emp.Form11Doc1 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Doc1Filename = Guid.NewGuid().ToString() + "_" + emp.Form11Doc1.FileName;
+                    string filePath = Path.Combine(uploadFolder, Doc1Filename);
+                    emp.Form11Doc1.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Doc1 != null && Doc1 != "")
+                {
+                    Doc1Filename = Doc1;
+                }
+                else
+                {
+                    emp.Form11Doc1 = null;
+                }
+                string Doc2Filename = "";
+                if (emp.Form11Doc2 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Doc2Filename = Guid.NewGuid().ToString() + "_" + emp.Form11Doc2.FileName;
+                    string filePath = Path.Combine(uploadFolder, Doc2Filename);
+                    emp.Form11Doc2.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Doc2 != null && Doc2 != "")
+                {
+                    Doc2Filename = Doc2;
+                }
+                else
+                {
+                    emp.Form11Doc2 = null;
+                }
+                string OtCer1Filename = "";
+                if (emp.OtherCerf1 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    OtCer1Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf1.FileName;
+                    string filePath = Path.Combine(uploadFolder, OtCer1Filename);
+                    emp.OtherCerf1.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (OtCer1 != null && OtCer1 != "")
+                {
+                    OtCer1Filename = OtCer1;
+                }
+                else
+                {
+                    emp.OtherCerf1 = null;
+                }
+                string OtCer2Filename = "";
+                if (emp.OtherCerf2 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    OtCer2Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf2.FileName;
+                    string filePath = Path.Combine(uploadFolder, OtCer2Filename);
+                    emp.OtherCerf2.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (OtCer2 != null && OtCer2 != "")
+                {
+                    OtCer2Filename = OtCer2;
+                }
+                else { emp.OtherCerf2 = null; }
+                string OtCer3Filename = "";
+                if (emp.OtherCerf3 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    OtCer3Filename = Guid.NewGuid().ToString() + "_" + emp.OtherCerf3.FileName;
+                    string filePath = Path.Combine(uploadFolder, OtCer3Filename);
+                    emp.OtherCerf3.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (OtCer3 != null && OtCer3 != "")
+                {
+                    OtCer3Filename = OtCer3;
+                }
+                else { emp.OtherCerf3 = null; }
+                string PreWorkDoc1Filename = "";
+                if (emp.PreWorkCmpDoc1 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PreWorkDoc1Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc1.FileName;
+                    string filePath = Path.Combine(uploadFolder, PreWorkDoc1Filename);
+                    emp.PreWorkCmpDoc1.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PreWorkDoc1 != null && PreWorkDoc1 != "")
+                {
+                    PreWorkDoc1Filename = PreWorkDoc1;
+                }
+                else { emp.PreWorkCmpDoc1 = null; }
+                string PreWorkDoc2Filename = "";
+                if (emp.PreWorkCmpDoc2 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PreWorkDoc2Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc2.FileName;
+                    string filePath = Path.Combine(uploadFolder, PreWorkDoc2Filename);
+                    emp.PreWorkCmpDoc2.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PreWorkDoc2 != null && PreWorkDoc2 != "")
+                {
+                    PreWorkDoc2Filename = PreWorkDoc2;
+                }
+                else
+                {
+                    emp.PreWorkCmpDoc2 = null;
+                }
+                string PreWorkDoc3Filename = "";
+                if (emp.PreWorkCmpDoc3 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PreWorkDoc3Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc3.FileName;
+                    string filePath = Path.Combine(uploadFolder, PreWorkDoc3Filename);
+                    emp.PreWorkCmpDoc3.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PreWorkDoc3 != null && PreWorkDoc3 != "")
+                {
+                    PreWorkDoc3Filename = PreWorkDoc3;
+                }
+                else
+                {
+                    emp.PreWorkCmpDoc3 = null;
+                }
+                string PreWorkDoc4Filename = "";
+                if (emp.PreWorkCmpDoc4 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PreWorkDoc4Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc4.FileName;
+                    string filePath = Path.Combine(uploadFolder, PreWorkDoc4Filename);
+                    emp.PreWorkCmpDoc4.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PreWorkDoc4 != null && PreWorkDoc4 != "")
+                {
+                    PreWorkDoc4Filename = PreWorkDoc4;
+                }
+                else
+                {
+                    emp.PreWorkCmpDoc4 = null;
+                }
+                string PreWorkDoc5Filename = "";
+                if (emp.PreWorkCmpDoc5 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    PreWorkDoc5Filename = Guid.NewGuid().ToString() + "_" + emp.PreWorkCmpDoc5.FileName;
+                    string filePath = Path.Combine(uploadFolder, PreWorkDoc5Filename);
+                    emp.PreWorkCmpDoc5.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (PreWorkDoc5 != null && PreWorkDoc5 != "")
+                {
+                    PreWorkDoc5Filename = PreWorkDoc5;
+                }
+                else
+                {
+                    emp.PreWorkCmpDoc5 = null;
+                }
+                string Att1Filename = "";
+                if (emp.Attachment1 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Att1Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment1.FileName;
+                    string filePath = Path.Combine(uploadFolder, Att1Filename);
+                    emp.Attachment1.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Attachment1Pic != null && Attachment1Pic != "")
+                {
+                    Att1Filename = Attachment1Pic;
+                }
+                else
+                {
+                    emp.Attachment1 = null;
+                }
+                string Att2Filename = "";
+                if (emp.Attachment2 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Att2Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment2.FileName;
+                    string filePath = Path.Combine(uploadFolder, Att2Filename);
+                    emp.Attachment2.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Attachment2Pic != null && Attachment2Pic != "")
+                {
+                    Att2Filename = Attachment2Pic;
+                }
+                else
+                {
+                    emp.Attachment2 = null;
+                }
+                string Att3Filename = "";
+                if (emp.Attachment3 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Att3Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment3.FileName;
+                    string filePath = Path.Combine(uploadFolder, Att3Filename);
+                    emp.Attachment3.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Attachment3Pic != null && Attachment3Pic != "")
+                {
+                    Att3Filename = Attachment3Pic;
+                }
+                else
+                {
+                    emp.Attachment3 = null;
+                }
+                string Att4Filename = "";
+                if (emp.Attachment4 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Att4Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment4.FileName;
+                    string filePath = Path.Combine(uploadFolder, Att4Filename);
+                    emp.Attachment4.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Attachment4Pic != null && Attachment4Pic != "")
+                {
+                    Att4Filename = Attachment4Pic;
+                }
+                else { emp.Attachment4 = null; }
+                string Att5Filename = "";
+                if (emp.Attachment5 != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    Att5Filename = Guid.NewGuid().ToString() + "_" + emp.Attachment5.FileName;
+                    string filePath = Path.Combine(uploadFolder, Att5Filename);
+                    emp.Attachment5.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (Attachment5Pic != null && Attachment5Pic != "")
+                {
+                    Att5Filename = Attachment5Pic;
+                }
+                else
+                {
+                    emp.Attachment5 = null;
+                }
+                string AadVerFilename = "";
+                if (emp.AadharVerfProof != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    AadVerFilename = Guid.NewGuid().ToString() + "_" + emp.AadharVerfProof.FileName;
+                    string filePath = Path.Combine(uploadFolder, AadVerFilename);
+                    emp.AadharVerfProof.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (AadVer != null && AadVer != "")
+                {
+                    AadVerFilename = AadVer;
+                }
+                else
+                {
+                    emp.AadharVerfProof = null;
+                }
+                string OrgDocFilename = "";
+                if (emp.OriginalDocAckProof != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    OrgDocFilename = Guid.NewGuid().ToString() + "_" + emp.OriginalDocAckProof.FileName;
+                    string filePath = Path.Combine(uploadFolder, OrgDocFilename);
+                    emp.OriginalDocAckProof.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (OrgDoc != null && OrgDoc != "")
+                {
+                    OrgDocFilename = OrgDoc;
+                }
+                else
+                {
+                    emp.OriginalDocAckProof = null;
+                }
+                string TcFilename = "";
+                if (emp.TcCard != null)
+                {
+                    string uploadFolder = Path.Combine(hostingenvironment.WebRootPath, "Images");
+                    TcFilename = Guid.NewGuid().ToString() + "_" + emp.TcCard.FileName;
+                    string filePath = Path.Combine(uploadFolder, TcFilename);
+                    emp.TcCard.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+                else if (TC != null && TC != "")
+                {
+                    TcFilename = TC;
+                }
+                else { emp.TcCard = null; }
+                emp.EmpOnboardCtg = emp.EmpCtg;
+                EmployeeMasterData1 em = new EmployeeMasterData1
+                {
+                    EmpCtg = emp.EmpCtg,
+                    EmpCode = emp.EmpCode,
+                    EmpName = emp.EmpName,
+                    EmpAadharName = emp.EmpAadharName,
+                    EmpPanName = emp.EmpPanName,
+                    EmpCertifName = emp.EmpCertifName,
+                    EmpNameInBank = emp.EmpNameInBank,
+                    EmpBcardName = emp.EmpBcardName,
+                    EmpPhoto = filename,
+                    Gender = emp.Gender,
+                    BloodGrp = emp.BloodGrp,
+                    AadharNo = emp.AadharNo,
+                    AadharCard = aadharFilename,
+                    PanNo = emp.PanNo,
+                    PanCard = panFilename,
+                    DrvLinNo = emp.DrvLinNo,
+                    DrvLinVal = emp.DrvLinVal,
+                    DrvLinCard = drvFilename,
+                    PassportNo = emp.PassportNo,
+                    PassportVal = emp.PassportVal,
+                    PassportCard = passFilename,
+                    AadharDob = emp.AadharDob,
+                    Dob = emp.Dob,
+                    PresentAddressLine1 = emp.PresentAddressLine1,
+                    PresentAddressLine2 = emp.PresentAddressLine2,
+                    PresentAddressCity = emp.PresentAddressCity,
+                    PresentAddressState = emp.PresentAddressState,
+                    PresentAddressZipcode = emp.PresentAddressZipcode,
+                    PermAddressLine1 = emp.PermAddressLine1,
+                    PermAddressLine2 = emp.PermAddressLine2,
+                    PermAddressCity = emp.PermAddressCity,
+                    PermAddressState = emp.PermAddressState,
+                    PermAddressZipcode = emp.PermAddressZipcode,
+                    CommAddressLine1 = emp.CommAddressLine1,
+                    CommAddressLine2 = emp.CommAddressLine2,
+                    CommAddressCity = emp.CommAddressCity,
+                    CommAddressState = emp.CommAddressState,
+                    CommAddressZipcode = emp.CommAddressZipcode,
+                    Nationality = emp.Nationality,
+                    MaritalStatus = emp.MaritalStatus,
+                    PerEmail = emp.PerEmail,
+                    PerMobile = emp.PerMobile,
+                    PerAccNo = emp.PerAccNo,
+                    PerBnkName = emp.PerBnkName,
+                    PerBnkIfsc = emp.PerBnkIfsc,
+                    PerBnkBranch = emp.PerBnkBranch,
+                    FamMemName1 = emp.FamMemName1,
+                    FamMemRel1 = emp.FamMemRel1,
+                    FamMemContact1 = emp.FamMemContact1,
+                    FamMemName2 = emp.FamMemName2,
+                    FamMemRel2 = emp.FamMemRel2,
+                    FamMemContact2 = emp.FamMemContact2,
+                    FamMemName3 = emp.FamMemName3,
+                    FamMemRel3 = emp.FamMemRel3,
+                    FamMemContact3 = emp.FamMemContact3,
+                    FamMemName4 = emp.FamMemName4,
+                    FamMemRel4 = emp.FamMemRel4,
+                    FamMemContact4 = emp.FamMemContact4,
+                    FamMemName5 = emp.FamMemName5,
+                    FamMemRel5 = emp.FamMemRel5,
+                    FamMemContact5 = emp.FamMemContact5,
+                    EmerContactName = emp.EmerContactName,
+                    EmerContactRel = emp.EmerContactRel,
+                    EmerContactNo = emp.EmerContactNo,
+                    HighQuali = emp.HighQuali,
+                    HighQualiInstituteName = emp.HighQualiInstituteName,
+                    HighQualiMark = emp.HighQualiMark / 100,
+                    HighQualiPassYear = emp.HighQualiPassYear,
+                    HighQualiCerf1 = PGFilename,
+                    HighQuali2 = emp.HighQuali2,
+                    HighQualiInstituteName2 = emp.HighQualiInstituteName2,
+                    HighQualiMark2 = emp.HighQualiMark2 / 100,
+                    HighQualiPassYear2 = emp.HighQualiPassYear2,
+                    HighQualiCerf2 = UGFilename,
+                    HscSchoolName = emp.HscSchoolName,
+                    HscMark = emp.HscMark / 100,
+                    HscPassYear = emp.HscPassYear,
+                    HscCerf = HscFilename,
+                    SslcSchoolName = emp.SslcSchoolName,
+                    SslcMark = emp.SslcMark / 100,
+                    SslcPassYear = emp.SslcPassYear,
+                    SslcCerf = SslcFilename,
+                    OtherCerfName1 = emp.OtherCerfName1,
+                    OtherCerfInstitute1 = emp.OtherCerfInstitute1,
+                    OtherCerfMark1 = emp.OtherCerfMark1 / 100,
+                    OtherCerfDuration1 = emp.OtherCerfDuration1,
+                    OtherCerfPassYear1 = emp.OtherCerfPassYear1,
+                    OtherCerf1 = OtCer1Filename,
+                    OtherCerfName2 = emp.OtherCerfName2,
+                    OtherCerfInstitute2 = emp.OtherCerfInstitute2,
+                    OtherCerfMark2 = emp.OtherCerfMark2 / 100,
+                    OtherCerfDuration2 = emp.OtherCerfDuration2,
+                    OtherCerfPassYear2 = emp.OtherCerfPassYear2,
+                    OtherCerf2 = OtCer2Filename,
+                    OtherCerfName3 = emp.OtherCerfName3,
+                    OtherCerfInstitute3 = emp.OtherCerfInstitute3,
+                    OtherCerfMark3 = emp.OtherCerfMark3 / 100,
+                    OtherCerfDuration3 = emp.OtherCerfDuration3,
+                    OtherCerfPassYear3 = emp.OtherCerfPassYear3,
+                    OtherCerf3 = OtCer3Filename,
+                    ExpYears = emp.ExpYears,
+                    PreWorkCmp1 = emp.PreWorkCmp1,
+                    PreWorkCmpSdt1 = emp.PreWorkCmpSdt1,
+                    PreWorkCmpEdt1 = emp.PreWorkCmpEdt1,
+                    PreWorkCmpDoc1 = PreWorkDoc1Filename,
+                    PreWorkCmp2 = emp.PreWorkCmp2,
+                    PreWorkCmpSdt2 = emp.PreWorkCmpSdt2,
+                    PreWorkCmpEdt2 = emp.PreWorkCmpEdt2,
+                    PreWorkCmpDoc2 = PreWorkDoc2Filename,
+                    PreWorkCmp3 = emp.PreWorkCmp3,
+                    PreWorkCmpSdt3 = emp.PreWorkCmpSdt3,
+                    PreWorkCmpEdt3 = emp.PreWorkCmpEdt3,
+                    PreWorkCmpDoc3 = PreWorkDoc3Filename,
+                    PreWorkCmp4 = emp.PreWorkCmp4,
+                    PreWorkCmpSdt4 = emp.PreWorkCmpSdt4,
+                    PreWorkCmpEdt4 = emp.PreWorkCmpEdt4,
+                    PreWorkCmpDoc4 = PreWorkDoc4Filename,
+                    PreWorkCmp5 = emp.PreWorkCmp5,
+                    PreWorkCmpSdt5 = emp.PreWorkCmpSdt5,
+                    PreWorkCmpEdt5 = emp.PreWorkCmpEdt5,
+                    PreWorkCmpDoc5 = PreWorkDoc5Filename,
+                    WorkExBreak1 = emp.WorkExBreak1,
+                    WorkExBreakSdt1 = emp.WorkExBreakSdt1,
+                    WorkExBreakEdt1 = emp.WorkExBreakEdt1,
+                    WorkExBreak2 = emp.WorkExBreak2,
+                    WorkExBreakSdt2 = emp.WorkExBreakSdt2,
+                    WorkExBreakEdt2 = emp.WorkExBreakEdt2,
+                    WorkExBreak3 = emp.WorkExBreak3,
+                    WorkExBreakSdt3 = emp.WorkExBreakSdt3,
+                    WorkExBreakEdt3 = emp.WorkExBreakEdt3,
+                    WorkExBreak4 = emp.WorkExBreak4,
+                    WorkExBreakSdt4 = emp.WorkExBreakSdt4,
+                    WorkExBreakEdt4 = emp.WorkExBreakEdt4,
+                    PreWorkCmpCtc = emp.PreWorkCmpCtc,
+                    PreWorkCmpEpfStatus = emp.PreWorkCmpEpfStatus,
+                    PreWorkCmpEsiStatus = emp.PreWorkCmpEsiStatus,
+                    EmpDept = emp.EmpDept,
+                    EmpDesignation = emp.EmpDesignation,
+                    EmpRole = emp.EmpRole,
+                    EmpDoj = emp.EmpDoj,
+                    EmpOnboardCtg = emp.EmpOnboardCtg,
+                    ContractorId = emp.ContractorId,
+                    SalaryPaidBy = emp.SalaryPaidBy,
+                    PaymentMode = emp.PaymentMode,
+                    SalAccEligibility = emp.SalAccEligibility,
+                    SalAccNo = emp.SalAccNo,
+                    SalBankName = emp.SalBankName,
+                    SalBankIfsc = emp.SalBankIfsc,
+                    SalBankBranch = emp.SalBankBranch,
+                    SalBenfCode = emp.SalBenfCode,
+                    EsiEpfEligibility = emp.EsiEpfEligibility,
+                    Form11Willingness = emp.Form11Willingness,
+                    Form11Eligibility = emp.Form11Eligibility,
+                    Form11No = emp.Form11No,
+                    Form11Doc1 = Doc1Filename,
+                    Form11Doc2 = Doc2Filename,
+                    EsiJdt = emp.EsiJdt,
+                    EpfJdt = emp.EpfJdt,
+                    EsiNo = emp.EsiNo,
+                    EsiNomineeName = emp.EsiNomineeName,
+                    EpfNo = emp.EpfNo,
+                    EpfNomineeName = emp.EpfNomineeName,
+                    SalCriteria = emp.SalCriteria,
+                    EmpSal = emp.EmpSal,
+                    EmpWageShift = emp.EmpWageShift,
+                    EmpWageHr = emp.EmpWageHr,
+                    EmpWageDay = emp.EmpWageDay,
+                    RoomRent = emp.RoomRent,
+                    MessDeduction = emp.MessDeduction,
+                    OffEmail = emp.OffEmail,
+                    OffMobile = emp.OffMobile,
+                    AssetEligibility = emp.AssetEligibility,
+                    Assets = emp.Assets,
+                    OnboardVia = emp.OnboardVia,
+                    OnboardRefNo = emp.OnboardRefNo,
+                    OnboardRefName1 = emp.OnboardRefName1,
+                    OnboardRefName2 = emp.OnboardRefName2,
+                    Attachment1 = Att1Filename,
+                    Attachment2 = Att2Filename,
+                    Attachment3 = Att3Filename,
+                    Attachment4 = Att4Filename,
+                    Attachment5 = Att5Filename,
+                    AadharVerf = emp.AadharVerf,
+                    AadharVerfProof = AadVerFilename,
+                    CerfVerf = emp.CerfVerf,
+                    OriginalDocSubmission = emp.OriginalDocSubmission,
+                    OriginalDocList = emp.OriginalDocList,
+                    OriginalDocAck = emp.OriginalDocAck,
+                    OriginalDocAckNo = emp.OriginalDocAckNo,
+                    OriginalDocAckProof = OrgDocFilename,
+                    EmpCurrentStatus = emp.EmpCurrentStatus,
+                    EmpDoe = emp.EmpDoe,
+                    OriginalDocHandover = emp.OriginalDocHandover,
+                    OriginalDocAckBack = emp.OriginalDocAckBack,
+                    ReleavedReason = emp.ReleavedReason,
+                    EmpRejoinDate = emp.EmpRejoinDate,
+                    ReportingTo = emp.ReportingTo,
+                    EmpOldCode = emp.EmpOldCode,
+                    EmpCreateDate = emp.EmpCreateDate,
+                    TcCard = TcFilename,
+                };
 
 
-          
-            
-           
-                    _context.Update(em);
-                    await _context.SaveChangesAsync();
+
+
+
+                _context.Update(em);
+                await _context.SaveChangesAsync();
                 ProfilePic = null; AadharPic = null; PanPic = null; DrvLinPic = null; PassportPic = null; PG = null; UG = null;
                 Hsc = null; Sslc = null; OtCer1 = null; OtCer2 = null; OtCer3 = null; PreWorkDoc1 = null; PreWorkDoc2 = null;
                 PreWorkDoc3 = null; PreWorkDoc4 = null; PreWorkDoc5 = null; Doc1 = null; Doc2 = null; Attachment1Pic = null;
@@ -2121,19 +2475,19 @@ namespace Accura_Innovatives.Controllers
                 Attachment4Pic = null; Dob = null; Doj = null;
                 Attachment5Pic = null; AadVer = null; OrgDoc = null; TC = null;
             }
-                catch (Exception ex)
-                {
-                
-                    //if (!EmployeeMasterData1Exists(emp.EmpCode))
-                    //{
-                    //ViewBag.ErrorMessage = "An error occurred:Not Found";
-                    //return View();
-                    // }
-                    //else
-                    //{
-                    ViewBag.ErrorMessage = "An error occurred: " + ex.Message;
-                    //return View();
-                    //}
+            catch (Exception ex)
+            {
+
+                //if (!EmployeeMasterData1Exists(emp.EmpCode))
+                //{
+                //ViewBag.ErrorMessage = "An error occurred:Not Found";
+                //return View();
+                // }
+                //else
+                //{
+                ViewBag.ErrorMessage = "An error occurred: " + ex.Message;
+                //return View();
+                //}
                 ViewData["BloodGrp"] = new SelectList(_context.BloodGrpMs, "BloodGrp", "BloodGrp", emp.BloodGrp);
                 ViewData["ContractorId"] = new SelectList(_context.ContractorMs, "ContractorId", "ContractorId", emp.ContractorId);
                 ViewData["EmpCtg"] = new SelectList(_context.CategoryMs, "CtgCode", "CtgCode", emp.EmpCtg);
@@ -2148,7 +2502,7 @@ namespace Accura_Innovatives.Controllers
                 return View(emp);
             }
 
-                return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Index));
             //}
             //ViewData["BloodGrp"] = new SelectList(_context.BloodGrpMs, "BloodGrp", "BloodGrp", employeeMasterData1.BloodGrp);
             //ViewData["ContractorId"] = new SelectList(_context.ContractorMs, "ContractorId", "ContractorId", employeeMasterData1.ContractorId);
@@ -2162,7 +2516,7 @@ namespace Accura_Innovatives.Controllers
             //ViewData["SalBankName"] = new SelectList(_context.BankMs, "BankName", "BankName", employeeMasterData1.SalBankName);
             //ViewData["SalaryPaidBy"] = new SelectList(_context.CompanyMs, "CompanyName", "CompanyName", employeeMasterData1.SalaryPaidBy);
             //return View(employeeMasterData1);
-           
+
 
         }
 
