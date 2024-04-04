@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Accura_Innovatives")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f2adbd8bdffbfb9eefa4f0ea775aa3dc702049d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7915270d61e4d4108ea1db19f727eada622e75b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Accura_Innovatives")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Accura_Innovatives")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
