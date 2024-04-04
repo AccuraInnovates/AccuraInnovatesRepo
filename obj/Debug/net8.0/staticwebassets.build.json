@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yUUGwcXKIuvsCyXBtZyD8pZ9VZKa7V1FiqCBeX0tMtk=",
+  "Hash": "WwQq1WUYafImP674e8GRUeiDpbHGdl8fcbdEmm1OBd0=",
   "Source": "Accura_Innovatives",
   "BasePath": "_content/Accura_Innovatives",
   "Mode": "Default",
@@ -623,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Welding.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\0c679deb-d8a9-43b9-b591-037da534fe1d_10004_1.JPG",
+      "SourceId": "Accura_Innovatives",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\",
+      "BasePath": "_content/Accura_Innovatives",
+      "RelativePath": "Images/0c679deb-d8a9-43b9-b591-037da534fe1d_10004_1.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\0c679deb-d8a9-43b9-b591-037da534fe1d_10004_1.JPG"
     },
     {
       "Identity": "C:\\Users\\Accura Dev 1\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\0ef7c2ae-1586-45e2-8185-84de74ba7e46_10004_2_22.pdf",
