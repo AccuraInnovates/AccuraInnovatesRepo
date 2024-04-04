@@ -2944,6 +2944,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d024df69-e62e-4d1e-b639-dc734924735a_10004_7.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -3088,6 +3089,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d7830141-a477-49b0-be82-6a0542be1ef9_10004_2_22.pdf))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -3104,6 +3107,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -3120,6 +3124,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -4719,6 +4725,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\SalaryDeatilsUploads\SalaryDetailsUpload.xlsx))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\SalaryDeatilsUploads\SalaryDetailsUpload_Jan.xlsx))">
+      <SourceType>Package</SourceType>
+      <SourceId>Accura_Innovatives</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Accura_Innovatives</BasePath>
+      <RelativePath>SalaryDeatilsUploads/SalaryDetailsUpload_Jan.xlsx</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\SalaryDeatilsUploads\SalaryDetailsUpload_Jan.xlsx))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\SalaryDeatilsUploads\SalaryDetailsUpload_New Joiners.xlsx))">
       <SourceType>Package</SourceType>
