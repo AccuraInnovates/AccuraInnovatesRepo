@@ -105,6 +105,7 @@
       "PackagePath": "staticwebassets\\Image\\right-arrow.jpg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\011666ef-e9da-4573-ab21-0031ccf3fe13_img.jpg",
       "PackagePath": "staticwebassets\\Images\\011666ef-e9da-4573-ab21-0031ccf3fe13_img.jpg"
     },
@@ -129,6 +130,8 @@
       "PackagePath": "staticwebassets\\Images\\0ef7c2ae-1586-45e2-8185-84de74ba7e46_10004_2_22.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\10004_1.JPG"
     },
@@ -237,14 +240,18 @@
       "PackagePath": "staticwebassets\\Images\\10232_9.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\1096dab6-e011-49d9-92f6-3622b12ac12e_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\1096dab6-e011-49d9-92f6-3622b12ac12e_10004_6.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\187497d1-474e-4197-b765-0abef54d2ba1_10004_2_22.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\19b828d1-c9f8-4daa-b1b2-7a2967c3aac3_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\19b828d1-c9f8-4daa-b1b2-7a2967c3aac3_10004_2_22.pdf"
     },
@@ -273,10 +280,13 @@
       "PackagePath": "staticwebassets\\Images\\25724ae1-f500-43e6-a97f-927290f91ae5_10004_10.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\26af44d0-5ea3-4aa2-831e-49e2601d2044_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\26af44d0-5ea3-4aa2-831e-49e2601d2044_10004_6.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\2a76997a-0ea1-4d26-964c-50038455f21b_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\2a76997a-0ea1-4d26-964c-50038455f21b_10004_2_22.pdf"
     },
@@ -349,10 +359,13 @@
       "PackagePath": "staticwebassets\\Images\\3ff7a825-9233-415f-b331-070988e90b65_10004_7.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\40b7cb4a-40e7-42c4-bca2-06d361f2d108_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\40b7cb4a-40e7-42c4-bca2-06d361f2d108_10004_6.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\44d48255-e171-4628-9a43-607d300b8f0c_img.jpg",
       "PackagePath": "staticwebassets\\Images\\44d48255-e171-4628-9a43-607d300b8f0c_img.jpg"
     },
@@ -361,26 +374,35 @@
       "PackagePath": "staticwebassets\\Images\\45c98e19-2e22-411f-b360-10aa2ef88113_10004_1.JPG"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4811fd2c-4440-4134-9a5f-c6b83b729e8c_10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\4811fd2c-4440-4134-9a5f-c6b83b729e8c_10004_1.JPG"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\487166da-7caf-4ccc-98d4-29a4bfcbb339_10004_8.pdf",
       "PackagePath": "staticwebassets\\Images\\487166da-7caf-4ccc-98d4-29a4bfcbb339_10004_8.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf",
       "PackagePath": "staticwebassets\\Images\\48bf822a-e4ef-4f23-b678-02593d7b42c2_10004_5.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\498bb0a4-aab2-4547-8eec-53a6571d3b5d_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\498bb0a4-aab2-4547-8eec-53a6571d3b5d_10004_3.jpeg"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf",
       "PackagePath": "staticwebassets\\Images\\4ecad4d9-e214-4919-9286-b55fa5418a4f_10004_10.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\4fba0029-6bbb-40ac-a9d1-2c689693d4ef_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\4fba0029-6bbb-40ac-a9d1-2c689693d4ef_10004_7.pdf"
     },
@@ -401,6 +423,8 @@
       "PackagePath": "staticwebassets\\Images\\53eaf12c-5407-40f4-a2e3-cc5c4a7e217e_10004_1.JPG"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\54eb34f0-4795-4132-912e-ed98c8cd6a88_10004_1.JPG"
     },
@@ -409,6 +433,7 @@
       "PackagePath": "staticwebassets\\Images\\55135ecf-ba59-459a-b0e1-c0eb041849b9_10004_2_22.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\55d2d218-71d5-4220-9be6-d6379404aa80_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\55d2d218-71d5-4220-9be6-d6379404aa80_10004_3.jpeg"
     },
@@ -421,6 +446,8 @@
       "PackagePath": "staticwebassets\\Images\\5851b4aa-825c-451e-8974-856fe0180662_10004_2_22.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\5a29a476-eafd-4cd9-be12-c9ebaff5e9df_10004_6.pdf"
     },
@@ -429,6 +456,7 @@
       "PackagePath": "staticwebassets\\Images\\5b177470-0213-48aa-aa8f-df9e1ac20766_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\5db03bc2-3005-488e-9e09-b0d4dc73c7b7_asp-net-logo-png-1.png",
       "PackagePath": "staticwebassets\\Images\\5db03bc2-3005-488e-9e09-b0d4dc73c7b7_asp-net-logo-png-1.png"
     },
@@ -437,10 +465,13 @@
       "PackagePath": "staticwebassets\\Images\\61dafa06-1ecc-4ffc-bd9d-25b7440f0e48_10004_7.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\62564137-262a-4cbe-881e-9e8aad104edd_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\6444a5f7-61bf-49a5-81f0-310a8067024f_img.jpg",
       "PackagePath": "staticwebassets\\Images\\6444a5f7-61bf-49a5-81f0-310a8067024f_img.jpg"
     },
@@ -449,6 +480,8 @@
       "PackagePath": "staticwebassets\\Images\\64fc9558-af8a-4756-8148-5fc222f09d18_10004_1.JPG"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\66225209-8d50-4664-bc08-79f0696e47cc_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\66225209-8d50-4664-bc08-79f0696e47cc_10004_6.pdf"
     },
@@ -461,6 +494,7 @@
       "PackagePath": "staticwebassets\\Images\\6ac48ed1-7629-485e-bd05-8bd5b793f56d_10004_2_22.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\6bddc382-ae40-45b1-8da3-ccc40645abfe_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\6bddc382-ae40-45b1-8da3-ccc40645abfe_10004_7.pdf"
     },
@@ -505,18 +539,24 @@
       "PackagePath": "staticwebassets\\Images\\786d7f3a-96f6-471a-895a-03ba3352de51_asp-net-logo-png-1.png"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7953f2f5-71b0-42f6-a9fc-a067bfd21fc8_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\7953f2f5-71b0-42f6-a9fc-a067bfd21fc8_10004_6.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7d7ca34d-7352-4440-9691-910b3143ed34_10004_8.pdf",
       "PackagePath": "staticwebassets\\Images\\7d7ca34d-7352-4440-9691-910b3143ed34_10004_8.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf",
       "PackagePath": "staticwebassets\\Images\\7fb426cf-5022-4b48-8208-10dcca8596da_10004_9.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\8045d5bb-df97-483f-9ae2-090cbdb9e9f1_asp-net-logo-png-1.png",
       "PackagePath": "staticwebassets\\Images\\8045d5bb-df97-483f-9ae2-090cbdb9e9f1_asp-net-logo-png-1.png"
     },
@@ -589,10 +629,13 @@
       "PackagePath": "staticwebassets\\Images\\94ca7e54-a3f8-4619-8991-f0492b900346_10004_8.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\963d5983-8ab0-4f38-8185-7ce005ed5844_10004_7.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\986341ea-3ff8-4ddb-80aa-ab789356ec47_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\986341ea-3ff8-4ddb-80aa-ab789356ec47_10004_3.jpeg"
     },
@@ -609,10 +652,13 @@
       "PackagePath": "staticwebassets\\Images\\9d3637ff-14b3-49d2-823a-e36507c2a164_10004_7.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\a254f8fe-2e9b-4588-8d64-5a12536da354_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a52e7a92-3495-419f-9fd6-927cd7cab92b_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\a52e7a92-3495-419f-9fd6-927cd7cab92b_10004_2_22.pdf"
     },
@@ -625,14 +671,19 @@
       "PackagePath": "staticwebassets\\Images\\a635e52e-9de3-490b-bfcd-06fdd990a14a_img.jpg"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf",
       "PackagePath": "staticwebassets\\Images\\a6e0b335-3edb-4707-85d9-0fecfc77c580_10004_4.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a75a437b-351b-4b80-823a-1927a5743061_10004_5.pdf",
       "PackagePath": "staticwebassets\\Images\\a75a437b-351b-4b80-823a-1927a5743061_10004_5.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\a7e17ae2-d147-4c4b-b1ee-3753db8b177e_10004_1.JPG"
     },
@@ -649,6 +700,7 @@
       "PackagePath": "staticwebassets\\Images\\ac04ced8-fd1b-46e3-b4e6-c7d5b4b0da6a_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\b156e0af-4bf9-44af-8691-a4d6c679b212_10004_1.JPG",
       "PackagePath": "staticwebassets\\Images\\b156e0af-4bf9-44af-8691-a4d6c679b212_10004_1.JPG"
     },
@@ -657,10 +709,13 @@
       "PackagePath": "staticwebassets\\Images\\b4d92f15-1ccf-48c8-8108-b64c413d7666_10004_2_22.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\b722ca99-a750-4163-b1cc-93c4d330ef89_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\b722ca99-a750-4163-b1cc-93c4d330ef89_10004_7.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\b788c8f2-7a55-4e3b-a3c1-432d76198983_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\b788c8f2-7a55-4e3b-a3c1-432d76198983_10004_6.pdf"
     },
@@ -669,10 +724,13 @@
       "PackagePath": "staticwebassets\\Images\\b94d135f-821c-430f-aad6-73e9cda31a34_10004_1.JPG"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ba12eb44-c233-45f8-acd8-81e8c2b603ea_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\ba12eb44-c233-45f8-acd8-81e8c2b603ea_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\bd173c17-5eb2-4ddf-8a81-0427fe73af80_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\bd173c17-5eb2-4ddf-8a81-0427fe73af80_10004_2_22.pdf"
     },
@@ -721,10 +779,13 @@
       "PackagePath": "staticwebassets\\Images\\cce7322d-717a-431c-ae5e-3b5ee49ebf8c_10004_6.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf",
       "PackagePath": "staticwebassets\\Images\\ce9d4545-be53-4a20-a4b1-b860b599f9f1_10004_4.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\d024df69-e62e-4d1e-b639-dc734924735a_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\d024df69-e62e-4d1e-b639-dc734924735a_10004_7.pdf"
     },
@@ -761,26 +822,35 @@
       "PackagePath": "staticwebassets\\Images\\d7830141-a477-49b0-be82-6a0542be1ef9_10004_2_22.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\dcdd56d9-d0ea-418d-b72e-2d69cec45539_10004_3.jpeg"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf",
       "PackagePath": "staticwebassets\\Images\\ddad6554-611f-4643-9208-d77e99276742_10004_8.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ddc28cbf-07be-4e64-8e88-eaf494ccb6c8_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\ddc28cbf-07be-4e64-8e88-eaf494ccb6c8_10004_7.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\de37801a-0625-4510-bf3a-7f421a7392e5_10004_7.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\de71c125-c443-4246-a207-aac73fcb5016_10004_7.pdf",
       "PackagePath": "staticwebassets\\Images\\de71c125-c443-4246-a207-aac73fcb5016_10004_7.pdf"
     },
@@ -797,6 +867,8 @@
       "PackagePath": "staticwebassets\\Images\\e00c6287-a497-4567-81b1-8e5b7899d31f_10004_6.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\e0b7ea96-aae3-489d-99cf-563e0de5d247_10004_6.pdf"
     },
@@ -805,6 +877,7 @@
       "PackagePath": "staticwebassets\\Images\\e119a32a-e0b6-4037-91e3-2a4e5a9f6249_10004_6.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\e1db2182-9eff-4911-86b1-0cef27d84351_asp-net-logo-png-1.png",
       "PackagePath": "staticwebassets\\Images\\e1db2182-9eff-4911-86b1-0cef27d84351_asp-net-logo-png-1.png"
     },
@@ -841,6 +914,8 @@
       "PackagePath": "staticwebassets\\Images\\ea302747-4496-466f-9fe9-c95ca7c330f5_10004_1.JPG"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\eaab3842-e637-4a1b-84f1-00dd2513da02_10004_2_22.pdf"
     },
@@ -849,14 +924,18 @@
       "PackagePath": "staticwebassets\\Images\\ec41f86f-d9a8-4e4a-9f2f-d82b86c1dc3e_10004_6.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ed07f26c-8649-4076-936e-b74c3995143e_10004_2_22.pdf",
       "PackagePath": "staticwebassets\\Images\\ed07f26c-8649-4076-936e-b74c3995143e_10004_2_22.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx",
       "PackagePath": "staticwebassets\\Images\\ed62e28c-bd7c-47b2-94ef-6617181d67c8_AWR-10000_Edited.xlsx"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\edcc7711-cffd-430b-9b2c-2110887e6ac6_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\edcc7711-cffd-430b-9b2c-2110887e6ac6_10004_3.jpeg"
     },
@@ -893,10 +972,13 @@
       "PackagePath": "staticwebassets\\Images\\f8a815e9-349b-4fba-8f6d-f2cda4f4fc54_asp-net-logo-png-1.png"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg",
       "PackagePath": "staticwebassets\\Images\\f942809c-1bd7-43be-a9af-e0c21ce4a8c2_10004_3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\f943ffcc-cb0f-4270-8713-201a41e5aece_img.jpg",
       "PackagePath": "staticwebassets\\Images\\f943ffcc-cb0f-4270-8713-201a41e5aece_img.jpg"
     },
@@ -905,6 +987,8 @@
       "PackagePath": "staticwebassets\\Images\\fb4723ae-1466-4b23-9f82-4a22054148b0_img.jpg"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx",
       "PackagePath": "staticwebassets\\Images\\fc4f3768-fd50-48e0-b61e-d70e890021b1_AWR-10000_Edited.xlsx"
     },
@@ -913,10 +997,13 @@
       "PackagePath": "staticwebassets\\Images\\fedb37c5-535f-42f6-95eb-b86f4a029e15_10004_4.pdf"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\Images\\ff235d9b-9260-4bad-a7f9-8b182368bb97_10004_6.pdf",
       "PackagePath": "staticwebassets\\Images\\ff235d9b-9260-4bad-a7f9-8b182368bb97_10004_6.pdf"
     },
     {
+=======
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx",
       "PackagePath": "staticwebassets\\SalaryDeatilsUploads\\Jan-24 import format sample.xlsx"
     },
@@ -937,6 +1024,13 @@
       "PackagePath": "staticwebassets\\SalaryDeatilsUploads\\SalaryDetailsUpload.xlsx"
     },
     {
+<<<<<<< HEAD
+=======
+      "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload_Jan.xlsx",
+      "PackagePath": "staticwebassets\\SalaryDeatilsUploads\\SalaryDetailsUpload_Jan.xlsx"
+    },
+    {
+>>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
       "Id": "C:\\Users\\Accura Dev 2\\source\\repos\\AccuraInnovatesRepo\\wwwroot\\SalaryDeatilsUploads\\SalaryDetailsUpload_New Joiners.xlsx",
       "PackagePath": "staticwebassets\\SalaryDeatilsUploads\\SalaryDetailsUpload_New Joiners.xlsx"
     },
