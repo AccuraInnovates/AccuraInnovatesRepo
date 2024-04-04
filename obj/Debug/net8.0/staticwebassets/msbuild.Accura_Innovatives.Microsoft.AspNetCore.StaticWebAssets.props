@@ -1458,6 +1458,7 @@
     </StaticWebAsset>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d024df69-e62e-4d1e-b639-dc734924735a_10004_7.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -1540,6 +1541,8 @@
     </StaticWebAsset>
 =======
 >>>>>>> parent of c6d79b9 (Edit Images Part and Experience round off changes in controller and edit.cshtml)
+=======
+>>>>>>> parent of c6d79b9 (Edit Images Part and Experience round off changes in controller and edit.cshtml)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d41f9bcc-ce8b-4bdc-9614-b5f2a6ab5154_10004_7.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>Accura_Innovatives</SourceId>
@@ -1556,6 +1559,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d41f9bcc-ce8b-4bdc-9614-b5f2a6ab5154_10004_7.pdf))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\d474d80a-8308-4b5c-ac0e-b4f67f0535dc_10004_7.pdf))">
       <SourceType>Package</SourceType>
@@ -1607,6 +1611,8 @@
     </StaticWebAsset>
 =======
 >>>>>>> 4132d7fd3e166a9f6fa6942fc53ae8c7cb85b01f
+=======
+>>>>>>> parent of c6d79b9 (Edit Images Part and Experience round off changes in controller and edit.cshtml)
 =======
 >>>>>>> parent of c6d79b9 (Edit Images Part and Experience round off changes in controller and edit.cshtml)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Images\db65553a-acb4-472b-aaca-8d8cfbc60f6e_10004_2_22.pdf))">
