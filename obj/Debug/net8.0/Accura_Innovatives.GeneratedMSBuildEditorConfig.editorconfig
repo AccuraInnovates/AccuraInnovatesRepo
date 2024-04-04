@@ -17,139 +17,139 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Accura_Innovatives
 build_property.RootNamespace = Accura_Innovatives
-build_property.ProjectDir = C:\Users\Accura Dev 1\source\repos\AccuraInnovatesRepo\
+build_property.ProjectDir = C:\Users\Accura Dev 2\source\repos\AccuraInnovatesRepo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Accura Dev 1\source\repos\AccuraInnovatesRepo
+build_property.MSBuildProjectDirectory = C:\Users\Accura Dev 2\source\repos\AccuraInnovatesRepo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Create.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJEYXRhMVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Delete.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJEYXRhMVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Details.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJEYXRhMVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Edit.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJEYXRhMVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Index.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeMasterData1/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVNYXN0ZXJEYXRhMVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Create.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Delete.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Details.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Edit.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/EditSalaryDetails.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/EditSalaryDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcRWRpdFNhbGFyeURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Index.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Pdf.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/EmployeeSalary/Pdf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVTYWxhcnlcUGRmLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/Attendance.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/Attendance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdHRlbmRhbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/BulkUpload.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/BulkUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdWxrVXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/CalculateSalary.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/CalculateSalary.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxjdWxhdGVTYWxhcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/CompOffAdvances.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/CompOffAdvances.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wT2ZmQWR2YW5jZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/ConsolidatedModel.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/ConsolidatedModel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zb2xpZGF0ZWRNb2RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/ExportEPFReport.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/ExportEPFReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBvcnRFUEZSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/ExportEsiReport.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/ExportEsiReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBvcnRFc2lSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/ExportPDFReport.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/ExportPDFReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBvcnRQREZSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/ImageUpload.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/ImageUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbWFnZVVwbG9hZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/Index.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/Privacy.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/SalaryDetailsUpload.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/SalaryDetailsUpload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWxhcnlEZXRhaWxzVXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/SalaryProcessMaster.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/SalaryProcessMaster.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYWxhcnlQcm9jZXNzTWFzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Home/YearlyLeave.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Home/YearlyLeave.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZWFybHlMZWF2ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Shared/Error.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Shared/_PaginationPartial.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Shared/_PaginationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0aW9uUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/_ViewImports.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/_ViewStart.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Accura Dev 1/source/repos/AccuraInnovatesRepo/Views/Shared/_Layout.cshtml]
+[C:/Users/Accura Dev 2/source/repos/AccuraInnovatesRepo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ktenqvzuq3
