@@ -452,6 +452,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label asp-for="EmpBcardName" class="control-label">Preferred Name in Business card & AWRKPL records</label>
+                                <br />
                                 <input asp-for="EmpBcardName" class="form-control" />
                                 <span asp-validation-for="EmpBcardName" class="text-danger"></span>
                             </div>
@@ -2237,10 +2238,6 @@
                 <div style="border:black 1px solid; padding: 5px;">
                     <label class="heads" for="EmpSalDetails">Employee Salary Details:</label>
                     <div class="row">
-
-
-
-
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label asp-for="SalaryPaidBy" class="control-label">Company for Pay*:</label>
@@ -2270,13 +2267,12 @@
                                     <span asp-validation-for="SalAccNo" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label asp-for="SalBankName" class="control-label">Salary Bank Name:</label>
                                     <select asp-for="SalBankName" class="form-control" asp-items="ViewBag.SalBankName"></select>
                                 </div>
                             </div>
-
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label asp-for="SalBankIfsc" class="control-label">Salary Bank IFSC Code:</label>
