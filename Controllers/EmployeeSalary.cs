@@ -432,8 +432,8 @@ namespace Accura_Innovatives.Controllers
                             }
                             //co.PreMonthsConsumedCL = (double)Math.Round((decimal)co.PreMonthsConsumedCL - (decimal)co.CurrentCL);
                             //co.PreMonthsConsumedSL = (double)Math.Round((decimal)co.PreMonthsConsumedSL - (decimal)co.CurrentSL);
-                            co.BalanceCL = (double)Math.Round((decimal)co.TotalAllowedCL - ((decimal)co.PreMonthsConsumedCL + (decimal)co.CurrentCL));
-                            co.BalanceSL = (double)Math.Round((decimal)co.TotalAllowedSL - ((decimal)co.PreMonthsConsumedSL + (decimal)co.CurrentSL));
+                            co.BalanceCL = (double)((decimal)co.TotalAllowedCL - ((decimal)co.PreMonthsConsumedCL + (decimal)co.CurrentCL));
+                            co.BalanceSL = (double)((decimal)co.TotalAllowedSL - ((decimal)co.PreMonthsConsumedSL + (decimal)co.CurrentSL));
                             co.ActualBasic = Convert.ToDouble(Math.Round((decimal)(0.64 * s.GrossPay)));
                             co.ActualHRA = (double)Math.Round(Convert.ToDecimal(s.GrossPay - co.ActualBasic));
                             co.ActualNetPay = (double)Math.Round((decimal)co.ActualBasic + (decimal)co.ActualHRA);
